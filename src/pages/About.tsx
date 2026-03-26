@@ -253,6 +253,72 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── AI + UX CAPABILITIES ── */}
+      <section className="py-24 border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-16">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">Cutting Edge</p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              AI & UX{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Expertise.</span>
+            </h2>
+          </ScrollReveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* AI Block */}
+            <ScrollReveal direction="left">
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="group relative overflow-hidden border border-border p-10 transition-all duration-300 hover:border-primary/50"
+              >
+                <div className="absolute top-0 right-0 h-32 w-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500" />
+                <Brain size={28} className="mb-6 text-primary" />
+                <h3 className="mb-4 font-display text-2xl font-black uppercase tracking-tight text-foreground">
+                  AI Development
+                </h3>
+                <p className="font-display text-sm font-light leading-relaxed text-muted-foreground mb-6">
+                  We're not just AI-aware—we're AI-native. We build and deploy generative creative pipelines,
+                  AI-powered marketing automation, intelligent content systems, and custom tooling that gives
+                  your brand an unfair competitive edge.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Generative Imagery", "AI Copywriting", "Automation Pipelines", "Prompt Engineering", "AI Tooling"].map((tag) => (
+                    <span key={tag} className="font-display text-[10px] font-bold uppercase tracking-widest border border-primary/30 px-3 py-1 text-primary/80">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </ScrollReveal>
+
+            {/* UX Block */}
+            <ScrollReveal direction="right">
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="group relative overflow-hidden border border-border p-10 transition-all duration-300 hover:border-secondary/50"
+              >
+                <div className="absolute top-0 right-0 h-32 w-32 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-all duration-500" />
+                <MousePointer2 size={28} className="mb-6 text-secondary" />
+                <h3 className="mb-4 font-display text-2xl font-black uppercase tracking-tight text-foreground">
+                  User Experience Design
+                </h3>
+                <p className="font-display text-sm font-light leading-relaxed text-muted-foreground mb-6">
+                  We obsess over how people feel when they interact with your brand digitally. From user
+                  research and journey mapping to wireframes, prototypes, and final interaction design—we
+                  engineer experiences that reduce friction and maximize impact.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["User Research", "Journey Mapping", "Wireframing", "Prototyping", "Interaction Design"].map((tag) => (
+                    <span key={tag} className="font-display text-[10px] font-bold uppercase tracking-widest border border-secondary/30 px-3 py-1 text-secondary/80">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ── CLIENT INDUSTRIES ── */}
       <section className="bg-muted/20 py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -279,3 +345,4 @@ export default function About() {
     </div>
   );
 }
+
