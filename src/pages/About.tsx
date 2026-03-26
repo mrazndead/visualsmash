@@ -27,14 +27,24 @@ const timeline = [
     body: "Bridged the gap between Silicon Valley and high fashion. Art direction for capsule collections, editorial campaigns, and global retail identities.",
   },
   {
+    year: "2019",
+    title: "UX as Strategy",
+    body: "Embedded full-scale UX design practice into the workflow—user research, journey mapping, interaction design, and prototype testing for digital products reaching millions of users.",
+  },
+  {
     year: "2021",
     title: "Visual Smash Founded",
     body: "After 17 years in-house, launched Visual Smash. The distillation of two decades of hard-won expertise into a boutique agency that refuses compromise.",
   },
   {
+    year: "2023",
+    title: "AI Integration",
+    body: "Became early adopters and experts in applied AI for creative work—generative imagery, AI-accelerated production pipelines, and intelligent campaign tools that give clients an unfair advantage.",
+  },
+  {
     year: "Now",
-    title: "Redefining Luxury",
-    body: "Working with challengers who want to become legends. If you're building something worth noticing, we're the creative force behind it.",
+    title: "Redefining What's Possible",
+    body: "Merging 20 years of creative mastery with AI-native workflows and rigorous UX strategy. The result: faster, smarter, and more impactful work than any agency our size has any right to produce.",
   },
 ];
 
