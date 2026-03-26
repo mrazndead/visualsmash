@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Users, Target, Zap } from "lucide-react";
+import { ArrowRight, Award, Users, Target, Zap, Brain, MousePointer2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
@@ -27,14 +27,24 @@ const timeline = [
     body: "Bridged the gap between Silicon Valley and high fashion. Art direction for capsule collections, editorial campaigns, and global retail identities.",
   },
   {
+    year: "2019",
+    title: "UX as Strategy",
+    body: "Embedded full-scale UX design practice into the workflow—user research, journey mapping, interaction design, and prototype testing for digital products reaching millions of users.",
+  },
+  {
     year: "2021",
     title: "Visual Smash Founded",
     body: "After 17 years in-house, launched Visual Smash. The distillation of two decades of hard-won expertise into a boutique agency that refuses compromise.",
   },
   {
+    year: "2023",
+    title: "AI Integration",
+    body: "Became early adopters and experts in applied AI for creative work—generative imagery, AI-accelerated production pipelines, and intelligent campaign tools that give clients an unfair advantage.",
+  },
+  {
     year: "Now",
-    title: "Redefining Luxury",
-    body: "Working with challengers who want to become legends. If you're building something worth noticing, we're the creative force behind it.",
+    title: "Redefining What's Possible",
+    body: "Merging 20 years of creative mastery with AI-native workflows and rigorous UX strategy. The result: faster, smarter, and more impactful work than any agency our size has any right to produce.",
   },
 ];
 
@@ -48,6 +58,16 @@ const values = [
     icon: Zap,
     title: "Velocity",
     body: "We move fast without breaking things. Agile creative sprints that keep pace with your ambitions.",
+  },
+  {
+    icon: Brain,
+    title: "AI-Augmented",
+    body: "We deploy AI strategically—generative assets, intelligent automation, and data-driven creative decisions—applied with human judgment, not as a shortcut.",
+  },
+  {
+    icon: MousePointer2,
+    title: "UX-First",
+    body: "Every experience we design starts with the human using it. Research, flows, prototypes—beauty that actually works.",
   },
   {
     icon: Users,
@@ -165,7 +185,7 @@ export default function About() {
               tag="h2"
             />
           </ScrollReveal>
-          <StaggerContainer className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <StaggerContainer className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((v) => (
               <StaggerItem key={v.title}>
                 <motion.div
@@ -233,6 +253,72 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── AI + UX CAPABILITIES ── */}
+      <section className="py-24 border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-16">
+            <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">Cutting Edge</p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              AI & UX{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Expertise.</span>
+            </h2>
+          </ScrollReveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* AI Block */}
+            <ScrollReveal direction="left">
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="group relative overflow-hidden border border-border p-10 transition-all duration-300 hover:border-primary/50"
+              >
+                <div className="absolute top-0 right-0 h-32 w-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500" />
+                <Brain size={28} className="mb-6 text-primary" />
+                <h3 className="mb-4 font-display text-2xl font-black uppercase tracking-tight text-foreground">
+                  AI Development
+                </h3>
+                <p className="font-display text-sm font-light leading-relaxed text-muted-foreground mb-6">
+                  We're not just AI-aware—we're AI-native. We build and deploy generative creative pipelines,
+                  AI-powered marketing automation, intelligent content systems, and custom tooling that gives
+                  your brand an unfair competitive edge.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Generative Imagery", "AI Copywriting", "Automation Pipelines", "Prompt Engineering", "AI Tooling"].map((tag) => (
+                    <span key={tag} className="font-display text-[10px] font-bold uppercase tracking-widest border border-primary/30 px-3 py-1 text-primary/80">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </ScrollReveal>
+
+            {/* UX Block */}
+            <ScrollReveal direction="right">
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="group relative overflow-hidden border border-border p-10 transition-all duration-300 hover:border-secondary/50"
+              >
+                <div className="absolute top-0 right-0 h-32 w-32 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-all duration-500" />
+                <MousePointer2 size={28} className="mb-6 text-secondary" />
+                <h3 className="mb-4 font-display text-2xl font-black uppercase tracking-tight text-foreground">
+                  User Experience Design
+                </h3>
+                <p className="font-display text-sm font-light leading-relaxed text-muted-foreground mb-6">
+                  We obsess over how people feel when they interact with your brand digitally. From user
+                  research and journey mapping to wireframes, prototypes, and final interaction design—we
+                  engineer experiences that reduce friction and maximize impact.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["User Research", "Journey Mapping", "Wireframing", "Prototyping", "Interaction Design"].map((tag) => (
+                    <span key={tag} className="font-display text-[10px] font-bold uppercase tracking-widest border border-secondary/30 px-3 py-1 text-secondary/80">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ── CLIENT INDUSTRIES ── */}
       <section className="bg-muted/20 py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -259,3 +345,4 @@ export default function About() {
     </div>
   );
 }
+

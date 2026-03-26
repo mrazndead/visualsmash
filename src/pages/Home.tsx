@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, ArrowRight, Zap, Globe, Award } from "lucide-react";
+import { ArrowDown, ArrowRight, Zap, Globe, Award, Brain, MousePointer2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
@@ -26,13 +26,27 @@ const services = [
   },
   {
     number: "02",
+    title: "User Experience Design",
+    description:
+      "Human-centered design that converts and delights. We architect digital experiences from user research through interaction design—every touchpoint precision-engineered.",
+    icon: MousePointer2,
+  },
+  {
+    number: "03",
+    title: "AI-Powered Creative",
+    description:
+      "We harness AI where it matters—accelerating production, unlocking generative visuals, and building intelligent marketing systems—without sacrificing the craft that makes work great.",
+    icon: Brain,
+  },
+  {
+    number: "04",
     title: "Digital Experience",
     description:
       "Award-caliber web design and digital campaigns that convert browsers into believers. Code meets craft.",
     icon: Globe,
   },
   {
-    number: "03",
+    number: "05",
     title: "Creative Direction",
     description:
       "Strategic vision from a 20-year veteran of Fortune 500 campaigns. We don't follow trends—we set them.",
@@ -230,10 +244,18 @@ export default function Home() {
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           className="flex gap-16 whitespace-nowrap"
         >
-          {[...Array(8)].map((_, i) => (
+          {[...Array(6)].map((_, i) => (
             <div key={i} className="flex items-center gap-16">
               <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
                 Brand Identity
+              </span>
+              <span className="text-primary">·</span>
+              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
+                UX Design
+              </span>
+              <span className="text-primary">·</span>
+              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
+                AI Development
               </span>
               <span className="text-primary">·</span>
               <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
