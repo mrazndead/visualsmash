@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Users, Target, Zap } from "lucide-react";
+import { ArrowRight, Award, Users, Target, Zap, Brain, MousePointer2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
@@ -48,6 +48,16 @@ const values = [
     icon: Zap,
     title: "Velocity",
     body: "We move fast without breaking things. Agile creative sprints that keep pace with your ambitions.",
+  },
+  {
+    icon: Brain,
+    title: "AI-Augmented",
+    body: "We deploy AI strategically—generative assets, intelligent automation, and data-driven creative decisions—applied with human judgment, not as a shortcut.",
+  },
+  {
+    icon: MousePointer2,
+    title: "UX-First",
+    body: "Every experience we design starts with the human using it. Research, flows, prototypes—beauty that actually works.",
   },
   {
     icon: Users,
