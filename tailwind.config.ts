@@ -8,11 +8,13 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
+      fontFamily: {
+        display: ["Inter Tight", "sans-serif"],
+        editorial: ["Playfair Display", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +59,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Extended brand palette
+        "electric-blue": "hsl(210, 100%, 56%)",
+        "acid-lime": "hsl(75, 100%, 60%)",
+        "deep-black": "hsl(0, 0%, 4%)",
+        "off-white": "hsl(60, 5%, 95%)",
+        surface: {
+          DEFAULT: "hsl(0, 0%, 7%)",
+          elevated: "hsl(0, 0%, 10%)",
+          border: "hsl(0, 0%, 14%)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +77,60 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        grain: {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "10%": { transform: "translate(-5%, -10%)" },
+          "30%": { transform: "translate(7%, -25%)" },
+          "50%": { transform: "translate(-15%, 10%)" },
+          "70%": { transform: "translate(0, 15%)" },
+          "90%": { transform: "translate(-10%, 10%)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        "scan-line": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "cursor-expand": {
+          "0%": { transform: "scale(1)", opacity: "0.4" },
+          "100%": { transform: "scale(2.5)", opacity: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        grain: "grain 0.4s steps(1) infinite",
+        float: "float 4s ease-in-out infinite",
+        "scan-line": "scan-line 4s linear infinite",
+        shimmer: "shimmer 2s linear infinite",
+        "cursor-expand": "cursor-expand 1s ease-out infinite",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-brand": "linear-gradient(135deg, hsl(210, 100%, 56%), hsl(75, 100%, 60%))",
+        "grid-lines":
+          "linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        "grid-80": "80px 80px",
+      },
+      boxShadow: {
+        "glow-blue": "0 0 60px rgba(59, 130, 246, 0.4), 0 0 120px rgba(59, 130, 246, 0.15)",
+        "glow-lime": "0 0 60px rgba(178, 255, 0, 0.4), 0 0 120px rgba(178, 255, 0, 0.15)",
+        glass: "0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)",
       },
     },
   },
