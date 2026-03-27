@@ -1,14 +1,24 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, ArrowRight, Zap, Globe, Award, Brain, MousePointer2 } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  Zap,
+  Globe,
+  Award,
+  Brain,
+  MousePointer2,
+  Palette,
+  BarChart3,
+  Fingerprint,
+  Workflow,
+  Sparkles,
+  Cpu,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
 import heroBg from "@/assets/hero-bg.jpg";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-
 
 const services = [
   {
@@ -48,10 +58,15 @@ const services = [
   },
 ];
 
-const featuredWork = [
-  { img: portfolio1, title: "NEXUS Identity", category: "Brand System · Tech" },
-  { img: portfolio3, title: "VOGUE Collab", category: "Editorial · Fashion" },
-  { img: portfolio4, title: "CloudArch UI", category: "Digital · Product" },
+const useCasePreview = [
+  { icon: Palette, title: "Graphic Design", accent: "primary" },
+  { icon: BarChart3, title: "Technical Marketing", accent: "secondary" },
+  { icon: MousePointer2, title: "UX Design", accent: "primary" },
+  { icon: Fingerprint, title: "Branding", accent: "secondary" },
+  { icon: Workflow, title: "Marketing Automation", accent: "primary" },
+  { icon: Sparkles, title: "Prompt Engineering", accent: "secondary" },
+  { icon: Globe, title: "Web Design", accent: "primary" },
+  { icon: Cpu, title: "Software Design with AI", accent: "secondary" },
 ];
 
 export default function Home() {
@@ -76,7 +91,6 @@ export default function Home() {
         ref={heroRef}
         className="relative flex min-h-screen flex-col items-start justify-end overflow-hidden pb-16 pt-32"
       >
-        {/* Background parallax */}
         <motion.div
           style={{ y: heroY, scale: heroScale }}
           className="absolute inset-0 z-0"
@@ -92,10 +106,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/30 to-transparent" />
         </motion.div>
 
-        {/* Grid overlay */}
         <div className="absolute inset-0 z-[1] grid-lines opacity-30" />
 
-        {/* Scan line */}
         <div className="pointer-events-none absolute inset-0 z-[2] overflow-hidden">
           <motion.div
             animate={{ y: ["0%", "100vh"] }}
@@ -104,12 +116,10 @@ export default function Home() {
           />
         </div>
 
-        {/* Hero Content */}
         <motion.div
           style={{ opacity: heroOpacity }}
           className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12"
         >
-          {/* Tag line */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
@@ -122,7 +132,6 @@ export default function Home() {
             </span>
           </motion.div>
 
-          {/* Main headline */}
           <div className="overflow-hidden">
             <motion.h1
               initial={{ y: "100%" }}
@@ -147,7 +156,6 @@ export default function Home() {
             </motion.h1>
           </div>
 
-          {/* Sub copy */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
@@ -159,21 +167,20 @@ export default function Home() {
             refuse to be forgettable.
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isLoaded ? 1 : 0, y: isLoaded ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 1.3 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <Link to="/portfolio">
+            <Link to="/use-cases">
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 data-cursor-text="VIEW"
                 className="group flex items-center gap-3 bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue"
               >
-                View Work
+                Explore Use Cases
                 <ArrowRight
                   size={14}
                   className="transition-transform duration-300 group-hover:translate-x-1"
@@ -192,7 +199,6 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isLoaded ? 1 : 0 }}
@@ -210,7 +216,6 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
-
 
       {/* ── MARQUEE ── */}
       <div className="overflow-hidden border-b border-border py-4">
@@ -234,15 +239,15 @@ export default function Home() {
               </span>
               <span className="text-primary">·</span>
               <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                Digital Campaigns
+                Prompt Engineering
               </span>
               <span className="text-primary">·</span>
               <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                Creative Direction
+                Web Design
               </span>
               <span className="text-primary">·</span>
               <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                Motion Design
+                Marketing Automation
               </span>
               <span className="text-primary">·</span>
             </div>
@@ -266,10 +271,10 @@ export default function Home() {
                 />
               </div>
               <Link
-                to="/portfolio"
+                to="/use-cases"
                 className="hidden items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground md:flex underline-accent"
               >
-                All Work <ArrowRight size={12} />
+                All Use Cases <ArrowRight size={12} />
               </Link>
             </div>
           </ScrollReveal>
@@ -306,49 +311,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FEATURED WORK ── */}
+      {/* ── USE CASES PREVIEW ── */}
       <section className="bg-muted/20 py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <ScrollReveal className="mb-20">
+          <ScrollReveal className="mb-16">
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
-              Selected Work
+              Expertise
             </p>
             <h2 className="text-display font-display font-black uppercase text-foreground">
-              Featured.
+              Use Cases.
             </h2>
           </ScrollReveal>
 
-          <StaggerContainer className="grid gap-4 md:grid-cols-3">
-            {featuredWork.map((work, i) => (
-              <StaggerItem key={work.title}>
-                <Link to="/portfolio">
+          <StaggerContainer className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {useCasePreview.map((uc) => (
+              <StaggerItem key={uc.title}>
+                <Link to="/use-cases">
                   <motion.div
-                    whileHover={{ y: -8 }}
-                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                    data-cursor-text="VIEW"
-                    className="group relative aspect-[4/5] overflow-hidden bg-muted"
+                    whileHover={{ y: -4, scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                    className="group flex flex-col items-center gap-4 border border-border p-6 md:p-8 transition-all duration-300 hover:border-primary/40 hover:bg-primary/5"
                   >
-                    <img
-                      src={work.img}
-                      alt={work.title}
-                      loading="lazy"
-                      width={800}
-                      height={1000}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    <uc.icon
+                      size={24}
+                      className={`transition-colors duration-300 ${
+                        uc.accent === "primary"
+                          ? "text-primary/60 group-hover:text-primary"
+                          : "text-secondary/60 group-hover:text-secondary"
+                      }`}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                    <div className="absolute bottom-0 left-0 right-0 translate-y-4 p-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                      <p className="font-display text-xs font-bold uppercase tracking-widest text-primary">
-                        {work.category}
-                      </p>
-                      <h3 className="font-display text-xl font-black uppercase text-foreground">
-                        {work.title}
-                      </h3>
-                    </div>
-                    {/* Index number */}
-                    <div className="absolute top-4 right-4 font-display text-xs font-bold text-muted-foreground/40">
-                      0{i + 1}
-                    </div>
+                    <span className="text-center font-display text-xs font-bold uppercase tracking-[0.1em] text-foreground/70 group-hover:text-foreground transition-colors">
+                      {uc.title}
+                    </span>
                   </motion.div>
                 </Link>
               </StaggerItem>
@@ -356,13 +350,13 @@ export default function Home() {
           </StaggerContainer>
 
           <ScrollReveal className="mt-12 flex justify-center" delay={0.3}>
-            <Link to="/portfolio">
+            <Link to="/use-cases">
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
                 className="flex items-center gap-3 border border-primary/40 px-10 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-glow-blue"
               >
-                View All Work <ArrowRight size={14} />
+                Explore All Use Cases <ArrowRight size={14} />
               </motion.button>
             </Link>
           </ScrollReveal>
