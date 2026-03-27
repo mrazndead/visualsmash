@@ -9,12 +9,6 @@ import portfolio1 from "@/assets/portfolio-1.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 import portfolio4 from "@/assets/portfolio-4.jpg";
 
-const stats = [
-  { value: "20+", label: "Years Experience" },
-  { value: "150+", label: "Brands Elevated" },
-  { value: "F500", label: "Fortune 500 Clients" },
-  { value: "3×", label: "Awwwards Winner" },
-];
 
 const services = [
   {
@@ -217,25 +211,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ── STATS ── */}
-      <section className="border-y border-border py-12">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <StaggerContainer className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {stats.map((stat) => (
-              <StaggerItem key={stat.value}>
-                <div className="flex flex-col gap-1">
-                  <span className="font-display text-4xl font-black text-accent-gradient md:text-5xl">
-                    {stat.value}
-                  </span>
-                  <span className="font-display text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                    {stat.label}
-                  </span>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
 
       {/* ── MARQUEE ── */}
       <div className="overflow-hidden border-b border-border py-4">
