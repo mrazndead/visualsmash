@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin, Clock } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Clock, Loader2 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   {
@@ -26,18 +28,19 @@ const contactInfo = [
 ];
 
 const budgetRanges = [
-  "$25K – $50K",
+  "$5K – $15K",
+  "$15K – $50K",
   "$50K – $100K",
-  "$100K – $250K",
-  "$250K+",
+  "$100K+",
 ];
 
 const projectTypes = [
-  "Brand Identity",
-  "Digital Campaign",
+  "Graphic Design",
+  "UX Design",
+  "Branding",
   "Web Design",
-  "Creative Direction",
-  "Packaging",
+  "AI & Automation",
+  "Marketing",
   "Other",
 ];
 
@@ -51,11 +54,48 @@ export default function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [focused, setFocused] = useState<string | null>(null);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    if (!formState.name.trim() || !formState.email.trim() || !formState.message.trim()) {
+      toast({
+        title: "Missing fields",
+        description: "Please fill in your name, email, and message.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setSending(true);
+
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: formState.name.trim(),
+          email: formState.email.trim(),
+          company: formState.company.trim(),
+          budget: formState.budget,
+          projectType: formState.projectType,
+          message: formState.message.trim(),
+        },
+      });
+
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly at visualsmash@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   const inputClass = (field: string) =>
@@ -124,6 +164,7 @@ export default function Contact() {
                           id="name"
                           type="text"
                           required
+                          maxLength={100}
                           value={formState.name}
                           onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                           onFocus={() => setFocused("name")}
@@ -148,6 +189,7 @@ export default function Contact() {
                           id="email"
                           type="email"
                           required
+                          maxLength={255}
                           value={formState.email}
                           onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                           onFocus={() => setFocused("email")}
@@ -174,6 +216,7 @@ export default function Contact() {
                       <input
                         id="company"
                         type="text"
+                        maxLength={100}
                         value={formState.company}
                         onChange={(e) => setFormState({ ...formState, company: e.target.value })}
                         onFocus={() => setFocused("company")}
@@ -246,6 +289,7 @@ export default function Contact() {
                         id="message"
                         required
                         rows={4}
+                        maxLength={2000}
                         value={formState.message}
                         onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                         onFocus={() => setFocused("message")}
@@ -258,16 +302,26 @@ export default function Contact() {
                   {/* Submit */}
                   <ScrollReveal delay={0.4} className="mt-12">
                     <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={{ scale: sending ? 1 : 1.02 }}
+                      whileTap={{ scale: sending ? 1 : 0.98 }}
                       type="submit"
-                      className="group flex w-full items-center justify-between bg-primary px-8 py-5 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue md:w-auto md:min-w-[280px]"
+                      disabled={sending}
+                      className="group flex w-full items-center justify-between bg-primary px-8 py-5 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue md:w-auto md:min-w-[280px] disabled:opacity-60"
                     >
-                      Send Transmission
-                      <ArrowRight
-                        size={16}
-                        className="transition-transform duration-300 group-hover:translate-x-2"
-                      />
+                      {sending ? (
+                        <>
+                          Sending...
+                          <Loader2 size={16} className="animate-spin" />
+                        </>
+                      ) : (
+                        <>
+                          Send Transmission
+                          <ArrowRight
+                            size={16}
+                            className="transition-transform duration-300 group-hover:translate-x-2"
+                          />
+                        </>
+                      )}
                     </motion.button>
                   </ScrollReveal>
                 </form>

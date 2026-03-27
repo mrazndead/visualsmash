@@ -9,7 +9,7 @@ import { MagneticCursor } from "@/components/MagneticCursor";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
+import UseCases from "./pages/UseCases";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -30,7 +30,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/use-cases" element={<UseCases />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
