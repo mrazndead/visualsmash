@@ -5,8 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { MagneticCursor } from "@/components/MagneticCursor";
-import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import UseCases from "./pages/UseCases";
@@ -21,10 +19,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <SmoothScrollProvider />
-        <MagneticCursor />
-        {/* Grain overlay */}
-        <div className="grain-overlay" />
         <Navigation />
         <main>
           <Routes>
