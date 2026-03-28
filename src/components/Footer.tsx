@@ -10,7 +10,7 @@ const footerLinks = [
 ];
 
 export const Footer = () => {
-  const year = new Date().getFullYear();
+  
 
   return (
     <footer className="relative border-t border-border overflow-hidden">
@@ -83,17 +83,11 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-20 flex flex-col items-start gap-4 border-t border-border pt-8 md:flex-row md:items-center md:justify-between">
           <p className="font-display text-xs text-muted-foreground/60">
-            © {year} Visual Smash. All rights reserved.
+            © Visual Smash. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <span className="font-display text-xs text-muted-foreground/40 uppercase tracking-[0.2em]">
-              Brutalist Luxury
-            </span>
-            <div className="h-1 w-1 rounded-full bg-muted-foreground/30" />
-            <span className="font-display text-xs text-muted-foreground/40 uppercase tracking-[0.2em]">
-              Bay Area, CA
-            </span>
-          </div>
+          <span className="font-display text-xs text-muted-foreground/40 uppercase tracking-[0.2em]">
+            Bay Area, CA
+          </span>
         </div>
       </div>
     </footer>

@@ -224,7 +224,7 @@ export default function Home() {
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           className="flex gap-16 whitespace-nowrap"
         >
-          {[...Array(6)].map((_, i) => (
+          {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-16">
               <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
                 Brand Identity
