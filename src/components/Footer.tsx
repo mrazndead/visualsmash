@@ -10,7 +10,7 @@ const footerLinks = [
 ];
 
 export const Footer = () => {
-  const year = new Date().getFullYear();
+  
 
   return (
     <footer className="relative border-t border-border overflow-hidden">
