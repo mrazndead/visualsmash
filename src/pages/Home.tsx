@@ -248,8 +248,10 @@ export default function Home() {
       </div>
 
       {/* ── SERVICES ── */}
-      <section className="py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+      <section className="py-32 relative">
+        <div className="absolute top-20 left-10 h-48 w-48 rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute bottom-20 right-10 h-64 w-64 rounded-full bg-secondary/5 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal>
             <div className="mb-20 flex items-end justify-between">
               <div>
