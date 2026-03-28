@@ -108,14 +108,6 @@ export default function Home() {
 
         <div className="absolute inset-0 z-[1] grid-lines opacity-30" />
 
-        <div className="pointer-events-none absolute inset-0 z-[2] overflow-hidden">
-          <motion.div
-            animate={{ y: ["0%", "100vh"] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
-            className="h-px w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent"
-          />
-        </div>
-
         <motion.div
           style={{ opacity: heroOpacity }}
           className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12"

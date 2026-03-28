@@ -164,7 +164,7 @@ export default function About() {
                   <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
                     Founded
                   </p>
-                  <p className="font-display text-3xl font-black text-foreground">2021</p>
+                   <p className="font-display text-3xl font-black text-foreground">2004</p>
                   <p className="mt-1 font-display text-xs text-muted-foreground">
                     Bay Area · California
                   </p>
