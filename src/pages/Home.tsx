@@ -14,11 +14,15 @@ import {
   Workflow,
   Sparkles,
   Cpu,
+  CheckCircle2,
+  Quote,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
+import { SEO } from "@/components/SEO";
 import heroBg from "@/assets/hero-bg.jpg";
+import homeVisual from "@/assets/home-visual.jpg";
 
 const services = [
   {
@@ -32,14 +36,14 @@ const services = [
     number: "02",
     title: "User Experience Design",
     description:
-      "Human-centered design that converts and delights. We architect digital experiences from user research through interaction design—every touchpoint precision-engineered.",
+      "Human-centered design that converts and delights. We architect digital experiences from user research through interaction design.",
     icon: MousePointer2,
   },
   {
     number: "03",
     title: "AI-Powered Creative",
     description:
-      "We harness AI where it matters—accelerating production, unlocking generative visuals, and building intelligent marketing systems—without sacrificing the craft that makes work great.",
+      "We harness AI where it matters—accelerating production, unlocking generative visuals, and building intelligent marketing systems.",
     icon: Brain,
   },
   {
@@ -69,6 +73,33 @@ const useCasePreview = [
   { icon: Cpu, title: "Software Design with AI", accent: "secondary" },
 ];
 
+const testimonials = [
+  {
+    quote: "Visual Smash transformed our entire brand presence. The ROI on their creative work was measurable within the first quarter.",
+    author: "VP of Marketing",
+    company: "Fortune 500 Tech Company",
+  },
+  {
+    quote: "They don't just design—they think strategically. Every deliverable moved our business forward in ways we didn't expect.",
+    author: "Chief Brand Officer",
+    company: "Luxury Real Estate Group",
+  },
+  {
+    quote: "Working with Visual Smash felt like adding a world-class creative department to our team overnight.",
+    author: "Founder & CEO",
+    company: "Series B SaaS Startup",
+  },
+];
+
+const whyUs = [
+  "20+ years of Fortune 500 creative leadership",
+  "AI-augmented workflows for faster, smarter output",
+  "Senior-only team—no juniors learning on your dime",
+  "Full-stack creative: strategy through execution",
+  "Proven across tech, real estate, fashion & finance",
+  "Boutique attention with enterprise-grade results",
+];
+
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -86,6 +117,12 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="relative">
+      <SEO
+        title="Visual Smash – Bay Area Creative Agency"
+        description="Award-winning creative agency in Northern California. 20+ years of brand design, UX, AI-powered creative, and marketing for Fortune 500 companies and ambitious startups."
+        canonical="https://visualsmash.lovable.app"
+      />
+
       {/* ── HERO ── */}
       <section
         ref={heroRef}
@@ -97,7 +134,7 @@ export default function Home() {
         >
           <img
             src={heroBg}
-            alt="Visual Smash hero"
+            alt="Visual Smash creative agency hero"
             className="h-full w-full object-cover"
             width={1920}
             height={1080}
@@ -169,14 +206,10 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
-                data-cursor-text="VIEW"
                 className="group flex items-center gap-3 bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue"
               >
                 Explore Use Cases
-                <ArrowRight
-                  size={14}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
+                <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
               </motion.button>
             </Link>
             <Link to="/contact">
@@ -195,15 +228,12 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: isLoaded ? 1 : 0 }}
           transition={{ delay: 1.8 }}
-          className="absolute bottom-10 right-12 z-10 flex flex-col items-center gap-2"
+          className="absolute bottom-10 right-12 z-10 hidden flex-col items-center gap-2 md:flex"
         >
           <span className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
             Scroll
           </span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.4, repeat: Infinity }}
-          >
+          <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.4, repeat: Infinity }}>
             <ArrowDown size={14} className="text-primary" />
           </motion.div>
         </motion.div>
@@ -218,39 +248,87 @@ export default function Home() {
         >
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-16">
-              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                Brand Identity
-              </span>
-              <span className="text-primary">·</span>
-              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                UX Design
-              </span>
-              <span className="text-primary">·</span>
-              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                AI Development
-              </span>
-              <span className="text-primary">·</span>
-              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                Prompt Engineering
-              </span>
-              <span className="text-primary">·</span>
-              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                Web Design
-              </span>
-              <span className="text-primary">·</span>
-              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
-                Marketing Automation
-              </span>
-              <span className="text-primary">·</span>
+              {["Brand Identity", "UX Design", "AI Development", "Prompt Engineering", "Web Design", "Marketing Automation"].map((s) => (
+                <span key={s} className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
+                  {s}
+                </span>
+              ))}
             </div>
           ))}
         </motion.div>
       </div>
 
+      {/* ── VISUAL BREAK ── */}
+      <section className="relative overflow-hidden">
+        <img
+          src={homeVisual}
+          alt="Abstract creative energy"
+          loading="lazy"
+          width={1280}
+          height={720}
+          className="w-full h-48 md:h-64 object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+      </section>
+
+      {/* ── WHY VISUAL SMASH ── */}
+      <section className="py-24 relative">
+        <div className="absolute top-0 right-20 h-64 w-64 rounded-full bg-secondary/5 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+          <div className="grid gap-16 lg:grid-cols-2 items-center">
+            <ScrollReveal>
+              <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                Why Us
+              </p>
+              <h2 className="text-title font-display font-black uppercase text-foreground mb-6">
+                The Unfair{" "}
+                <span className="font-editorial italic font-light text-accent-gradient">Advantage.</span>
+              </h2>
+              <p className="font-display text-sm font-light leading-relaxed text-muted-foreground mb-8">
+                We're not another agency with a slick pitch deck. We're a senior creative team
+                with two decades of real results for real brands. When you work with Visual Smash,
+                you get the strategic depth of a Fortune 500 creative department and the agility of
+                a focused boutique studio—powered by AI workflows that multiply our output without
+                sacrificing an ounce of quality.
+              </p>
+              <div className="space-y-3">
+                {whyUs.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <CheckCircle2 size={16} className="text-secondary shrink-0 mt-0.5" />
+                    <span className="font-display text-sm text-foreground/80">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="left">
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="border border-border p-8 flex flex-col items-center justify-center text-center group hover:border-primary/40 transition-colors">
+                    <span className="font-display text-4xl font-black text-accent-gradient">20+</span>
+                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-2">Years</span>
+                  </div>
+                  <div className="border border-border p-8 flex flex-col items-center justify-center text-center group hover:border-secondary/40 transition-colors">
+                    <span className="font-display text-4xl font-black text-accent-gradient">150+</span>
+                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-2">Brands</span>
+                  </div>
+                  <div className="border border-border p-8 flex flex-col items-center justify-center text-center group hover:border-primary/40 transition-colors">
+                    <span className="font-display text-4xl font-black text-accent-gradient">F500</span>
+                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-2">Clients</span>
+                  </div>
+                  <div className="border border-border p-8 flex flex-col items-center justify-center text-center group hover:border-secondary/40 transition-colors">
+                    <span className="font-display text-4xl font-black text-accent-gradient">3×</span>
+                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-2">Awards</span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ── SERVICES ── */}
-      <section className="py-32 relative">
+      <section className="py-32 relative border-t border-border">
         <div className="absolute top-20 left-10 h-48 w-48 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-20 right-10 h-64 w-64 rounded-full bg-secondary/5 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal>
             <div className="mb-20 flex items-end justify-between">
@@ -275,7 +353,7 @@ export default function Home() {
 
           <div className="grid gap-0 divide-y divide-border">
             {services.map((svc, i) => (
-              <ScrollReveal key={svc.number} delay={i * 0.1}>
+              <ScrollReveal key={svc.number} delay={i * 0.08}>
                 <motion.div
                   whileHover={{ x: 8 }}
                   transition={{ duration: 0.3 }}
@@ -289,10 +367,7 @@ export default function Home() {
                       <h3 className="font-display text-2xl font-black uppercase tracking-tight text-foreground transition-colors group-hover:text-primary md:text-3xl">
                         {svc.title}
                       </h3>
-                      <svc.icon
-                        size={16}
-                        className="mt-2 shrink-0 text-muted-foreground transition-colors group-hover:text-primary"
-                      />
+                      <svc.icon size={16} className="mt-2 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
                     </div>
                     <p className="mt-3 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
                       {svc.description}
@@ -305,8 +380,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── TESTIMONIALS ── */}
+      <section className="py-24 bg-muted/10 border-y border-border relative">
+        <div className="absolute bottom-10 left-10 h-48 w-48 rounded-full bg-primary/5 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-16">
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Client Voices
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              What They{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Say.</span>
+            </h2>
+          </ScrollReveal>
+          <StaggerContainer className="grid gap-6 md:grid-cols-3">
+            {testimonials.map((t, i) => (
+              <StaggerItem key={i}>
+                <div className="group relative border border-border p-8 h-full flex flex-col transition-all duration-300 hover:border-primary/40">
+                  <Quote size={20} className="text-primary/30 mb-4" />
+                  <p className="font-editorial italic text-sm leading-relaxed text-foreground/80 flex-1">
+                    "{t.quote}"
+                  </p>
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <p className="font-display text-xs font-bold uppercase tracking-widest text-foreground">{t.author}</p>
+                    <p className="font-display text-[10px] uppercase tracking-widest text-muted-foreground mt-1">{t.company}</p>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
       {/* ── USE CASES PREVIEW ── */}
-      <section className="bg-muted/20 py-32">
+      <section className="py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
@@ -315,6 +422,10 @@ export default function Home() {
             <h2 className="text-display font-display font-black uppercase text-foreground">
               Use Cases.
             </h2>
+            <p className="mt-4 max-w-xl font-display text-sm font-light text-muted-foreground">
+              Eight disciplines. Twenty years of mastery. Every one battle-tested across
+              Fortune 500 campaigns, luxury brands, and high-growth startups.
+            </p>
           </ScrollReveal>
 
           <StaggerContainer className="grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -385,15 +496,30 @@ export default function Home() {
                 className="group inline-flex items-center gap-4 bg-primary px-12 py-5 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue"
               >
                 Start a Conversation
-                <ArrowRight
-                  size={14}
-                  className="transition-transform duration-300 group-hover:translate-x-2"
-                />
+                <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-2" />
               </motion.button>
             </Link>
           </ScrollReveal>
         </div>
       </section>
+
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeAgency",
+            name: "Visual Smash",
+            description: "Award-winning creative agency in the San Francisco Bay Area specializing in brand design, UX, AI-powered creative, and marketing.",
+            url: "https://visualsmash.lovable.app",
+            foundingDate: "2004",
+            areaServed: "San Francisco Bay Area, California",
+            email: "visualsmash@gmail.com",
+            knowsAbout: ["Brand Design", "UX Design", "AI Creative", "Marketing Automation", "Web Design", "Prompt Engineering"],
+          }),
+        }}
+      />
     </div>
   );
 }
