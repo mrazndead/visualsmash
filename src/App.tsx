@@ -10,6 +10,7 @@ import { PageTransition } from "@/components/PageTransition";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import UseCases from "./pages/UseCases";
+import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +24,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/use-cases" element={<UseCases />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

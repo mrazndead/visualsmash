@@ -23,6 +23,8 @@ import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
 import heroBg from "@/assets/hero-bg.jpg";
 import homeVisual from "@/assets/home-visual.jpg";
+import creativeBurst from "@/assets/creative-burst.jpg";
+import testimonialsBg from "@/assets/testimonials-bg.jpg";
 
 const services = [
   {
@@ -78,16 +80,31 @@ const testimonials = [
     quote: "Visual Smash transformed our entire brand presence. The ROI on their creative work was measurable within the first quarter.",
     author: "VP of Marketing",
     company: "Fortune 500 Tech Company",
+    rating: 5,
   },
   {
     quote: "They don't just design—they think strategically. Every deliverable moved our business forward in ways we didn't expect.",
     author: "Chief Brand Officer",
     company: "Luxury Real Estate Group",
+    rating: 5,
   },
   {
     quote: "Working with Visual Smash felt like adding a world-class creative department to our team overnight.",
     author: "Founder & CEO",
     company: "Series B SaaS Startup",
+    rating: 5,
+  },
+  {
+    quote: "Their AI-augmented process delivered what used to take months in weeks. The quality didn't just match our expectations—it exceeded them dramatically.",
+    author: "Director of Digital",
+    company: "Global Fashion Brand",
+    rating: 5,
+  },
+  {
+    quote: "We've worked with agencies on three continents. Visual Smash is the only one that truly understood both our brand DNA and our growth ambitions.",
+    author: "CMO",
+    company: "FinTech Unicorn",
+    rating: 5,
   },
 ];
 
@@ -358,35 +375,87 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CREATIVE VISUAL BREAK ── */}
+      <section className="relative overflow-hidden">
+        <img
+          src={creativeBurst}
+          alt="Creative energy explosion"
+          loading="lazy"
+          width={1280}
+          height={720}
+          className="w-full h-40 md:h-56 object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background opacity-50" />
+      </section>
+
       {/* ── TESTIMONIALS ── */}
-      <section className="py-24 bg-muted/10 border-y border-border relative">
-        <div className="absolute bottom-10 left-10 h-48 w-48 rounded-full bg-primary/5 blur-3xl" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
-          <ScrollReveal className="mb-16">
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={testimonialsBg}
+            alt=""
+            loading="lazy"
+            width={1920}
+            height={1080}
+            className="h-full w-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+        </div>
+        <div className="absolute top-20 left-1/4 h-64 w-64 rounded-full bg-primary/8 blur-3xl" />
+        <div className="absolute bottom-20 right-1/4 h-48 w-48 rounded-full bg-secondary/8 blur-3xl" />
+        
+        <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-16 text-center">
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Client Voices
             </p>
-            <h2 className="text-title font-display font-black uppercase text-foreground">
+            <h2 className="text-display font-display font-black uppercase text-foreground">
               What They{" "}
               <span className="font-editorial italic font-light text-accent-gradient">Say.</span>
             </h2>
+            <p className="mt-4 mx-auto max-w-lg font-display text-sm font-light text-muted-foreground">
+              We let our work and our clients speak for us. Here's what the people behind the brands have to say.
+            </p>
           </ScrollReveal>
-          <StaggerContainer className="grid gap-6 md:grid-cols-3">
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((t, i) => (
-              <StaggerItem key={i}>
-                <div className="group relative border border-border p-8 h-full flex flex-col transition-all duration-300 hover:border-primary/40">
-                  <Quote size={20} className="text-primary/30 mb-4" />
-                  <p className="font-editorial italic text-sm leading-relaxed text-foreground/80 flex-1">
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <motion.div
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                  className={`group relative border border-border p-8 md:p-10 h-full flex flex-col transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.08)] ${
+                    i === 0 ? "md:col-span-2 lg:col-span-1" : ""
+                  }`}
+                >
+                  <div className="absolute top-0 left-0 w-16 h-16 border-r border-b border-primary/10 transition-colors group-hover:border-primary/30" />
+                  
+                  <div className="flex gap-1 mb-6">
+                    {[...Array(t.rating)].map((_, j) => (
+                      <motion.div
+                        key={j}
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 + j * 0.1 }}
+                        className="h-1.5 w-1.5 rounded-full bg-secondary"
+                      />
+                    ))}
+                  </div>
+
+                  <Quote size={24} className="text-primary/20 mb-4 transition-colors group-hover:text-primary/40" />
+                  <p className="font-editorial italic text-sm md:text-base leading-relaxed text-foreground/80 flex-1">
                     "{t.quote}"
                   </p>
-                  <div className="mt-6 pt-4 border-t border-border">
+                  <div className="mt-8 pt-4 border-t border-border">
                     <p className="font-display text-xs font-bold uppercase tracking-widest text-foreground">{t.author}</p>
                     <p className="font-display text-[10px] uppercase tracking-widest text-muted-foreground mt-1">{t.company}</p>
                   </div>
-                </div>
-              </StaggerItem>
+                </motion.div>
+              </ScrollReveal>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
