@@ -78,16 +78,31 @@ const testimonials = [
     quote: "Visual Smash transformed our entire brand presence. The ROI on their creative work was measurable within the first quarter.",
     author: "VP of Marketing",
     company: "Fortune 500 Tech Company",
+    rating: 5,
   },
   {
     quote: "They don't just design—they think strategically. Every deliverable moved our business forward in ways we didn't expect.",
     author: "Chief Brand Officer",
     company: "Luxury Real Estate Group",
+    rating: 5,
   },
   {
     quote: "Working with Visual Smash felt like adding a world-class creative department to our team overnight.",
     author: "Founder & CEO",
     company: "Series B SaaS Startup",
+    rating: 5,
+  },
+  {
+    quote: "Their AI-augmented process delivered what used to take months in weeks. The quality didn't just match our expectations—it exceeded them dramatically.",
+    author: "Director of Digital",
+    company: "Global Fashion Brand",
+    rating: 5,
+  },
+  {
+    quote: "We've worked with agencies on three continents. Visual Smash is the only one that truly understood both our brand DNA and our growth ambitions.",
+    author: "CMO",
+    company: "FinTech Unicorn",
+    rating: 5,
   },
 ];
 
