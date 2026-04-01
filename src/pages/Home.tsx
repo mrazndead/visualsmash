@@ -23,6 +23,8 @@ import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
 import heroBg from "@/assets/hero-bg.jpg";
 import homeVisual from "@/assets/home-visual.jpg";
+import creativeBurst from "@/assets/creative-burst.jpg";
+import testimonialsBg from "@/assets/testimonials-bg.jpg";
 
 const services = [
   {
