@@ -300,28 +300,6 @@ export default function Home() {
                 ))}
               </div>
             </ScrollReveal>
-            <ScrollReveal direction="left">
-              <div className="relative">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="border border-border p-8 flex flex-col items-center justify-center text-center group hover:border-primary/40 transition-colors">
-                    <span className="font-display text-4xl font-black text-accent-gradient">20+</span>
-                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-2">Years</span>
-                  </div>
-                  <div className="border border-border p-8 flex flex-col items-center justify-center text-center group hover:border-secondary/40 transition-colors">
-                    <span className="font-display text-4xl font-black text-accent-gradient">150+</span>
-                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-2">Brands</span>
-                  </div>
-                  <div className="border border-border p-8 flex flex-col items-center justify-center text-center group hover:border-primary/40 transition-colors">
-                    <span className="font-display text-4xl font-black text-accent-gradient">F500</span>
-                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-2">Clients</span>
-                  </div>
-                  <div className="border border-border p-8 flex flex-col items-center justify-center text-center group hover:border-secondary/40 transition-colors">
-                    <span className="font-display text-4xl font-black text-accent-gradient">3×</span>
-                    <span className="font-display text-[10px] font-bold uppercase tracking-widest text-muted-foreground mt-2">Awards</span>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>
