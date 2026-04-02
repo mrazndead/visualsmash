@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
+import { LineReveal, FloatingOrb, ParallaxLayer, MaskReveal, RotatingBorder } from "@/components/AnimatedElements";
 import aboutPortrait from "@/assets/about-portrait.jpg";
 
 const timeline = [
