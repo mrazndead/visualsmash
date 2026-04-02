@@ -267,7 +267,8 @@ export default function About() {
 
       {/* ── AI + UX CAPABILITIES ── */}
       <section className="py-24 border-b border-border relative">
-        <div className="absolute top-20 right-20 h-48 w-48 rounded-full bg-primary/5 blur-3xl" />
+        <FloatingOrb size={200} color="primary" x="90%" y="30%" delay={0.5} />
+        <RotatingBorder className="top-40 right-10 hidden lg:block opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
             <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">Cutting Edge</p>
