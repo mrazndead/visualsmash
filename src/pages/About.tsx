@@ -213,7 +213,7 @@ export default function About() {
 
       {/* ── VALUES ── */}
       <section className="py-24 border-t border-border relative">
-        <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-secondary/5 blur-3xl" />
+        <FloatingOrb size={200} color="secondary" x="5%" y="70%" delay={2} />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
             <TextScramble text="Our Values" className="text-title font-display font-black uppercase text-foreground" tag="h2" />
