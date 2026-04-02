@@ -139,8 +139,8 @@ export default function About() {
       <section className="border-y border-border py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
+            <LineReveal className="mb-6" />
             <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">Philosophy</p>
-            <h2 className="text-title font-display font-black uppercase text-foreground">
               Why We're <span className="font-editorial italic font-light text-accent-gradient">Different.</span>
             </h2>
           </ScrollReveal>
