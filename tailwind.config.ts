@@ -96,6 +96,10 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-12px)" },
         },
+        "float-delayed": {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-8px) rotate(2deg)" },
+        },
         "scan-line": {
           "0%": { transform: "translateY(-100%)" },
           "100%": { transform: "translateY(100vh)" },
@@ -108,15 +112,31 @@ export default {
           "0%": { transform: "scale(1)", opacity: "0.4" },
           "100%": { transform: "scale(2.5)", opacity: "0" },
         },
+        "line-draw": {
+          from: { transform: "scaleX(0)" },
+          to: { transform: "scaleX(1)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(59, 130, 246, 0.3)" },
+          "50%": { boxShadow: "0 0 20px 4px rgba(59, 130, 246, 0.15)" },
+        },
+        "rotate-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         grain: "grain 0.4s steps(1) infinite",
         float: "float 4s ease-in-out infinite",
+        "float-delayed": "float-delayed 5s ease-in-out infinite",
         "scan-line": "scan-line 4s linear infinite",
         shimmer: "shimmer 2s linear infinite",
         "cursor-expand": "cursor-expand 1s ease-out infinite",
+        "line-draw": "line-draw 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "rotate-slow": "rotate-slow 20s linear infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
