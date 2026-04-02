@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
+import { LineReveal, FloatingOrb, ParallaxLayer, MaskReveal, RotatingBorder } from "@/components/AnimatedElements";
 import heroBg from "@/assets/hero-bg.jpg";
 import homeVisual from "@/assets/home-visual.jpg";
 import creativeBurst from "@/assets/creative-burst.jpg";
@@ -162,6 +163,10 @@ export default function Home() {
 
         <div className="absolute inset-0 z-[1] grid-lines opacity-30" />
 
+        {/* Floating orbs for depth */}
+        <FloatingOrb size={300} color="primary" x="70%" y="20%" delay={0} />
+        <FloatingOrb size={200} color="secondary" x="10%" y="60%" delay={2} />
+
         <motion.div
           style={{ opacity: heroOpacity }}
           className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12"
@@ -172,7 +177,12 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mb-6 flex items-center gap-3"
           >
-            <div className="h-px w-10 bg-primary" />
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: isLoaded ? 1 : 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="h-px w-10 bg-primary origin-left"
+            />
             <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Creative Agency · Bay Area, CA
             </span>
@@ -223,7 +233,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
-                className="group flex items-center gap-3 bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue"
+                className="group flex items-center gap-3 bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue animate-pulse-glow"
               >
                 Explore Use Cases
                 <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -254,6 +264,9 @@ export default function Home() {
             <ArrowDown size={14} className="text-primary" />
           </motion.div>
         </motion.div>
+
+        {/* Rotating decoration */}
+        <RotatingBorder className="bottom-20 left-12 hidden lg:block opacity-20" />
       </section>
 
       {/* ── MARQUEE ── */}
@@ -275,25 +288,28 @@ export default function Home() {
         </motion.div>
       </div>
 
-      {/* ── VISUAL BREAK ── */}
-      <section className="relative overflow-hidden">
-        <img
-          src={homeVisual}
-          alt="Abstract creative energy"
-          loading="lazy"
-          width={1280}
-          height={720}
-          className="w-full h-48 md:h-64 object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
-      </section>
+      {/* ── VISUAL BREAK with parallax ── */}
+      <ParallaxLayer speed={0.3}>
+        <section className="relative overflow-hidden">
+          <img
+            src={homeVisual}
+            alt="Abstract creative energy"
+            loading="lazy"
+            width={1280}
+            height={720}
+            className="w-full h-48 md:h-64 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+        </section>
+      </ParallaxLayer>
 
       {/* ── WHY VISUAL SMASH ── */}
       <section className="py-24 relative">
-        <div className="absolute top-0 right-20 h-64 w-64 rounded-full bg-secondary/5 blur-3xl" />
+        <FloatingOrb size={250} color="secondary" x="80%" y="10%" delay={1} />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-2 items-center">
             <ScrollReveal>
+              <LineReveal className="mb-8" />
               <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
                 Why Us
               </p>
@@ -308,14 +324,27 @@ export default function Home() {
                 a focused boutique studio—powered by AI workflows that multiply our output without
                 sacrificing an ounce of quality.
               </p>
-              <div className="space-y-3">
-                {whyUs.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <CheckCircle2 size={16} className="text-secondary shrink-0 mt-0.5" />
-                    <span className="font-display text-sm text-foreground/80">{item}</span>
-                  </div>
+              <StaggerContainer className="space-y-3">
+                {whyUs.map((item, i) => (
+                  <StaggerItem key={item}>
+                    <motion.div
+                      whileHover={{ x: 6 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex items-start gap-3 group"
+                    >
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 + i * 0.1, type: "spring", stiffness: 400 }}
+                      >
+                        <CheckCircle2 size={16} className="text-secondary shrink-0 mt-0.5 group-hover:text-primary transition-colors" />
+                      </motion.div>
+                      <span className="font-display text-sm text-foreground/80 group-hover:text-foreground transition-colors">{item}</span>
+                    </motion.div>
+                  </StaggerItem>
                 ))}
-              </div>
+              </StaggerContainer>
             </ScrollReveal>
           </div>
         </div>
@@ -323,11 +352,12 @@ export default function Home() {
 
       {/* ── SERVICES ── */}
       <section className="py-32 relative border-t border-border">
-        <div className="absolute top-20 left-10 h-48 w-48 rounded-full bg-primary/5 blur-3xl" />
+        <FloatingOrb size={200} color="primary" x="5%" y="30%" delay={0.5} />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal>
             <div className="mb-20 flex items-end justify-between">
               <div>
+                <LineReveal className="mb-6" delay={0.1} />
                 <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
                   What We Do
                 </p>
@@ -350,24 +380,39 @@ export default function Home() {
             {services.map((svc, i) => (
               <ScrollReveal key={svc.number} delay={i * 0.08}>
                 <motion.div
-                  whileHover={{ x: 8 }}
-                  transition={{ duration: 0.3 }}
-                  className="group flex items-start gap-8 py-10 transition-colors duration-300 hover:bg-muted/30 px-4"
+                  whileHover={{ x: 12, backgroundColor: "rgba(255,255,255,0.02)" }}
+                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                  className="group flex items-start gap-8 py-10 transition-colors duration-300 px-4"
                 >
-                  <span className="font-display text-xs font-bold tracking-widest text-muted-foreground/40 mt-1">
+                  <motion.span
+                    whileHover={{ scale: 1.2 }}
+                    className="font-display text-xs font-bold tracking-widest text-muted-foreground/40 mt-1 transition-colors group-hover:text-primary"
+                  >
                     {svc.number}
-                  </span>
+                  </motion.span>
                   <div className="flex-1">
                     <div className="flex items-start justify-between gap-4">
                       <h3 className="font-display text-2xl font-black uppercase tracking-tight text-foreground transition-colors group-hover:text-primary md:text-3xl">
                         {svc.title}
                       </h3>
-                      <svc.icon size={16} className="mt-2 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                      <motion.div
+                        whileHover={{ rotate: 90 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <svc.icon size={16} className="mt-2 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                      </motion.div>
                     </div>
                     <p className="mt-3 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
                       {svc.description}
                     </p>
                   </div>
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.3 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-primary/20 via-secondary/10 to-transparent origin-left"
+                  />
                 </motion.div>
               </ScrollReveal>
             ))}
@@ -375,19 +420,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CREATIVE VISUAL BREAK ── */}
-      <section className="relative overflow-hidden">
-        <img
-          src={creativeBurst}
-          alt="Creative energy explosion"
-          loading="lazy"
-          width={1280}
-          height={720}
-          className="w-full h-40 md:h-56 object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background opacity-50" />
-      </section>
+      {/* ── CREATIVE VISUAL BREAK with parallax ── */}
+      <ParallaxLayer speed={0.4}>
+        <section className="relative overflow-hidden">
+          <img
+            src={creativeBurst}
+            alt="Creative energy explosion"
+            loading="lazy"
+            width={1280}
+            height={720}
+            className="w-full h-40 md:h-56 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background opacity-50" />
+        </section>
+      </ParallaxLayer>
 
       {/* ── TESTIMONIALS ── */}
       <section className="py-32 relative overflow-hidden">
@@ -402,11 +449,12 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
         </div>
-        <div className="absolute top-20 left-1/4 h-64 w-64 rounded-full bg-primary/8 blur-3xl" />
-        <div className="absolute bottom-20 right-1/4 h-48 w-48 rounded-full bg-secondary/8 blur-3xl" />
+        <FloatingOrb size={300} color="primary" x="25%" y="20%" delay={0} />
+        <FloatingOrb size={200} color="secondary" x="75%" y="60%" delay={3} />
         
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16 text-center">
+            <LineReveal className="mx-auto max-w-xs mb-8" />
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Client Voices
             </p>
@@ -425,7 +473,7 @@ export default function Home() {
                 <motion.div
                   whileHover={{ y: -6, scale: 1.02 }}
                   transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                  className={`group relative border border-border p-8 md:p-10 h-full flex flex-col transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.08)] ${
+                  className={`group relative border border-border p-8 md:p-10 h-full flex flex-col transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.08)] border-glow ${
                     i === 0 ? "md:col-span-2 lg:col-span-1" : ""
                   }`}
                 >
@@ -438,7 +486,7 @@ export default function Home() {
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3 + j * 0.1 }}
+                        transition={{ delay: 0.3 + j * 0.1, type: "spring", stiffness: 500 }}
                         className="h-1.5 w-1.5 rounded-full bg-secondary"
                       />
                     ))}
@@ -460,9 +508,11 @@ export default function Home() {
       </section>
 
       {/* ── USE CASES PREVIEW ── */}
-      <section className="py-32">
+      <section className="py-32 relative">
+        <RotatingBorder className="top-20 right-20 hidden lg:block opacity-10" />
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
+            <LineReveal className="mb-8" />
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Expertise
             </p>
@@ -476,22 +526,27 @@ export default function Home() {
           </ScrollReveal>
 
           <StaggerContainer className="grid grid-cols-2 gap-3 md:grid-cols-4">
-            {useCasePreview.map((uc) => (
+            {useCasePreview.map((uc, i) => (
               <StaggerItem key={uc.title}>
                 <Link to="/use-cases">
                   <motion.div
-                    whileHover={{ y: -4, scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                    className="group flex flex-col items-center gap-4 border border-border p-6 md:p-8 transition-all duration-300 hover:border-primary/40 hover:bg-primary/5"
+                    whileHover={{ y: -6, scale: 1.03 }}
+                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    className="group flex flex-col items-center gap-4 border border-border p-6 md:p-8 transition-all duration-300 hover:border-primary/40 hover:bg-primary/5 border-glow hover-lift"
                   >
-                    <uc.icon
-                      size={24}
-                      className={`transition-colors duration-300 ${
-                        uc.accent === "primary"
-                          ? "text-primary/60 group-hover:text-primary"
-                          : "text-secondary/60 group-hover:text-secondary"
-                      }`}
-                    />
+                    <motion.div
+                      whileHover={{ rotate: 15, scale: 1.2 }}
+                      transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                    >
+                      <uc.icon
+                        size={24}
+                        className={`transition-colors duration-300 ${
+                          uc.accent === "primary"
+                            ? "text-primary/60 group-hover:text-primary"
+                            : "text-secondary/60 group-hover:text-secondary"
+                        }`}
+                      />
+                    </motion.div>
                     <span className="text-center font-display text-xs font-bold uppercase tracking-[0.1em] text-foreground/70 group-hover:text-foreground transition-colors">
                       {uc.title}
                     </span>
@@ -519,8 +574,11 @@ export default function Home() {
       <section className="relative overflow-hidden py-40">
         <div className="absolute inset-0 grid-lines opacity-20" />
         <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent" />
+        <FloatingOrb size={400} color="primary" x="50%" y="30%" delay={0} />
+        <RotatingBorder className="bottom-10 left-10 hidden lg:block opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-12">
           <ScrollReveal>
+            <LineReveal className="mx-auto max-w-xs mb-8" />
             <p className="mb-6 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
               Ready to Dominate?
             </p>
@@ -540,7 +598,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="group inline-flex items-center gap-4 bg-primary px-12 py-5 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue"
+                className="group inline-flex items-center gap-4 bg-primary px-12 py-5 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue animate-pulse-glow"
               >
                 Start a Conversation
                 <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-2" />

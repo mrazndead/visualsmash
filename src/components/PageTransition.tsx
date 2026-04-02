@@ -3,9 +3,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
 const pageVariants = {
-  initial: { opacity: 0, y: 12 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -8 },
+  initial: {
+    opacity: 0,
+    y: 20,
+    filter: "blur(4px)",
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+  },
+  exit: {
+    opacity: 0,
+    y: -12,
+    filter: "blur(2px)",
+  },
 };
 
 export const PageTransition = ({ children }: { children: ReactNode }) => {
@@ -19,7 +31,7 @@ export const PageTransition = ({ children }: { children: ReactNode }) => {
         initial="initial"
         animate="animate"
         exit="exit"
-        transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+        transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
       >
         {children}
       </motion.div>

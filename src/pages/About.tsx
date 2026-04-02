@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Award, Users, Target, Zap, Brain, MousePointer2, Heart, Shield, Eye, TrendingUp, Lightbulb } from "lucide-react";
+import { ArrowRight, Award, Users, Target, Zap, Brain, MousePointer2, Heart, Shield, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
+import { LineReveal, FloatingOrb, RotatingBorder } from "@/components/AnimatedElements";
 import aboutPortrait from "@/assets/about-portrait.jpg";
 
 const timeline = [
@@ -52,11 +53,13 @@ export default function About() {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden py-24 lg:py-32">
         <div className="absolute inset-0 grid-lines opacity-20" />
-        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+        <FloatingOrb size={350} color="primary" x="85%" y="10%" delay={0} />
+        <FloatingOrb size={200} color="secondary" x="5%" y="70%" delay={2} />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
               <ScrollReveal>
+                <LineReveal className="mb-6" />
                 <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">About Visual Smash</p>
               </ScrollReveal>
               <div className="overflow-hidden">
@@ -95,7 +98,7 @@ export default function About() {
                   <motion.button
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.96 }}
-                    className="group flex items-center gap-3 bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all hover:shadow-glow-blue"
+                    className="group flex items-center gap-3 bg-primary px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all hover:shadow-glow-blue animate-pulse-glow"
                   >
                     Work With Us <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                   </motion.button>
@@ -138,6 +141,7 @@ export default function About() {
       <section className="border-y border-border py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
+            <LineReveal className="mb-6" />
             <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">Philosophy</p>
             <h2 className="text-title font-display font-black uppercase text-foreground">
               Why We're <span className="font-editorial italic font-light text-accent-gradient">Different.</span>
@@ -165,13 +169,16 @@ export default function About() {
             <StaggerContainer className="space-y-6">
               {approach.map((a) => (
                 <StaggerItem key={a.title}>
-                  <div className="group flex gap-5 p-6 border border-border transition-all duration-300 hover:border-primary/40">
+                  <motion.div
+                    whileHover={{ x: 6, y: -2 }}
+                    className="group flex gap-5 p-6 border border-border transition-all duration-300 hover:border-primary/40 border-glow"
+                  >
                     <a.icon size={22} className="shrink-0 text-primary mt-1 transition-colors group-hover:text-secondary" />
                     <div>
                       <h4 className="mb-2 font-display text-base font-black uppercase tracking-tight text-foreground">{a.title}</h4>
                       <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">{a.body}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 </StaggerItem>
               ))}
             </StaggerContainer>
@@ -181,20 +188,21 @@ export default function About() {
 
       {/* ── EXTENDED CAPABILITIES ── */}
       <section className="py-24 relative">
-        <div className="absolute top-10 right-10 h-64 w-64 rounded-full bg-secondary/5 blur-3xl" />
+        <FloatingOrb size={250} color="secondary" x="90%" y="20%" delay={1} />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
+            <LineReveal className="mb-6" />
             <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">What We Bring</p>
             <h2 className="text-title font-display font-black uppercase text-foreground">
               Core <span className="font-editorial italic font-light text-accent-gradient">Capabilities.</span>
             </h2>
           </ScrollReveal>
           <StaggerContainer className="grid gap-6 md:grid-cols-2">
-            {capabilities.map((c, i) => (
+            {capabilities.map((c) => (
               <StaggerItem key={c.title}>
                 <motion.div
-                  whileHover={{ y: -4 }}
-                  className="group border border-border p-8 transition-all duration-300 hover:border-primary/40 h-full"
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  className="group border border-border p-8 transition-all duration-300 hover:border-primary/40 h-full hover-lift border-glow"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="h-1.5 w-1.5 rounded-full bg-primary group-hover:bg-secondary transition-colors" />
@@ -210,7 +218,8 @@ export default function About() {
 
       {/* ── VALUES ── */}
       <section className="py-24 border-t border-border relative">
-        <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-secondary/5 blur-3xl" />
+        <FloatingOrb size={200} color="secondary" x="5%" y="70%" delay={2} />
+        <RotatingBorder className="top-20 right-10 hidden lg:block opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
             <TextScramble text="Our Values" className="text-title font-display font-black uppercase text-foreground" tag="h2" />
@@ -218,8 +227,10 @@ export default function About() {
           <StaggerContainer className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((v) => (
               <StaggerItem key={v.title}>
-                <motion.div whileHover={{ y: -4 }} className="group glass border border-surface-border p-8 transition-all duration-300 hover:border-primary/40">
-                  <v.icon size={20} className="mb-4 text-primary transition-colors group-hover:text-secondary" />
+                <motion.div whileHover={{ y: -6, scale: 1.02 }} className="group glass border border-surface-border p-8 transition-all duration-300 hover:border-primary/40 hover-lift border-glow">
+                  <motion.div whileHover={{ rotate: 15 }} transition={{ type: "spring", stiffness: 300 }}>
+                    <v.icon size={20} className="mb-4 text-primary transition-colors group-hover:text-secondary" />
+                  </motion.div>
                   <h3 className="mb-3 font-display text-lg font-black uppercase tracking-tight text-foreground">{v.title}</h3>
                   <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">{v.body}</p>
                 </motion.div>
@@ -233,6 +244,7 @@ export default function About() {
       <section className="py-32 border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-20">
+            <LineReveal className="mb-6" />
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">Our Story</p>
             <h2 className="text-display font-display font-black uppercase text-foreground">
               Twenty Years. <span className="font-editorial italic font-light text-accent-gradient">One Vision.</span>
@@ -247,14 +259,24 @@ export default function About() {
             <div className="space-y-0 md:pl-12">
               {timeline.map((item, i) => (
                 <ScrollReveal key={item.year} delay={i * 0.04}>
-                  <div className="group relative grid gap-4 border-b border-border py-10 md:grid-cols-[120px_1fr]">
-                    <div className="absolute -left-[15px] top-11 hidden h-[8px] w-[8px] rounded-full bg-primary ring-2 ring-background ring-offset-1 ring-offset-primary/20 md:block" />
+                  <motion.div
+                    whileHover={{ x: 8 }}
+                    transition={{ duration: 0.3 }}
+                    className="group relative grid gap-4 border-b border-border py-10 md:grid-cols-[120px_1fr] transition-colors hover:bg-muted/10"
+                  >
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2 + i * 0.05, type: "spring", stiffness: 400 }}
+                      className="absolute -left-[15px] top-11 hidden h-[8px] w-[8px] rounded-full bg-primary ring-2 ring-background ring-offset-1 ring-offset-primary/20 md:block"
+                    />
                     <div className="font-display text-xs font-bold uppercase tracking-[0.2em] text-primary pt-1">{item.year}</div>
                     <div>
                       <h3 className="mb-2 font-display text-xl font-black uppercase tracking-tight text-foreground transition-colors group-hover:text-primary">{item.title}</h3>
                       <p className="font-display text-sm font-light leading-relaxed text-muted-foreground max-w-2xl">{item.body}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 </ScrollReveal>
               ))}
             </div>
@@ -264,9 +286,11 @@ export default function About() {
 
       {/* ── AI + UX CAPABILITIES ── */}
       <section className="py-24 border-b border-border relative">
-        <div className="absolute top-20 right-20 h-48 w-48 rounded-full bg-primary/5 blur-3xl" />
+        <FloatingOrb size={200} color="primary" x="90%" y="30%" delay={0.5} />
+        <RotatingBorder className="top-40 right-10 hidden lg:block opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
+            <LineReveal className="mb-6" />
             <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">Cutting Edge</p>
             <h2 className="text-title font-display font-black uppercase text-foreground">
               AI & UX <span className="font-editorial italic font-light text-accent-gradient">Expertise.</span>
@@ -274,7 +298,7 @@ export default function About() {
           </ScrollReveal>
           <div className="grid gap-6 md:grid-cols-2">
             <ScrollReveal direction="left">
-              <motion.div whileHover={{ y: -4 }} className="group relative overflow-hidden border border-border p-10 transition-all duration-300 hover:border-primary/50">
+              <motion.div whileHover={{ y: -6, scale: 1.01 }} className="group relative overflow-hidden border border-border p-10 transition-all duration-300 hover:border-primary/50 border-glow">
                 <div className="absolute top-0 right-0 h-32 w-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-500" />
                 <Brain size={28} className="mb-6 text-primary" />
                 <h3 className="mb-4 font-display text-2xl font-black uppercase tracking-tight text-foreground">AI Development</h3>
@@ -295,7 +319,7 @@ export default function About() {
             </ScrollReveal>
 
             <ScrollReveal direction="right">
-              <motion.div whileHover={{ y: -4 }} className="group relative overflow-hidden border border-border p-10 transition-all duration-300 hover:border-secondary/50">
+              <motion.div whileHover={{ y: -6, scale: 1.01 }} className="group relative overflow-hidden border border-border p-10 transition-all duration-300 hover:border-secondary/50 border-glow">
                 <div className="absolute top-0 right-0 h-32 w-32 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-all duration-500" />
                 <MousePointer2 size={28} className="mb-6 text-secondary" />
                 <h3 className="mb-4 font-display text-2xl font-black uppercase tracking-tight text-foreground">User Experience Design</h3>
@@ -320,9 +344,10 @@ export default function About() {
 
       {/* ── CLIENT INDUSTRIES ── */}
       <section className="bg-muted/20 py-24 relative">
-        <div className="absolute top-0 left-1/3 h-64 w-64 rounded-full bg-primary/3 blur-3xl" />
+        <FloatingOrb size={200} color="primary" x="30%" y="10%" delay={1.5} />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-12">
+            <LineReveal className="mb-6" />
             <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">Industries</p>
             <h2 className="text-title font-display font-black uppercase text-foreground">Sectors We Dominate</h2>
             <p className="mt-4 max-w-xl font-display text-sm font-light text-muted-foreground">
@@ -338,13 +363,19 @@ export default function About() {
               { name: "Financial Services", sub: "Fintech · Banking · Insurance" },
             ].map((industry) => (
               <StaggerItem key={industry.name}>
-                <div className="flex flex-col gap-2 border border-border py-6 px-6 transition-colors duration-300 hover:border-primary/40 hover:bg-primary/5 group">
+                <motion.div
+                  whileHover={{ y: -4, scale: 1.02 }}
+                  className="flex flex-col gap-2 border border-border py-6 px-6 transition-colors duration-300 hover:border-primary/40 hover:bg-primary/5 group hover-lift"
+                >
                   <div className="flex items-center gap-3">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary shrink-0 group-hover:bg-secondary transition-colors" />
+                    <motion.div
+                      whileHover={{ scale: 1.5 }}
+                      className="h-1.5 w-1.5 rounded-full bg-primary shrink-0 group-hover:bg-secondary transition-colors"
+                    />
                     <span className="font-display text-sm font-bold uppercase tracking-[0.1em] text-foreground">{industry.name}</span>
                   </div>
                   <span className="font-display text-xs font-light text-muted-foreground pl-[18px]">{industry.sub}</span>
-                </div>
+                </motion.div>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -355,8 +386,10 @@ export default function About() {
       <section className="relative overflow-hidden py-32">
         <div className="absolute inset-0 grid-lines opacity-15" />
         <div className="absolute inset-0 bg-gradient-radial from-primary/8 via-transparent to-transparent" />
+        <FloatingOrb size={400} color="primary" x="50%" y="40%" delay={0} />
         <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-12">
           <ScrollReveal>
+            <LineReveal className="mx-auto max-w-xs mb-8" />
             <h2 className="text-display font-display font-black uppercase text-foreground">
               Ready to <span className="font-editorial italic font-light text-accent-gradient">Collaborate?</span>
             </h2>
@@ -370,7 +403,7 @@ export default function About() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="group inline-flex items-center gap-4 bg-primary px-12 py-5 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue"
+                className="group inline-flex items-center gap-4 bg-primary px-12 py-5 font-display text-sm font-bold uppercase tracking-[0.15em] text-primary-foreground transition-all duration-300 hover:bg-primary/90 hover:shadow-glow-blue animate-pulse-glow"
               >
                 Start a Conversation
                 <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-2" />
