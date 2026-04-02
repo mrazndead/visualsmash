@@ -221,8 +221,8 @@ export default function About() {
           <StaggerContainer className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((v) => (
               <StaggerItem key={v.title}>
-                <motion.div whileHover={{ y: -4 }} className="group glass border border-surface-border p-8 transition-all duration-300 hover:border-primary/40">
-                  <v.icon size={20} className="mb-4 text-primary transition-colors group-hover:text-secondary" />
+                <motion.div whileHover={{ y: -6, scale: 1.02 }} className="group glass border border-surface-border p-8 transition-all duration-300 hover:border-primary/40 hover-lift border-glow">
+                  <motion.div whileHover={{ rotate: 15 }} transition={{ type: "spring", stiffness: 300 }}>
                   <h3 className="mb-3 font-display text-lg font-black uppercase tracking-tight text-foreground">{v.title}</h3>
                   <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">{v.body}</p>
                 </motion.div>
