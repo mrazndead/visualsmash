@@ -53,7 +53,7 @@ export default function About() {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden py-24 lg:py-32">
         <div className="absolute inset-0 grid-lines opacity-20" />
-        <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+        <FloatingOrb size={350} color="primary" x="85%" y="10%" delay={0} />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
