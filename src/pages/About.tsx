@@ -164,10 +164,12 @@ export default function About() {
               </div>
             </ScrollReveal>
             <StaggerContainer className="space-y-6">
-              {approach.map((a) => (
+              {approach.map((a, i) => (
                 <StaggerItem key={a.title}>
-                  <div className="group flex gap-5 p-6 border border-border transition-all duration-300 hover:border-primary/40">
-                    <a.icon size={22} className="shrink-0 text-primary mt-1 transition-colors group-hover:text-secondary" />
+                  <motion.div
+                    whileHover={{ x: 6, y: -2 }}
+                    className="group flex gap-5 p-6 border border-border transition-all duration-300 hover:border-primary/40 border-glow"
+                  >
                     <div>
                       <h4 className="mb-2 font-display text-base font-black uppercase tracking-tight text-foreground">{a.title}</h4>
                       <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">{a.body}</p>
