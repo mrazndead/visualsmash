@@ -58,8 +58,8 @@ export default function About() {
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
               <ScrollReveal>
+                <LineReveal className="mb-6" />
                 <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">About Visual Smash</p>
-              </ScrollReveal>
               <div className="overflow-hidden">
                 <motion.div
                   initial={{ y: "100%" }}
