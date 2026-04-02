@@ -184,7 +184,7 @@ export default function About() {
 
       {/* ── EXTENDED CAPABILITIES ── */}
       <section className="py-24 relative">
-        <div className="absolute top-10 right-10 h-64 w-64 rounded-full bg-secondary/5 blur-3xl" />
+        <FloatingOrb size={250} color="secondary" x="90%" y="20%" delay={1} />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
             <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">What We Bring</p>
