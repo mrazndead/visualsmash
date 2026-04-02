@@ -195,9 +195,9 @@ export default function About() {
           <StaggerContainer className="grid gap-6 md:grid-cols-2">
             {capabilities.map((c, i) => (
               <StaggerItem key={c.title}>
-                <motion.div
-                  whileHover={{ y: -4 }}
-                  className="group border border-border p-8 transition-all duration-300 hover:border-primary/40 h-full"
+                  <motion.div
+                    whileHover={{ y: -6, scale: 1.02 }}
+                    className="group border border-border p-8 transition-all duration-300 hover:border-primary/40 h-full hover-lift border-glow"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="h-1.5 w-1.5 rounded-full bg-primary group-hover:bg-secondary transition-colors" />
