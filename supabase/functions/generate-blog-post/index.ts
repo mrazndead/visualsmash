@@ -56,17 +56,17 @@ Deno.serve(async (req) => {
             },
             {
               role: "user",
-              content: `Write a blog post about "${category}" for a premium creative agency blog.
+              content: `Write an in-depth, comprehensive blog post about "${category}" for a premium creative agency blog.
 
 Return a JSON object with these exact fields:
 {
   "title": "SEO-optimized title under 70 chars",
   "excerpt": "Compelling meta description under 160 chars that includes the main keyword",
-  "content": "Full article with **bold subheadings**, multiple paragraphs separated by double newlines. At least 4 sections.",
+  "content": "Full long-form article (2400-3600 words) with **bold subheadings**, multiple paragraphs separated by double newlines. At least 8-10 sections. Include real-world examples, actionable frameworks, numbered lists, data points, expert insights, case study references, strategic recommendations, common mistakes to avoid, and a strong conclusion with next steps.",
   "readTime": "X min"
 }
 
-Make the title compelling and keyword-rich. The content should provide genuine strategic value, not generic advice. Include current year trends and data points where relevant.`,
+Make the title compelling and keyword-rich. The content should provide genuine strategic value, not generic advice. Include 2026 trends and data points. Write like a thought leader with 20+ years of experience. Cover the topic exhaustively—this should be the definitive resource on this subject.`,
             },
           ],
           response_format: { type: "json_object" },
