@@ -184,7 +184,7 @@ export default function Home() {
               className="h-px w-10 bg-primary origin-left"
             />
             <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
-              Creative Agency · Bay Area, CA
+              Creative Agency
             </span>
           </motion.div>
 
