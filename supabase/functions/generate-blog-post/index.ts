@@ -52,7 +52,7 @@ Deno.serve(async (req) => {
           messages: [
             {
               role: "system",
-              content: `You are an expert content writer for Visual Smash, a high-end creative and marketing agency. Write SEO-optimized blog posts that are authoritative, insightful, and appeal to CMOs, brand directors, and creative leads. Use bold subheadings with **markdown bold**. Write in a confident, knowledgeable tone. The post should be 800-1200 words. Return ONLY valid JSON with no markdown code fences.`,
+              content: `You are an expert content writer for Visual Smash, a high-end creative and marketing agency. Write SEO-optimized blog posts that are authoritative, insightful, and appeal to CMOs, brand directors, and creative leads. Use bold subheadings with **markdown bold**. Write in a confident, knowledgeable tone. The post should be 2400-3600 words (long-form, comprehensive). Include real-world examples, actionable frameworks, data points, case study references, and strategic recommendations. Return ONLY valid JSON with no markdown code fences.`,
             },
             {
               role: "user",
