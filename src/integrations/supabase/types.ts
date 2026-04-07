@@ -53,6 +53,51 @@ export type Database = {
         }
         Relationships: []
       }
+      site_themes: {
+        Row: {
+          active: boolean
+          created_at: string
+          font_display: string
+          font_editorial: string
+          google_fonts_url: string
+          id: string
+          primary_hue: number
+          primary_lightness: number
+          primary_saturation: number
+          secondary_hue: number
+          secondary_lightness: number
+          secondary_saturation: number
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          font_display?: string
+          font_editorial?: string
+          google_fonts_url?: string
+          id?: string
+          primary_hue?: number
+          primary_lightness?: number
+          primary_saturation?: number
+          secondary_hue?: number
+          secondary_lightness?: number
+          secondary_saturation?: number
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          font_display?: string
+          font_editorial?: string
+          google_fonts_url?: string
+          id?: string
+          primary_hue?: number
+          primary_lightness?: number
+          primary_saturation?: number
+          secondary_hue?: number
+          secondary_lightness?: number
+          secondary_saturation?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
