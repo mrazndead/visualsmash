@@ -359,6 +359,21 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── VISUAL BREAK 2 ── */}
+      <ParallaxLayer speed={0.4}>
+        <section className="relative overflow-hidden">
+          <img
+            src={metalTexture}
+            alt="Luxury metallic texture"
+            loading="lazy"
+            width={1920}
+            height={600}
+            className="w-full h-40 md:h-48 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+        </section>
+      </ParallaxLayer>
+
       {/* ── CLIENT INDUSTRIES ── */}
       <section className="bg-muted/20 py-24 relative">
         <FloatingOrb size={200} color="primary" x="30%" y="10%" delay={1.5} />

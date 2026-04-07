@@ -348,6 +348,24 @@ export default function Home() {
                 ))}
               </StaggerContainer>
             </ScrollReveal>
+
+            {/* Visual panel */}
+            <ScrollReveal direction="left" delay={0.2}>
+              <div className="relative overflow-hidden hidden lg:block">
+                <motion.img
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.6 }}
+                  src={fluidArt}
+                  alt="Creative fluid art representing our dynamic approach"
+                  loading="lazy"
+                  width={600}
+                  height={500}
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                <div className="absolute -bottom-3 -right-3 h-full w-full border border-primary/20 -z-10" />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
