@@ -26,6 +26,8 @@ import heroBg from "@/assets/hero-bg.jpg";
 import homeVisual from "@/assets/home-visual.jpg";
 import creativeBurst from "@/assets/creative-burst.jpg";
 import testimonialsBg from "@/assets/testimonials-bg.jpg";
+import fluidArt from "@/assets/fluid-art.jpg";
+import metalTexture from "@/assets/metallic-texture.jpg";
 
 const services = [
   {
