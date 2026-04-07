@@ -4,8 +4,10 @@ import { ArrowRight, Clock, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { SEO } from "@/components/SEO";
+import { FloatingOrb, LineReveal, RotatingBorder } from "@/components/AnimatedElements";
 import { supabase } from "@/integrations/supabase/client";
 import blogHero from "@/assets/blog-hero.jpg";
+import wireframeArch from "@/assets/wireframe-arch.jpg";
 
 interface BlogPost {
   id: string;
