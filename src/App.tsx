@@ -46,6 +46,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ThemeLoader />
           <ScrollToTop />
           <Navigation />
           <main>
