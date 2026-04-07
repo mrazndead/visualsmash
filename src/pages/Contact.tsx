@@ -280,6 +280,8 @@ export default function Contact() {
       <section className="relative overflow-hidden py-32">
         <div className="absolute inset-0 grid-lines opacity-15" />
         <div className="absolute inset-0 bg-gradient-radial from-primary/8 via-transparent to-transparent" />
+        <FloatingOrb size={350} color="primary" x="50%" y="30%" delay={0} />
+        <RotatingBorder className="bottom-10 right-10 hidden lg:block opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-12">
           <ScrollReveal>
             <h2 className="text-display font-display font-black uppercase text-foreground">

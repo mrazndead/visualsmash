@@ -267,8 +267,10 @@ export default function Blog() {
       )}
 
       {/* ── CTA ── */}
-      <section className="relative py-32 border-t border-border">
+      <section className="relative py-32 border-t border-border overflow-hidden">
         <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
+        <FloatingOrb size={300} color="primary" x="50%" y="30%" delay={0} />
+        <RotatingBorder className="top-10 right-10 hidden lg:block opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-12">
           <ScrollReveal>
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">

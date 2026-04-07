@@ -456,6 +456,19 @@ export default function Home() {
         </section>
       </ParallaxLayer>
 
+      {/* ── METALLIC VISUAL BAND ── */}
+      <section className="relative overflow-hidden">
+        <img
+          src={metalTexture}
+          alt="Premium metallic texture"
+          loading="lazy"
+          width={1920}
+          height={600}
+          className="w-full h-24 md:h-32 object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+      </section>
+
       {/* ── TESTIMONIALS ── */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
