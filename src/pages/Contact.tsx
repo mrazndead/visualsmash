@@ -65,6 +65,8 @@ export default function Contact() {
       {/* ── HEADER ── */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 grid-lines opacity-20" />
+        <FloatingOrb size={300} color="primary" x="80%" y="10%" delay={0} />
+        <FloatingOrb size={200} color="secondary" x="5%" y="70%" delay={2} />
         <div className="absolute top-10 right-10 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-2 items-center">
