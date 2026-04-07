@@ -8,6 +8,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { useSiteTheme } from "@/hooks/useSiteTheme";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import UseCases from "./pages/UseCases";
@@ -16,6 +17,11 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+
+const ThemeLoader = () => {
+  useSiteTheme();
+  return null;
+};
 
 const AnimatedRoutes = () => {
   const location = useLocation();
