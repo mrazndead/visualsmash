@@ -4,8 +4,10 @@ import { ArrowRight, Clock, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { SEO } from "@/components/SEO";
+import { FloatingOrb, LineReveal, RotatingBorder } from "@/components/AnimatedElements";
 import { supabase } from "@/integrations/supabase/client";
 import blogHero from "@/assets/blog-hero.jpg";
+import wireframeArch from "@/assets/wireframe-arch.jpg";
 
 interface BlogPost {
   id: string;
@@ -77,6 +79,8 @@ export default function Blog() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
         </div>
         <div className="absolute inset-0 z-[1] grid-lines opacity-20" />
+        <FloatingOrb size={300} color="primary" x="75%" y="20%" delay={0} />
+        <FloatingOrb size={200} color="secondary" x="10%" y="50%" delay={2} />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12">
           <motion.div
@@ -263,8 +267,10 @@ export default function Blog() {
       )}
 
       {/* ── CTA ── */}
-      <section className="relative py-32 border-t border-border">
+      <section className="relative py-32 border-t border-border overflow-hidden">
         <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" />
+        <FloatingOrb size={300} color="primary" x="50%" y="30%" delay={0} />
+        <RotatingBorder className="top-10 right-10 hidden lg:block opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-12">
           <ScrollReveal>
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">

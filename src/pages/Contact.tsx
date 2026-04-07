@@ -3,7 +3,9 @@ import { ArrowRight, Mail, MapPin, Clock, MessageSquare, Layers, Rocket } from "
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
+import { LineReveal, FloatingOrb, RotatingBorder } from "@/components/AnimatedElements";
 import contactVisual from "@/assets/contact-visual.jpg";
+import wireframeArch from "@/assets/wireframe-arch.jpg";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "visualsmash@gmail.com", href: "mailto:visualsmash@gmail.com" },
@@ -63,6 +65,8 @@ export default function Contact() {
       {/* ── HEADER ── */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 grid-lines opacity-20" />
+        <FloatingOrb size={300} color="primary" x="80%" y="10%" delay={0} />
+        <FloatingOrb size={200} color="secondary" x="5%" y="70%" delay={2} />
         <div className="absolute top-10 right-10 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <div className="grid gap-16 lg:grid-cols-2 items-center">
@@ -206,6 +210,8 @@ export default function Contact() {
 
       {/* ── ENGAGEMENT TYPES ── */}
       <section className="py-24 border-y border-border relative">
+        <FloatingOrb size={200} color="secondary" x="90%" y="20%" delay={1} />
+        <RotatingBorder className="top-10 left-10 hidden lg:block opacity-10" />
         <div className="absolute bottom-20 right-10 h-48 w-48 rounded-full bg-secondary/5 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
@@ -274,6 +280,8 @@ export default function Contact() {
       <section className="relative overflow-hidden py-32">
         <div className="absolute inset-0 grid-lines opacity-15" />
         <div className="absolute inset-0 bg-gradient-radial from-primary/8 via-transparent to-transparent" />
+        <FloatingOrb size={350} color="primary" x="50%" y="30%" delay={0} />
+        <RotatingBorder className="bottom-10 right-10 hidden lg:block opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-12">
           <ScrollReveal>
             <h2 className="text-display font-display font-black uppercase text-foreground">

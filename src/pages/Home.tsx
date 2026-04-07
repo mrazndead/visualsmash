@@ -26,6 +26,8 @@ import heroBg from "@/assets/hero-bg.jpg";
 import homeVisual from "@/assets/home-visual.jpg";
 import creativeBurst from "@/assets/creative-burst.jpg";
 import testimonialsBg from "@/assets/testimonials-bg.jpg";
+import fluidArt from "@/assets/fluid-art.jpg";
+import metalTexture from "@/assets/metallic-texture.jpg";
 
 const services = [
   {
@@ -346,6 +348,24 @@ export default function Home() {
                 ))}
               </StaggerContainer>
             </ScrollReveal>
+
+            {/* Visual panel */}
+            <ScrollReveal direction="left" delay={0.2}>
+              <div className="relative overflow-hidden hidden lg:block">
+                <motion.img
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.6 }}
+                  src={fluidArt}
+                  alt="Creative fluid art representing our dynamic approach"
+                  loading="lazy"
+                  width={600}
+                  height={500}
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                <div className="absolute -bottom-3 -right-3 h-full w-full border border-primary/20 -z-10" />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -435,6 +455,19 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background opacity-50" />
         </section>
       </ParallaxLayer>
+
+      {/* ── METALLIC VISUAL BAND ── */}
+      <section className="relative overflow-hidden">
+        <img
+          src={metalTexture}
+          alt="Premium metallic texture"
+          loading="lazy"
+          width={1920}
+          height={600}
+          className="w-full h-24 md:h-32 object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+      </section>
 
       {/* ── TESTIMONIALS ── */}
       <section className="py-32 relative overflow-hidden">
