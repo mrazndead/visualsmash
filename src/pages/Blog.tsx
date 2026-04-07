@@ -79,6 +79,8 @@ export default function Blog() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
         </div>
         <div className="absolute inset-0 z-[1] grid-lines opacity-20" />
+        <FloatingOrb size={300} color="primary" x="75%" y="20%" delay={0} />
+        <FloatingOrb size={200} color="secondary" x="10%" y="50%" delay={2} />
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-12">
           <motion.div
