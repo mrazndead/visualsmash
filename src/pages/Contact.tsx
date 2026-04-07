@@ -210,6 +210,8 @@ export default function Contact() {
 
       {/* ── ENGAGEMENT TYPES ── */}
       <section className="py-24 border-y border-border relative">
+        <FloatingOrb size={200} color="secondary" x="90%" y="20%" delay={1} />
+        <RotatingBorder className="top-10 left-10 hidden lg:block opacity-10" />
         <div className="absolute bottom-20 right-10 h-48 w-48 rounded-full bg-secondary/5 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <ScrollReveal className="mb-16">
