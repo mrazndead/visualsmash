@@ -242,6 +242,21 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── VISUAL BREAK ── */}
+      <ParallaxLayer speed={0.3}>
+        <section className="relative overflow-hidden">
+          <img
+            src={abstractGlass}
+            alt="Abstract crystalline shapes"
+            loading="lazy"
+            width={1280}
+            height={720}
+            className="w-full h-40 md:h-56 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+        </section>
+      </ParallaxLayer>
+
       {/* ── TIMELINE ── */}
       <section className="py-32 border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
