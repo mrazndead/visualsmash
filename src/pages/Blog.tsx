@@ -59,7 +59,7 @@ export default function Blog() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <SEO
         title="Blog – Visual Smash | AI Design, Branding & Creative Insights"
         description="Expert insights on AI-powered design, branding strategy, UX psychology, marketing automation, and the future of creative technology from Visual Smash."
