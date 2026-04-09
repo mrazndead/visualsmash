@@ -14,6 +14,7 @@ import About from "./pages/About";
 import UseCases from "./pages/UseCases";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
