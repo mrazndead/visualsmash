@@ -45,7 +45,7 @@ const capabilities = [
 
 export default function About() {
   return (
-    <div className="pt-24">
+    <div className="pt-24 overflow-x-hidden">
       <SEO
         title="About"
         description="Visual Smash is a boutique creative agency founded in 2004. 20+ years of Fortune 500 brand design, UX strategy, and AI-powered creative direction from the San Francisco Bay Area."

@@ -55,7 +55,7 @@ const faqs = [
 
 export default function Contact() {
   return (
-    <div className="pt-24">
+    <div className="pt-24 overflow-x-hidden">
       <SEO
         title="Contact"
         description="Get in touch with Visual Smash. We're a selective creative agency accepting 2-3 new clients per quarter. Let's discuss your next project."
