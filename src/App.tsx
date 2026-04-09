@@ -34,6 +34,7 @@ const AnimatedRoutes = () => {
         <Route path="/use-cases" element={<UseCases />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </PageTransition>
