@@ -87,6 +87,15 @@
     overflow-x: hidden;
   }
 
+  /* Hide scrollbar for filter strips */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
   ::selection {
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));

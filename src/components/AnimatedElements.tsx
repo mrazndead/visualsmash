@@ -126,7 +126,7 @@ export const ParallaxLayer = ({
   );
 };
 
-/** Floating decorative orb */
+/** Floating decorative orb — hidden on small screens to prevent overflow */
 export const FloatingOrb = ({
   size = 200,
   color = "primary",
@@ -144,7 +144,7 @@ export const FloatingOrb = ({
 
   return (
     <motion.div
-      className={`absolute rounded-full ${colorClass} blur-3xl pointer-events-none`}
+      className={`absolute rounded-full ${colorClass} blur-3xl pointer-events-none hidden md:block`}
       style={{ width: size, height: size, left: x, top: y }}
       animate={{
         y: [0, -20, 0],

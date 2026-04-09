@@ -45,7 +45,7 @@ const capabilities = [
 
 export default function About() {
   return (
-    <div className="pt-24">
+    <div className="pt-24 overflow-x-hidden">
       <SEO
         title="About"
         description="Visual Smash is a boutique creative agency founded in 2004. 20+ years of Fortune 500 brand design, UX strategy, and AI-powered creative direction from the San Francisco Bay Area."
@@ -121,16 +121,16 @@ export default function About() {
                     height={1000}
                     className="w-full object-cover"
                   />
-                  <div className="absolute -bottom-3 -right-3 h-full w-full border border-primary/30 -z-10" />
+                  <div className="absolute bottom-0 right-0 md:-bottom-3 md:-right-3 h-full w-full border border-primary/30 -z-10" />
                 </div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
-                  className="absolute -bottom-6 -left-6 glass border border-surface-border p-6 shadow-glass"
+                  className="absolute bottom-2 left-2 md:-bottom-6 md:-left-6 glass border border-surface-border p-4 md:p-6 shadow-glass"
                 >
                   <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">Founded</p>
-                  <p className="font-display text-3xl font-black text-foreground">2004</p>
+                  <p className="font-display text-2xl md:text-3xl font-black text-foreground">2004</p>
                   <p className="mt-1 font-display text-xs text-muted-foreground">Bay Area · California</p>
                 </motion.div>
               </div>

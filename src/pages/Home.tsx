@@ -136,7 +136,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative">
+    <div ref={containerRef} className="relative overflow-x-hidden">
       <SEO
         title="Visual Smash – Bay Area Creative Agency"
         description="Award-winning creative agency in Northern California. 20+ years of brand design, UX, AI-powered creative, and marketing for Fortune 500 companies and ambitious startups."
