@@ -57,6 +57,14 @@ const Portfolio = () => {
         title="Design Portfolio"
         description="Explore Visual Smash's design portfolio featuring brand identity, catalog design, advertising, web design, and creative direction for major brands."
         canonical="https://visualsmash.lovable.app/portfolio"
+        keywords="design portfolio, brand identity portfolio, catalog design, advertising design, creative direction, Visual Smash work"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Visual Smash Design Portfolio",
+          "description": "A curated collection of brand identities, catalog systems, advertising campaigns, and digital experiences.",
+          "url": "https://visualsmash.lovable.app/portfolio"
+        }}
       />
 
       {/* Hero */}
@@ -197,7 +205,7 @@ const Portfolio = () => {
           </ScrollReveal>
 
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {["Stetson", "Tommy Bahama", "Panama Jack", "Stacy Adams", "Scala Pro", "Christys' London", "Dorfman Pacific", "Sinatra Collection"].map((brand) => (
+            {["Stetson", "Tommy Bahama", "Panama Jack", "Stacy Adams", "Scala Pro", "Christys' London", "Dorfman Pacific", "Sinatra Collection", "Renovo Communities", "Lyon Investments", "Zelman Development", "AGS", "ROME", "Digital Risk", "ABB", "Modesto Symphony"].map((brand) => (
               <StaggerItem key={brand}>
                 <div className="group p-6 border border-border text-center transition-all duration-300 hover:border-primary/30 hover:bg-primary/5">
                   <span className="font-display text-sm font-bold uppercase tracking-[0.1em] text-muted-foreground group-hover:text-foreground transition-colors">
