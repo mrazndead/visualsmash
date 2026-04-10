@@ -218,6 +218,52 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Web Work */}
+      <section className="py-24 md:py-32 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4 block">
+                Live Projects
+              </span>
+              <h2 className="text-title text-foreground">
+                Web <span className="text-accent-gradient">Work</span>
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: "Husker Home 1040", url: "https://huskerhome1040.com/" },
+              { name: "AC Testing", url: "https://actesting.com/" },
+              { name: "Beakr Winery", url: "https://beakrwinery.com/" },
+              { name: "Amaara Networks", url: "https://www.amaaranetworks.com/" },
+              { name: "Toro Performance", url: "https://www.toroperformance.net/" },
+              { name: "B-A-C", url: "https://b-a-c.com/" },
+              { name: "HBI", url: "https://www.hbi.la/" },
+            ].map((site) => (
+              <StaggerItem key={site.name}>
+                <a href={site.url} target="_blank" rel="noopener noreferrer">
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    className="group relative p-8 border border-border bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-primary/30"
+                  >
+                    <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-primary/0 via-primary/40 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <Monitor className="w-8 h-8 text-primary mb-4" strokeWidth={1.5} />
+                    <h3 className="font-display text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      {site.name}
+                    </h3>
+                    <span className="inline-flex items-center gap-1.5 font-display text-xs font-semibold uppercase tracking-wider text-muted-foreground group-hover:text-primary transition-colors">
+                      Visit Site <ExternalLink size={12} />
+                    </span>
+                  </motion.div>
+                </a>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-6 lg:px-12 text-center">
