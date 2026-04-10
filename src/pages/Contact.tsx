@@ -60,6 +60,16 @@ export default function Contact() {
         title="Contact"
         description="Get in touch with Visual Smash. We're a selective creative agency accepting 2-3 new clients per quarter. Let's discuss your next project."
         canonical="https://visualsmash.lovable.app/contact"
+        keywords="contact Visual Smash, hire creative agency, design consultation, brand project inquiry"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Visual Smash",
+          "description": "Get in touch to discuss your next creative project.",
+          "url": "https://visualsmash.lovable.app/contact"
+        }}
+      />
+        canonical="https://visualsmash.lovable.app/contact"
       />
 
       {/* ── HEADER ── */}

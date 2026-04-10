@@ -141,6 +141,22 @@ export default function Home() {
         title="Visual Smash – Bay Area Creative Agency"
         description="Award-winning creative agency in Northern California. 20+ years of brand design, UX, AI-powered creative, and marketing for Fortune 500 companies and ambitious startups."
         canonical="https://visualsmash.lovable.app"
+        keywords="creative agency, brand design, UX design, AI design, Bay Area, San Francisco, graphic design, web design, marketing"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Visual Smash",
+          "description": "Award-winning creative agency specializing in brand design, UX, AI-powered creative, and marketing.",
+          "url": "https://visualsmash.lovable.app",
+          "areaServed": "San Francisco Bay Area, California",
+          "priceRange": "$$$$",
+          "address": { "@type": "PostalAddress", "addressLocality": "San Francisco Bay Area", "addressRegion": "CA", "addressCountry": "US" },
+          "sameAs": [],
+          "serviceType": ["Brand Identity", "UX Design", "AI-Powered Creative", "Web Design", "Marketing"],
+          "foundingDate": "2004"
+        }}
+      />
+        canonical="https://visualsmash.lovable.app"
       />
 
       {/* ── HERO ── */}

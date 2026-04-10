@@ -126,6 +126,16 @@ export default function UseCases() {
         title="Use Cases"
         description="Explore our eight core disciplines: graphic design, technical marketing, UX design, branding, marketing automation, prompt engineering, web design, and AI-powered software design."
         canonical="https://visualsmash.lovable.app/use-cases"
+        keywords="graphic design, UX design, branding, marketing automation, AI software design, web design, prompt engineering, technical marketing"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Visual Smash Use Cases",
+          "description": "Eight core creative disciplines from graphic design to AI-powered software.",
+          "url": "https://visualsmash.lovable.app/use-cases"
+        }}
+      />
+        canonical="https://visualsmash.lovable.app/use-cases"
       />
 
       {/* ── HERO ── */}

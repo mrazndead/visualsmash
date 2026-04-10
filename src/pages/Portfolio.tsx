@@ -57,6 +57,15 @@ const Portfolio = () => {
         title="Design Portfolio"
         description="Explore Visual Smash's design portfolio featuring brand identity, catalog design, advertising, web design, and creative direction for major brands."
         canonical="https://visualsmash.lovable.app/portfolio"
+        keywords="design portfolio, brand identity portfolio, catalog design, advertising design, creative direction, Visual Smash work"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Visual Smash Design Portfolio",
+          "description": "A curated collection of brand identities, catalog systems, advertising campaigns, and digital experiences.",
+          "url": "https://visualsmash.lovable.app/portfolio"
+        }}
+      />
       />
 
       {/* Hero */}

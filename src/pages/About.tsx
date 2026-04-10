@@ -50,6 +50,17 @@ export default function About() {
         title="About"
         description="Visual Smash is a boutique creative agency founded in 2004. 20+ years of Fortune 500 brand design, UX strategy, and AI-powered creative direction from the San Francisco Bay Area."
         canonical="https://visualsmash.lovable.app/about"
+        keywords="about Visual Smash, creative agency history, brand design experience, Fortune 500 design, Bay Area agency"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Visual Smash",
+          "description": "Boutique creative agency founded in 2004 with 20+ years of Fortune 500 brand design and AI-powered creative direction.",
+          "url": "https://visualsmash.lovable.app/about",
+          "mainEntity": { "@type": "Organization", "name": "Visual Smash", "foundingDate": "2004", "areaServed": "San Francisco Bay Area" }
+        }}
+      />
+        canonical="https://visualsmash.lovable.app/about"
       />
 
       {/* ── HERO ── */}
