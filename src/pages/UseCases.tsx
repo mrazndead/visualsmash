@@ -135,8 +135,6 @@ export default function UseCases() {
           "url": "https://visualsmash.lovable.app/use-cases"
         }}
       />
-        canonical="https://visualsmash.lovable.app/use-cases"
-      />
 
       {/* ── HERO ── */}
       <section ref={heroRef} className="relative overflow-hidden py-24 lg:py-32">

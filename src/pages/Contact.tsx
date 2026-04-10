@@ -69,8 +69,6 @@ export default function Contact() {
           "url": "https://visualsmash.lovable.app/contact"
         }}
       />
-        canonical="https://visualsmash.lovable.app/contact"
-      />
 
       {/* ── HEADER ── */}
       <section className="relative py-24 overflow-hidden">

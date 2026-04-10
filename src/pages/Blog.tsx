@@ -74,8 +74,6 @@ export default function Blog() {
           "publisher": { "@type": "Organization", "name": "Visual Smash" }
         }}
       />
-        canonical="https://visualsmash.lovable.app/blog"
-      />
 
       {/* ── HERO ── */}
       <section className="relative flex min-h-[60vh] flex-col justify-end overflow-hidden pb-16 pt-40">

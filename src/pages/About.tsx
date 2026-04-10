@@ -60,8 +60,6 @@ export default function About() {
           "mainEntity": { "@type": "Organization", "name": "Visual Smash", "foundingDate": "2004", "areaServed": "San Francisco Bay Area" }
         }}
       />
-        canonical="https://visualsmash.lovable.app/about"
-      />
 
       {/* ── HERO ── */}
       <section className="relative overflow-hidden py-24 lg:py-32">

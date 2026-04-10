@@ -156,8 +156,6 @@ export default function Home() {
           "foundingDate": "2004"
         }}
       />
-        canonical="https://visualsmash.lovable.app"
-      />
 
       {/* ── HERO ── */}
       <section
