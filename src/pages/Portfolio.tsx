@@ -66,7 +66,6 @@ const Portfolio = () => {
           "url": "https://visualsmash.lovable.app/portfolio"
         }}
       />
-      />
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
