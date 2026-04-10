@@ -90,21 +90,25 @@ const Portfolio = () => {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
-            <a
-              href="/portfolio/visual-smash-design-portfolio.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(59,130,246,0.3)" }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 transition-all duration-300 hover:bg-primary/90"
-              >
-                <Download size={18} />
-                Download Full Portfolio
-                <ExternalLink size={14} className="opacity-60" />
-              </motion.button>
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              {[
+                { label: "Full Portfolio", href: "/portfolio/visual-smash-design-portfolio.pdf" },
+                { label: "Architecture", href: "/portfolio/architecture.pdf" },
+                { label: "Rome", href: "/portfolio/rome.pdf" },
+              ].map((pdf) => (
+                <a key={pdf.label} href={pdf.href} target="_blank" rel="noopener noreferrer">
+                  <motion.button
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(59,130,246,0.3)" }}
+                    whileTap={{ scale: 0.95 }}
+                    className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4 transition-all duration-300 hover:bg-primary/90"
+                  >
+                    <Download size={18} />
+                    {pdf.label}
+                    <ExternalLink size={14} className="opacity-60" />
+                  </motion.button>
+                </a>
+              ))}
+            </div>
           </ScrollReveal>
         </div>
 
@@ -216,21 +220,23 @@ const Portfolio = () => {
             <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
               Download the full portfolio PDF for an in-depth look at our creative process, design systems, and campaign results.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="/portfolio/visual-smash-design-portfolio.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4"
-                >
-                  <Download size={18} />
-                  Download Portfolio PDF
-                </motion.button>
-              </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
+              {[
+                { label: "Full Portfolio", href: "/portfolio/visual-smash-design-portfolio.pdf" },
+                { label: "Architecture", href: "/portfolio/architecture.pdf" },
+                { label: "Rome", href: "/portfolio/rome.pdf" },
+              ].map((pdf) => (
+                <a key={pdf.label} href={pdf.href} target="_blank" rel="noopener noreferrer">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="inline-flex items-center gap-3 font-display text-sm font-bold uppercase tracking-[0.15em] bg-primary text-primary-foreground px-8 py-4"
+                  >
+                    <Download size={18} />
+                    {pdf.label}
+                  </motion.button>
+                </a>
+              ))}
               <a href="/contact">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
