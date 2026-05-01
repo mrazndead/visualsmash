@@ -134,6 +134,29 @@ const whyUs = [
   "Boutique attention with enterprise-grade results",
 ];
 
+const homeFaqs = [
+  {
+    q: "What does Visual Smash do?",
+    a: "Visual Smash is a Bay Area creative agency offering brand identity, UX design, web design, AI-powered creative, marketing automation, Microsoft Power Automate workflows, and AI agents built with Microsoft 365 Copilot Studio.",
+  },
+  {
+    q: "Where is Visual Smash located?",
+    a: "We're based in the San Francisco Bay Area, California, and work with clients across the United States and globally.",
+  },
+  {
+    q: "Who are your typical clients?",
+    a: "We partner with Fortune 500 companies, growth-stage startups, luxury real estate developers, fashion and retail brands, and enterprise technology teams.",
+  },
+  {
+    q: "How does AI fit into your creative process?",
+    a: "AI is a force multiplier in our workflow. We use generative tools, custom GPTs, and prompt engineering pipelines to accelerate concepting, scale content, and run automated quality checks—while every output is refined by senior creatives.",
+  },
+  {
+    q: "How do I start a project with Visual Smash?",
+    a: "Email visualsmash@gmail.com or visit our Contact page. We schedule a 30-minute discovery call within 48 hours and follow up with a tailored proposal covering scope, timeline, and investment.",
+  },
+];
+
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -158,16 +181,27 @@ export default function Home() {
         keywords="creative agency, brand design, UX design, AI design, Bay Area, San Francisco, graphic design, web design, marketing"
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          "name": "Visual Smash",
-          "description": "Award-winning creative agency specializing in brand design, UX, AI-powered creative, and marketing.",
-          "url": "https://visualsmash.lovable.app",
-          "areaServed": "San Francisco Bay Area, California",
-          "priceRange": "$$$$",
-          "address": { "@type": "PostalAddress", "addressLocality": "San Francisco Bay Area", "addressRegion": "CA", "addressCountry": "US" },
-          "sameAs": [],
-          "serviceType": ["Brand Identity", "UX Design", "AI-Powered Creative", "Web Design", "Marketing"],
-          "foundingDate": "2004"
+          "@graph": [
+            {
+              "@type": "ProfessionalService",
+              "name": "Visual Smash",
+              "description": "Award-winning creative agency specializing in brand design, UX, AI-powered creative, and marketing.",
+              "url": "https://visualsmash.lovable.app",
+              "areaServed": "San Francisco Bay Area, California",
+              "priceRange": "$$$$",
+              "address": { "@type": "PostalAddress", "addressLocality": "San Francisco Bay Area", "addressRegion": "CA", "addressCountry": "US" },
+              "serviceType": ["Brand Identity", "UX Design", "AI-Powered Creative", "Web Design", "Marketing"],
+              "foundingDate": "2004"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": homeFaqs.map((f) => ({
+                "@type": "Question",
+                "name": f.q,
+                "acceptedAnswer": { "@type": "Answer", "text": f.a }
+              }))
+            }
+          ]
         }}
       />
 
