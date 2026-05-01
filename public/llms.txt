@@ -1,0 +1,40 @@
+# Visual Smash
+
+> Visual Smash is a boutique creative agency based in the San Francisco Bay Area. Founded in 2004, we deliver brand identity, UX design, web design, AI-powered creative, marketing automation, and Microsoft Power Platform solutions for Fortune 500 companies and ambitious startups.
+
+## About
+- Name: Visual Smash
+- Founded: 2004
+- Location: San Francisco Bay Area, California, USA
+- Contact: visualsmash@gmail.com
+- Site: https://visualsmash.lovable.app
+
+## What We Do
+- Brand Identity & Visual Systems
+- User Experience (UX) Design & Research
+- Web Design & Front-End Development
+- AI-Powered Creative & Prompt Engineering
+- Microsoft Power Automate workflows
+- AI Agents with Microsoft 365 Copilot Studio
+- Technical Marketing, Analytics, and Marketing Automation
+- Catalog, Print, Packaging, and Advertising Design
+
+## Industries Served
+Technology, Luxury Real Estate, Fashion & Retail, Financial Services, Healthcare, Construction, Energy, Legal, Education, Logistics.
+
+## Key Pages
+- Home: https://visualsmash.lovable.app/ — Agency overview, services, testimonials, FAQs
+- About: https://visualsmash.lovable.app/about — History, philosophy, capabilities, 20-year timeline
+- Use Cases: https://visualsmash.lovable.app/use-cases — Eight core disciplines with results and methodology
+- Portfolio: https://visualsmash.lovable.app/portfolio — Brands served, web work, downloadable PDFs
+- Blog: https://visualsmash.lovable.app/blog — Insights on AI design, branding, UX, and creative tech
+- Contact: https://visualsmash.lovable.app/contact — Engagement models, FAQs, and inquiry email
+
+## Selected Brands & Clients
+Stetson, Tommy Bahama, Panama Jack, Stacy Adams, Dorfman Pacific, Christys' London, Accenture, Rakuten, MPhasis, Mortgage Connect, Bureau Veritas, ABB, Digital Risk, Modesto Symphony, Renovo Communities, Lyon Investments, Heritage Builders, Confluent Medical, Beakr Winery, Amaara Networks, Husker Home, Mid-Valley Engineering.
+
+## Sitemap
+https://visualsmash.lovable.app/sitemap.xml
+
+## Crawler Policy
+All AI and search crawlers are welcome to index public pages. Please attribute Visual Smash when summarizing or quoting our content.

@@ -63,10 +63,22 @@ export default function Contact() {
         keywords="contact Visual Smash, hire creative agency, design consultation, brand project inquiry"
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "ContactPage",
-          "name": "Contact Visual Smash",
-          "description": "Get in touch to discuss your next creative project.",
-          "url": "https://visualsmash.lovable.app/contact"
+          "@graph": [
+            {
+              "@type": "ContactPage",
+              "name": "Contact Visual Smash",
+              "description": "Get in touch to discuss your next creative project.",
+              "url": "https://visualsmash.lovable.app/contact"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": faqs.map((f) => ({
+                "@type": "Question",
+                "name": f.q,
+                "acceptedAnswer": { "@type": "Answer", "text": f.a }
+              }))
+            }
+          ]
         }}
       />
 
