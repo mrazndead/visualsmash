@@ -19,4 +19,20 @@ export default defineConfig(({ mode }) => ({
     },
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
   },
+  build: {
+    target: "es2020",
+    cssCodeSplit: true,
+    sourcemap: false,
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "motion": ["framer-motion", "lenis"],
+          "ui-vendor": ["lucide-react", "react-helmet-async"],
+          "supabase": ["@supabase/supabase-js"],
+        },
+      },
+    },
+  },
 }));
