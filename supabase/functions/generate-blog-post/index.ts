@@ -43,7 +43,7 @@ Deno.serve(async (req) => {
 
     // Generate blog post with AI
     const aiResponse = await fetch(
-      "https://ai-gateway.lovable.dev/api/chat/completions",
+      "https://ai.gateway.lovable.dev/v1/chat/completions",
       {
         method: "POST",
         headers: {
