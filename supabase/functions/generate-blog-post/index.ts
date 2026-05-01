@@ -2,13 +2,16 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.100.1";
 import { corsHeaders } from "https://esm.sh/@supabase/supabase-js@2.95.0/cors";
 
 const categories = [
-  "Traffic Design",
+  "Brand Identity",
   "Web Design",
-  "Marketing",
-  "Branding",
-  "AI Software Development",
-  "Graphic Design",
   "UX Design",
+  "AI-Powered Creative",
+  "Microsoft Power Automate",
+  "AI Agents with Microsoft 365 Copilot",
+  "Marketing Automation",
+  "Graphic Design",
+  "Catalog & Print Design",
+  "Technical Marketing & Analytics",
 ];
 
 Deno.serve(async (req) => {
@@ -40,7 +43,7 @@ Deno.serve(async (req) => {
 
     // Generate blog post with AI
     const aiResponse = await fetch(
-      "https://ai-gateway.lovable.dev/api/chat/completions",
+      "https://ai.gateway.lovable.dev/v1/chat/completions",
       {
         method: "POST",
         headers: {
