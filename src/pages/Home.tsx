@@ -665,6 +665,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FAQ ── */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-5xl px-6 lg:px-12">
+          <ScrollReveal className="mb-12">
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Common Questions
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Frequently Asked{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Questions.</span>
+            </h2>
+          </ScrollReveal>
+          <div className="divide-y divide-border">
+            {homeFaqs.map((faq, i) => (
+              <ScrollReveal key={faq.q} delay={i * 0.05}>
+                <div className="py-6">
+                  <h3 className="font-display text-base md:text-lg font-bold text-foreground mb-2">
+                    {faq.q}
+                  </h3>
+                  <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">
+                    {faq.a}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA BAND ── */}
       <section className="relative overflow-hidden py-40">
         <div className="absolute inset-0 grid-lines opacity-20" />
