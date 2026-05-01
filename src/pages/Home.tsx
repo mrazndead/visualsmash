@@ -65,6 +65,20 @@ const services = [
       "Strategic vision from a 20-year veteran of Fortune 500 campaigns. We don't follow trends—we set them.",
     icon: Award,
   },
+  {
+    number: "06",
+    title: "Microsoft Power Automate",
+    description:
+      "Streamline workflows and eliminate repetitive tasks with Microsoft Power Automate—custom flows that connect your apps, data, and teams.",
+    icon: Workflow,
+  },
+  {
+    number: "07",
+    title: "AI Agents with Microsoft 365",
+    description:
+      "Build intelligent AI agents for your business using Microsoft 365 Copilot Studio—automate decisions, surface insights, and scale productivity.",
+    icon: Brain,
+  },
 ];
 
 const useCasePreview = [
