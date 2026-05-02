@@ -5,9 +5,9 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/Scroll
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
 import { LineReveal, FloatingOrb, RotatingBorder, ParallaxLayer } from "@/components/AnimatedElements";
-import aboutPortrait from "@/assets/about-portrait.jpg";
-import abstractGlass from "@/assets/abstract-glass.jpg";
-import metalTexture from "@/assets/metallic-texture.jpg";
+import aboutPortrait from "@/assets/about-portrait.webp";
+import abstractGlass from "@/assets/abstract-glass.webp";
+import metalTexture from "@/assets/metallic-texture.webp";
 
 const timeline = [
   { year: "2004", title: "The Genesis", body: "Started in San Francisco's tech scene, shaping brands for emerging companies during the dot-com renaissance. Cut teeth on high-stakes product launches and built a reputation for creative work that actually moved the needle." },

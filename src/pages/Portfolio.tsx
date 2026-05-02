@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Download, ExternalLink, ArrowRight, Palette, Layout, Megaphone, Globe, Layers, Sparkles, Monitor } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
-import portfolioHero from "@/assets/portfolio-hero.jpg";
+import portfolioHero from "@/assets/portfolio-hero.webp";
 
 const disciplines = [
   {

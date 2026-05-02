@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import { SEO } from "@/components/SEO";
 import { LineReveal, FloatingOrb, ParallaxLayer, MaskReveal, RotatingBorder } from "@/components/AnimatedElements";
-import usecasesVisual from "@/assets/usecases-visual.jpg";
-import abstractGlass from "@/assets/abstract-glass.jpg";
-import holographicUi from "@/assets/holographic-ui.jpg";
-import fluidArt from "@/assets/fluid-art.jpg";
-import wireframeArch from "@/assets/wireframe-arch.jpg";
+import usecasesVisual from "@/assets/usecases-visual.webp";
+import abstractGlass from "@/assets/abstract-glass.webp";
+import holographicUi from "@/assets/holographic-ui.webp";
+import fluidArt from "@/assets/fluid-art.webp";
+import wireframeArch from "@/assets/wireframe-arch.webp";
 
 const useCases = [
   {

@@ -22,12 +22,12 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/Scroll
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
 import { LineReveal, FloatingOrb, ParallaxLayer, MaskReveal, RotatingBorder } from "@/components/AnimatedElements";
-import heroBg from "@/assets/hero-bg.jpg";
-import homeVisual from "@/assets/home-visual.jpg";
-import creativeBurst from "@/assets/creative-burst.jpg";
-import testimonialsBg from "@/assets/testimonials-bg.jpg";
-import fluidArt from "@/assets/fluid-art.jpg";
-import metalTexture from "@/assets/metallic-texture.jpg";
+import heroBg from "@/assets/hero-bg.webp";
+import homeVisual from "@/assets/home-visual.webp";
+import creativeBurst from "@/assets/creative-burst.webp";
+import testimonialsBg from "@/assets/testimonials-bg.webp";
+import fluidArt from "@/assets/fluid-art.webp";
+import metalTexture from "@/assets/metallic-texture.webp";
 
 const services = [
   {

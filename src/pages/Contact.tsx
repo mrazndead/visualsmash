@@ -4,8 +4,8 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/Scroll
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
 import { LineReveal, FloatingOrb, RotatingBorder } from "@/components/AnimatedElements";
-import contactVisual from "@/assets/contact-visual.jpg";
-import wireframeArch from "@/assets/wireframe-arch.jpg";
+import contactVisual from "@/assets/contact-visual.webp";
+import wireframeArch from "@/assets/wireframe-arch.webp";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "visualsmash@gmail.com", href: "mailto:visualsmash@gmail.com" },
