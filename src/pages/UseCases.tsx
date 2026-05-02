@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import {
   Palette, BarChart3, MousePointer2, Fingerprint,
-  Workflow, Sparkles, Globe, Cpu, ArrowRight, CheckCircle2,
+  Workflow, Sparkles, Globe, Cpu, ArrowRight, CheckCircle2, Brain,
   TrendingUp, Users, Lightbulb, Layers,
 } from "lucide-react";
 import { Link } from "react-router-dom";
