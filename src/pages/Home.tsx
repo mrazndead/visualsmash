@@ -360,7 +360,7 @@ export default function Home() {
           <img
             src={homeVisual}
             alt="Abstract creative energy"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1280}
             height={720}
             className="w-full h-48 md:h-64 object-cover"
@@ -421,7 +421,7 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   src={fluidArt}
                   alt="Creative fluid art representing our dynamic approach"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                   width={600}
                   height={500}
                   className="w-full h-[400px] object-cover"
@@ -510,7 +510,7 @@ export default function Home() {
           <img
             src={creativeBurst}
             alt="Creative energy explosion"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1280}
             height={720}
             className="w-full h-40 md:h-56 object-cover"
@@ -525,7 +525,7 @@ export default function Home() {
         <img
           src={metalTexture}
           alt="Premium metallic texture"
-          loading="lazy"
+          loading="lazy" decoding="async"
           width={1920}
           height={600}
           className="w-full h-24 md:h-32 object-cover opacity-60"
@@ -539,7 +539,7 @@ export default function Home() {
           <img
             src={testimonialsBg}
             alt=""
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1920}
             height={1080}
             className="h-full w-full object-cover opacity-20"

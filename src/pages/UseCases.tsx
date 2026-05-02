@@ -177,7 +177,7 @@ export default function UseCases() {
           <img
             src={usecasesVisual}
             alt="Abstract 3D shapes representing our creative capabilities"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1280}
             height={600}
             className="w-full h-48 md:h-64 object-cover"
@@ -272,7 +272,7 @@ export default function UseCases() {
                         transition={{ duration: 0.6 }}
                         src={uc.image}
                         alt={`${uc.title} visual`}
-                        loading="lazy"
+                        loading="lazy" decoding="async"
                         width={300}
                         height={400}
                         className="h-full w-full object-cover"
@@ -293,7 +293,7 @@ export default function UseCases() {
           <img
             src={abstractGlass}
             alt="Abstract crystalline creative visual"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1280}
             height={720}
             className="w-full h-48 md:h-64 object-cover"

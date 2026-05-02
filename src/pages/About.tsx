@@ -125,7 +125,7 @@ export default function About() {
                     transition={{ duration: 0.6 }}
                     src={aboutPortrait}
                     alt="Visual Smash abstract creative"
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                     width={800}
                     height={1000}
                     className="w-full object-cover"
@@ -257,7 +257,7 @@ export default function About() {
           <img
             src={abstractGlass}
             alt="Abstract crystalline shapes"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1280}
             height={720}
             className="w-full h-40 md:h-56 object-cover"
@@ -374,7 +374,7 @@ export default function About() {
           <img
             src={metalTexture}
             alt="Luxury metallic texture"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1920}
             height={600}
             className="w-full h-40 md:h-48 object-cover"

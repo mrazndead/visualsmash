@@ -126,7 +126,7 @@ export default function Contact() {
                 <img
                   src={contactVisual}
                   alt="Abstract creative visual"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                   width={800}
                   height={1000}
                   className="w-full h-80 object-cover"
