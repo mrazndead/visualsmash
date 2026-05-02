@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import {
   Palette, BarChart3, MousePointer2, Fingerprint,
-  Workflow, Sparkles, Globe, Cpu, ArrowRight, CheckCircle2,
+  Workflow, Sparkles, Globe, Cpu, ArrowRight, CheckCircle2, Brain,
   TrendingUp, Users, Lightbulb, Layers,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -104,6 +104,39 @@ const useCases = [
     accent: "secondary" as const,
     image: holographicUi,
   },
+  {
+    icon: Workflow, number: "09", title: "Email Marketing Automation",
+    tagline: "Inboxes That Print Revenue.",
+    body: "We design, build, and optimize end-to-end email marketing programs—platform setup, audience segmentation, lifecycle flows, and creative that turns subscribers into customers and customers into advocates.",
+    extended: "From welcome series and abandoned-cart recovery to win-back campaigns and VIP loyalty tracks, we engineer email programs across Klaviyo, HubSpot, Mailchimp, Customer.io, Iterable, and Braze. Every send is grounded in segmentation logic, deliverability hygiene, and creative that actually gets opened.",
+    deepDive: "Our email marketing practice combines deliverability engineering, behavioral segmentation, and editorial-grade creative. We architect SPF/DKIM/DMARC infrastructure, warm dedicated sending IPs, and build dynamic content blocks that personalize at scale. We design AMP-for-email experiences, interactive carousels, and dark-mode-perfect templates. Our reporting dashboards track revenue per recipient, list health, and incremental lift—so every campaign learns from the last.",
+    results: ["38% average open rate (industry avg: 21%)", "5.2x revenue per email vs. previous baseline", "Deliverability rates sustained above 98%"],
+    tags: ["Lifecycle Flows", "Segmentation", "Deliverability", "A/B Testing", "Klaviyo & HubSpot", "Template Design", "Revenue Reporting"],
+    accent: "primary" as const,
+    image: holographicUi,
+  },
+  {
+    icon: Sparkles, number: "10", title: "Product Launch Content & Collateral",
+    tagline: "Launches Engineered for Liftoff.",
+    body: "Content writing and creative collateral built specifically for product launches—messaging frameworks, sales decks, one-pagers, landing pages, demo scripts, and campaign assets that align teams and convert audiences from day one.",
+    extended: "We've launched products for Series B startups, Fortune 500 enterprises, and luxury consumer brands. Our launch packages include positioning narratives, press materials, sales enablement collateral, internal comms, and the full creative campaign system—coordinated so marketing, sales, and product speak with one voice.",
+    deepDive: "Our launch practice integrates strategic copywriting, brand storytelling, and production design. We run messaging workshops to extract category-defining narratives, then translate them across every surface: investor decks, analyst briefings, paid media, organic social, video scripts, email sequences, and sales playbooks. We've shipped launch kits with 80+ deliverables in under six weeks—each piece tonally consistent, on-brand, and ready for global rollout.",
+    results: ["Average 4.6x pipeline lift in launch quarter", "Press coverage in 28+ tier-1 publications per launch", "Sales-team adoption of new collateral within 7 days"],
+    tags: ["Messaging Strategy", "Sales Decks", "Landing Pages", "PR & Press Kits", "Demo Scripts", "Campaign Creative", "Launch Playbooks"],
+    accent: "secondary" as const,
+    image: fluidArt,
+  },
+  {
+    icon: Brain, number: "11", title: "AI Brain Development for Small Business",
+    tagline: "Your Digital Consultant, On-Brand 24/7.",
+    body: "We build your AI Brain—a private digital consultant trained on your company's content, brand guidelines, processes, and product knowledge. Your team asks questions, drafts content, and makes decisions with an AI that actually knows your business.",
+    extended: "An AI Brain is more than a chatbot. It's a curated knowledge system grounded in your brand voice, sales playbooks, customer FAQs, technical documentation, and historical creative—so every output sounds like you, follows your guidelines, and respects your context. Visual Smash designs the data architecture, ingests your sources, tunes the retrieval, and ships a secure interface your team can use day one.",
+    deepDive: "We architect AI Brains using retrieval-augmented generation (RAG), vector databases, and brand-aware prompt frameworks. We ingest brand books, product docs, sales scripts, support tickets, and creative archives—then layer guardrails for tone, accuracy, and compliance. Deployments include a branded chat interface, role-based access, audit logging, and continuous learning workflows. We train your team on prompting best practices and provide 90-day optimization to refine retrieval quality and expand capabilities.",
+    results: ["62% reduction in content turnaround time", "On-brand consistency scores above 94%", "ROI realized within first 90 days for SMB deployments"],
+    tags: ["RAG Architecture", "Brand Voice AI", "Knowledge Base", "Custom GPTs", "Vector Search", "Secure Deployment", "Team Training"],
+    accent: "primary" as const,
+    image: abstractGlass,
+  },
 ];
 
 const methodology = [
@@ -124,9 +157,9 @@ export default function UseCases() {
     <div className="pt-24">
       <SEO
         title="Use Cases"
-        description="Explore our eight core disciplines: graphic design, technical marketing, UX design, branding, marketing automation, prompt engineering, web design, and AI-powered software design."
+        description="Explore our core disciplines: graphic design, technical marketing, UX design, branding, marketing automation, prompt engineering, web design, AI-powered software design, email marketing automation, product launch content, and AI Brain development."
         canonical="https://visualsmash.lovable.app/use-cases"
-        keywords="graphic design, UX design, branding, marketing automation, AI software design, web design, prompt engineering, technical marketing"
+        keywords="graphic design, UX design, branding, marketing automation, email marketing automation, product launch content, AI Brain development, AI software design, web design, prompt engineering, technical marketing"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
