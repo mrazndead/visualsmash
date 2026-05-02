@@ -12,6 +12,9 @@ const categories = [
   "Graphic Design",
   "Catalog & Print Design",
   "Technical Marketing & Analytics",
+  "Email Marketing Automation",
+  "Product Launch Content & Collateral",
+  "AI Brain Development for Small Business",
 ];
 
 Deno.serve(async (req) => {
