@@ -79,6 +79,27 @@ const services = [
       "Build intelligent AI agents for your business using Microsoft 365 Copilot Studio—automate decisions, surface insights, and scale productivity.",
     icon: Brain,
   },
+  {
+    number: "08",
+    title: "Email Marketing Automation",
+    description:
+      "End-to-end email marketing programs—platform setup, list segmentation, lifecycle flows, and creative that turns inboxes into revenue channels.",
+    icon: Workflow,
+  },
+  {
+    number: "09",
+    title: "Product Launch Content & Collateral",
+    description:
+      "Launch-ready content writing and creative collateral—messaging frameworks, sales decks, one-pagers, landing pages, and campaign assets engineered for liftoff.",
+    icon: Award,
+  },
+  {
+    number: "10",
+    title: "AI Brain Development for Small Business",
+    description:
+      "Your digital consultant, trained on your company's content and brand guidelines. Visual Smash builds your AI Brain so your team can ask, create, and decide—on-brand, 24/7.",
+    icon: Brain,
+  },
 ];
 
 const useCasePreview = [
