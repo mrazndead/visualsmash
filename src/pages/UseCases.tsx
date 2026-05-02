@@ -157,9 +157,9 @@ export default function UseCases() {
     <div className="pt-24">
       <SEO
         title="Use Cases"
-        description="Explore our eight core disciplines: graphic design, technical marketing, UX design, branding, marketing automation, prompt engineering, web design, and AI-powered software design."
+        description="Explore our core disciplines: graphic design, technical marketing, UX design, branding, marketing automation, prompt engineering, web design, AI-powered software design, email marketing automation, product launch content, and AI Brain development."
         canonical="https://visualsmash.lovable.app/use-cases"
-        keywords="graphic design, UX design, branding, marketing automation, AI software design, web design, prompt engineering, technical marketing"
+        keywords="graphic design, UX design, branding, marketing automation, email marketing automation, product launch content, AI Brain development, AI software design, web design, prompt engineering, technical marketing"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
