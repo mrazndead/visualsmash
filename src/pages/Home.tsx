@@ -158,7 +158,7 @@ const whyUs = [
 const homeFaqs = [
   {
     q: "What does Visual Smash do?",
-    a: "Visual Smash is a Bay Area creative agency offering brand identity, UX design, web design, AI-powered creative, marketing automation, Microsoft Power Automate workflows, and AI agents built with Microsoft 365 Copilot Studio.",
+    a: "Visual Smash is a Bay Area creative agency offering brand identity, UX design, web design, AI-powered creative, marketing automation, email marketing automation, product launch content and collateral, AI Brain development for small businesses, Microsoft Power Automate workflows, and AI agents built with Microsoft 365 Copilot Studio.",
   },
   {
     q: "Where is Visual Smash located?",
@@ -365,7 +365,7 @@ export default function Home() {
         >
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-16">
-              {["Brand Identity", "UX Design", "AI Development", "Prompt Engineering", "Web Design", "Marketing Automation"].map((s) => (
+              {["Brand Identity", "UX Design", "AI Brain Development", "Email Marketing Automation", "Product Launch Content", "Web Design", "Marketing Automation"].map((s) => (
                 <span key={s} className="font-display text-xs font-bold uppercase tracking-[0.3em] text-muted-foreground/40">
                   {s}
                 </span>
@@ -768,7 +768,7 @@ export default function Home() {
             foundingDate: "2004",
             areaServed: "San Francisco Bay Area, California",
             email: "visualsmash@gmail.com",
-            knowsAbout: ["Brand Design", "UX Design", "AI Creative", "Marketing Automation", "Web Design", "Prompt Engineering"],
+            knowsAbout: ["Brand Design", "UX Design", "AI Creative", "Marketing Automation", "Email Marketing Automation", "Product Launch Content", "AI Brain Development", "Web Design", "Prompt Engineering"],
           }),
         }}
       />
