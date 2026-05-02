@@ -22,12 +22,12 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/Scroll
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
 import { LineReveal, FloatingOrb, ParallaxLayer, MaskReveal, RotatingBorder } from "@/components/AnimatedElements";
-import heroBg from "@/assets/hero-bg.jpg";
-import homeVisual from "@/assets/home-visual.jpg";
-import creativeBurst from "@/assets/creative-burst.jpg";
-import testimonialsBg from "@/assets/testimonials-bg.jpg";
-import fluidArt from "@/assets/fluid-art.jpg";
-import metalTexture from "@/assets/metallic-texture.jpg";
+import heroBg from "@/assets/hero-bg.webp";
+import homeVisual from "@/assets/home-visual.webp";
+import creativeBurst from "@/assets/creative-burst.webp";
+import testimonialsBg from "@/assets/testimonials-bg.webp";
+import fluidArt from "@/assets/fluid-art.webp";
+import metalTexture from "@/assets/metallic-texture.webp";
 
 const services = [
   {
@@ -220,6 +220,8 @@ export default function Home() {
             className="h-full w-full object-cover"
             width={1920}
             height={1080}
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/30 to-transparent" />
@@ -358,7 +360,7 @@ export default function Home() {
           <img
             src={homeVisual}
             alt="Abstract creative energy"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1280}
             height={720}
             className="w-full h-48 md:h-64 object-cover"
@@ -419,7 +421,7 @@ export default function Home() {
                   transition={{ duration: 0.6 }}
                   src={fluidArt}
                   alt="Creative fluid art representing our dynamic approach"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                   width={600}
                   height={500}
                   className="w-full h-[400px] object-cover"
@@ -508,7 +510,7 @@ export default function Home() {
           <img
             src={creativeBurst}
             alt="Creative energy explosion"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1280}
             height={720}
             className="w-full h-40 md:h-56 object-cover"
@@ -523,7 +525,7 @@ export default function Home() {
         <img
           src={metalTexture}
           alt="Premium metallic texture"
-          loading="lazy"
+          loading="lazy" decoding="async"
           width={1920}
           height={600}
           className="w-full h-24 md:h-32 object-cover opacity-60"
@@ -537,7 +539,7 @@ export default function Home() {
           <img
             src={testimonialsBg}
             alt=""
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1920}
             height={1080}
             className="h-full w-full object-cover opacity-20"

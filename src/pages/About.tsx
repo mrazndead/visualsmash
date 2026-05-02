@@ -5,9 +5,9 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/Scroll
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
 import { LineReveal, FloatingOrb, RotatingBorder, ParallaxLayer } from "@/components/AnimatedElements";
-import aboutPortrait from "@/assets/about-portrait.jpg";
-import abstractGlass from "@/assets/abstract-glass.jpg";
-import metalTexture from "@/assets/metallic-texture.jpg";
+import aboutPortrait from "@/assets/about-portrait.webp";
+import abstractGlass from "@/assets/abstract-glass.webp";
+import metalTexture from "@/assets/metallic-texture.webp";
 
 const timeline = [
   { year: "2004", title: "The Genesis", body: "Started in San Francisco's tech scene, shaping brands for emerging companies during the dot-com renaissance. Cut teeth on high-stakes product launches and built a reputation for creative work that actually moved the needle." },
@@ -125,7 +125,7 @@ export default function About() {
                     transition={{ duration: 0.6 }}
                     src={aboutPortrait}
                     alt="Visual Smash abstract creative"
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                     width={800}
                     height={1000}
                     className="w-full object-cover"
@@ -257,7 +257,7 @@ export default function About() {
           <img
             src={abstractGlass}
             alt="Abstract crystalline shapes"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1280}
             height={720}
             className="w-full h-40 md:h-56 object-cover"
@@ -374,7 +374,7 @@ export default function About() {
           <img
             src={metalTexture}
             alt="Luxury metallic texture"
-            loading="lazy"
+            loading="lazy" decoding="async"
             width={1920}
             height={600}
             className="w-full h-40 md:h-48 object-cover"

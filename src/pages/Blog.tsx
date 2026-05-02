@@ -6,8 +6,8 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/Scroll
 import { SEO } from "@/components/SEO";
 import { FloatingOrb, LineReveal, RotatingBorder } from "@/components/AnimatedElements";
 import { supabase } from "@/integrations/supabase/client";
-import blogHero from "@/assets/blog-hero.jpg";
-import wireframeArch from "@/assets/wireframe-arch.jpg";
+import blogHero from "@/assets/blog-hero.webp";
+import wireframeArch from "@/assets/wireframe-arch.webp";
 
 interface BlogPost {
   id: string;
