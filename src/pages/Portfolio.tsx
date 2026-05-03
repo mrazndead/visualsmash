@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { lazy, Suspense } from "react";
 import { Download, ExternalLink, ArrowRight, Palette, Layout, Megaphone, Globe, Layers, Sparkles, Monitor } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import portfolioHero from "@/assets/portfolio-hero.webp";
+const DeepDiveScrollStory = lazy(() => import("@/components/features/DeepDiveScrollStory"));
 
 const disciplines = [
   {
@@ -268,6 +270,26 @@ const Portfolio = () => {
             ))}
           </StaggerContainer>
         </div>
+      </section>
+
+      {/* ── DEEP DIVE: Sticky-scroll case study ── */}
+      <section className="py-24 md:py-32 border-t border-border relative">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12 mb-12">
+          <ScrollReveal>
+            <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4 block">
+              Feature 04 · Deep Dive
+            </span>
+            <h2 className="text-title text-foreground">
+              Inside a <span className="text-accent-gradient">Smash.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-sm font-light text-muted-foreground">
+              Scroll through a case study the way it actually unfolded — the ordinary, the smash, the aftermath.
+            </p>
+          </ScrollReveal>
+        </div>
+        <Suspense fallback={<div className="h-[600px]" />}>
+          <DeepDiveScrollStory />
+        </Suspense>
       </section>
 
       {/* CTA */}

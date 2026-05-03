@@ -22,6 +22,9 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/Scroll
 import { TextScramble } from "@/components/TextScramble";
 import { SEO } from "@/components/SEO";
 import { LineReveal, FloatingOrb, ParallaxLayer, MaskReveal, RotatingBorder } from "@/components/AnimatedElements";
+import { lazy, Suspense } from "react";
+const ProductionMultiplier = lazy(() => import("@/components/features/ProductionMultiplier"));
+const PromptToPolish = lazy(() => import("@/components/features/PromptToPolish"));
 import heroBg from "@/assets/hero-bg.webp";
 import homeVisual from "@/assets/home-visual.webp";
 import creativeBurst from "@/assets/creative-burst.webp";
@@ -540,6 +543,55 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background opacity-50" />
         </section>
       </ParallaxLayer>
+
+      {/* ── PRODUCTION MULTIPLIER (interactive comparison) ── */}
+      <section className="py-24 md:py-32 relative border-t border-border">
+        <FloatingOrb size={300} color="primary" x="80%" y="20%" delay={0.2} />
+        <div className="relative mx-auto max-w-6xl px-6 lg:px-12">
+          <ScrollReveal className="mb-12 text-center">
+            <LineReveal className="mx-auto max-w-xs mb-6" />
+            <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Feature 01 · The Production Multiplier
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Why we ship <span className="font-editorial italic font-light text-accent-gradient">4× faster.</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl font-display text-sm font-light text-muted-foreground">
+              Drag the slider to compare a traditional agency timeline against our AI-augmented workflow — same Fortune 500 quality, a fraction of the runway.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal>
+            <Suspense fallback={<div className="h-[460px] rounded-lg border border-surface-border bg-surface/30" />}>
+              <ProductionMultiplier />
+            </Suspense>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── PROMPT-TO-POLISH LAB ── */}
+      <section className="py-24 md:py-32 relative border-t border-border">
+        <FloatingOrb size={250} color="secondary" x="5%" y="50%" delay={0.4} />
+        <div className="relative mx-auto max-w-6xl px-6 lg:px-12">
+          <ScrollReveal className="mb-12">
+            <LineReveal className="mb-6" />
+            <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Feature 02 · The Prompt-to-Polish Lab
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Spark → Engineering →{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Smash.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-sm font-light text-muted-foreground">
+              Watch a five-word concept become a brand-grade asset. Our prompt engineers turn intent into deterministic instructions — then our creatives polish the output to flagship quality.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal>
+            <Suspense fallback={<div className="h-[480px] rounded-lg border border-surface-border bg-surface/30" />}>
+              <PromptToPolish />
+            </Suspense>
+          </ScrollReveal>
+        </div>
+      </section>
 
       {/* ── METALLIC VISUAL BAND ── */}
       <section className="relative overflow-hidden">
