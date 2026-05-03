@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { AlertTriangle, Zap, TrendingUp } from "lucide-react";
-import portfolio1 from "@/assets/portfolio-1.webp";
-import portfolio2 from "@/assets/portfolio-2.webp";
-import portfolio3 from "@/assets/portfolio-3.webp";
+import ordinaryArt from "@/assets/deepdive-ordinary.jpg";
+import smashArt from "@/assets/deepdive-smash.jpg";
+import aftermathArt from "@/assets/deepdive-aftermath.jpg";
 
 const sections = [
   {
@@ -13,7 +13,7 @@ const sections = [
     title: "The Problem",
     body:
       "A category leader stuck shipping creative on 12-week cycles, burning $2.4M/yr on production drag. Every campaign felt 'good enough'—nothing felt inevitable.",
-    image: portfolio1,
+    image: ordinaryArt,
     range: [0, 0.34] as const,
   },
   {
@@ -23,7 +23,7 @@ const sections = [
     title: "The Solution",
     body:
       "We rebuilt the production pipeline around an AI-augmented prompt-to-polish workflow. Brand tokens encoded as deterministic prompts, hand-retouched by senior creatives, governed by a Fortune-500-grade QA loop.",
-    image: portfolio2,
+    image: smashArt,
     range: [0.33, 0.67] as const,
   },
   {
@@ -33,7 +33,7 @@ const sections = [
     title: "The ROI",
     body:
       "4× faster delivery. 62% lower cost-per-asset. Engagement up 340%. The category leader is now defining the category.",
-    image: portfolio3,
+    image: aftermathArt,
     range: [0.66, 1] as const,
   },
 ];
