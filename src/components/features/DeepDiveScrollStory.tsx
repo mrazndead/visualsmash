@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import { AlertTriangle, Zap, TrendingUp } from "lucide-react";
 import portfolio1 from "@/assets/portfolio-1.webp";
 import portfolio2 from "@/assets/portfolio-2.webp";
@@ -44,6 +44,54 @@ const metrics = [
   { v: "+340%", l: "Engagement" },
 ];
 
+function StrategyCard({
+  s,
+  i,
+  progress,
+}: {
+  s: (typeof sections)[number];
+  i: number;
+  progress: MotionValue<number>;
+}) {
+  const opacity = useTransform(
+    progress,
+    [s.range[0] - 0.05, s.range[0] + 0.05, s.range[1] - 0.05, s.range[1] + 0.05],
+    [0, 1, 1, 0],
+  );
+  const y = useTransform(progress, [s.range[0], s.range[1]], [20, -20]);
+  return (
+    <motion.div
+      style={{ opacity, y }}
+      className={`${i === 0 ? "" : "absolute inset-0"} rounded-lg border border-surface-border bg-surface/40 backdrop-blur-xl p-8 shadow-glass`}
+    >
+      <div className="flex items-center gap-2 mb-4">
+        <s.icon size={14} className="text-primary" />
+        <span className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+          {s.eyebrow}
+        </span>
+      </div>
+      <h3 className="font-display text-3xl md:text-4xl font-black uppercase text-foreground mb-4">
+        {s.title}
+      </h3>
+      <p className="font-display text-base font-light leading-relaxed text-muted-foreground">
+        {s.body}
+      </p>
+      {s.key === "aftermath" && (
+        <div className="mt-6 grid grid-cols-3 gap-3">
+          {metrics.map((m) => (
+            <div key={m.l} className="border border-primary/20 p-3">
+              <div className="font-display text-xl font-black text-accent-gradient">{m.v}</div>
+              <div className="font-display text-[9px] uppercase tracking-widest text-muted-foreground mt-1">
+                {m.l}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </motion.div>
+  );
+}
+
 export default function DeepDiveScrollStory() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -57,50 +105,9 @@ export default function DeepDiveScrollStory() {
         {/* LEFT: sticky strategy column */}
         <div className="lg:sticky lg:top-24 lg:h-[calc(100vh-6rem)] flex items-center px-6 lg:px-12 py-12">
           <div className="relative w-full max-w-lg">
-            {sections.map((s, i) => {
-              const opacity = useTransform(
-                scrollYProgress,
-                [s.range[0] - 0.05, s.range[0] + 0.05, s.range[1] - 0.05, s.range[1] + 0.05],
-                [0, 1, 1, 0],
-              );
-              const y = useTransform(
-                scrollYProgress,
-                [s.range[0], s.range[1]],
-                [20, -20],
-              );
-              return (
-                <motion.div
-                  key={s.key}
-                  style={{ opacity, y }}
-                  className={`${i === 0 ? "" : "absolute inset-0"} rounded-lg border border-surface-border bg-surface/40 backdrop-blur-xl p-8 shadow-glass`}
-                >
-                  <div className="flex items-center gap-2 mb-4">
-                    <s.icon size={14} className="text-primary" />
-                    <span className="font-display text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
-                      {s.eyebrow}
-                    </span>
-                  </div>
-                  <h3 className="font-display text-3xl md:text-4xl font-black uppercase text-foreground mb-4">
-                    {s.title}
-                  </h3>
-                  <p className="font-display text-base font-light leading-relaxed text-muted-foreground">
-                    {s.body}
-                  </p>
-                  {s.key === "aftermath" && (
-                    <div className="mt-6 grid grid-cols-3 gap-3">
-                      {metrics.map((m) => (
-                        <div key={m.l} className="border border-primary/20 p-3">
-                          <div className="font-display text-xl font-black text-accent-gradient">{m.v}</div>
-                          <div className="font-display text-[9px] uppercase tracking-widest text-muted-foreground mt-1">
-                            {m.l}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </motion.div>
-              );
-            })}
+            {sections.map((s, i) => (
+              <StrategyCard key={s.key} s={s} i={i} progress={scrollYProgress} />
+            ))}
           </div>
         </div>
 
