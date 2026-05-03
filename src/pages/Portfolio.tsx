@@ -272,11 +272,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 md:py-32">
-        {/* Deep Dive: case study scroll story above the CTA */}
-      </section>
-
       {/* ── DEEP DIVE: Sticky-scroll case study ── */}
       <section className="py-24 md:py-32 border-t border-border relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-12 mb-12">
