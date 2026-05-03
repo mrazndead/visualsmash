@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Lightbulb, Terminal, Sparkles, ArrowRight } from "lucide-react";
+import sparkArt from "@/assets/lab-spark.jpg";
+import finalArt from "@/assets/lab-final.jpg";
 
 const STAGES = [
   {
@@ -164,22 +166,36 @@ export default function PromptToPolish() {
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
               {stage === 0 && (
-                <div className="aspect-[4/3] rounded-md border border-dashed border-muted-foreground/30 bg-muted/5 flex items-center justify-center p-10">
-                  <p className="font-editorial italic text-2xl md:text-3xl text-muted-foreground/80 text-center leading-snug">
-                    "glowing skincare<br />bottle, golden hour"
+                <div className="relative aspect-[4/3] rounded-md overflow-hidden border border-surface-border shadow-glass">
+                  <img
+                    src={sparkArt}
+                    alt="Charcoal sketch concept — the spark"
+                    loading="lazy"
+                    decoding="async"
+                    width={1024}
+                    height={768}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                  <p className="absolute bottom-4 left-4 right-4 font-editorial italic text-lg md:text-2xl text-foreground leading-snug">
+                    "glowing skincare bottle, golden hour"
                   </p>
                 </div>
               )}
               {stage === 1 && <Terminal3D />}
               {stage === 2 && (
-                <div className="relative aspect-[4/3] rounded-md overflow-hidden border border-primary/30 shadow-glow-blue bg-gradient-to-br from-primary/30 via-secondary/20 to-primary/10">
-                  <div className="absolute inset-0 grid-lines opacity-30" />
-                  <motion.div
-                    animate={{ scale: [1, 1.05, 1], rotate: [0, 1, 0] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute inset-12 rounded-full bg-gradient-to-br from-secondary via-primary to-foreground/80 blur-2xl opacity-70"
+                <div className="relative aspect-[4/3] rounded-md overflow-hidden border border-primary/30 shadow-glow-blue">
+                  <img
+                    src={finalArt}
+                    alt="Final polished hero asset — the smash"
+                    loading="lazy"
+                    decoding="async"
+                    width={1024}
+                    height={768}
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
-                  <div className="absolute bottom-3 left-3 font-display text-[10px] uppercase tracking-widest text-foreground/90">
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-3 font-display text-[10px] uppercase tracking-widest text-primary">
                     hero-final.webp · 4096×3072 · ready
                   </div>
                 </div>
