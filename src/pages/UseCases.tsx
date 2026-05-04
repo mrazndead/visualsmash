@@ -156,15 +156,15 @@ export default function UseCases() {
   return (
     <div className="pt-24">
       <SEO
-        title="Use Cases"
-        description="Explore our core disciplines: graphic design, technical marketing, UX design, branding, marketing automation, prompt engineering, web design, AI-powered software design, email marketing automation, product launch content, and AI Brain development."
+        title="Use Cases | Marketing Agency Stockton CA"
+        description="Marketing agency Stockton CA services: graphic design, technical marketing, UX design, branding, marketing automation, web design, AI software, email automation, product launch content, and AI Brain development."
         canonical="https://visualsmash.lovable.app/use-cases"
-        keywords="graphic design, UX design, branding, marketing automation, email marketing automation, product launch content, AI Brain development, AI software design, web design, prompt engineering, technical marketing"
+        keywords="marketing agency Stockton CA, Stockton branding, web design Stockton, UX design Stockton, marketing automation Stockton, AI marketing Stockton, Central Valley marketing agency, graphic design Stockton, email marketing Stockton, product launch agency, AI Brain development"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Visual Smash Use Cases",
-          "description": "Eight core creative disciplines from graphic design to AI-powered software.",
+          "name": "Visual Smash Use Cases — Marketing Agency Stockton CA",
+          "description": "Core creative and marketing disciplines from a Stockton, CA marketing agency: graphic design, branding, UX, web, AI, and automation.",
           "url": "https://visualsmash.lovable.app/use-cases"
         }}
       />

@@ -56,15 +56,15 @@ const Portfolio = () => {
   return (
     <>
       <SEO
-        title="Design Portfolio"
-        description="Explore Visual Smash's design portfolio featuring brand identity, catalog design, advertising, web design, and creative direction for major brands."
+        title="Design Portfolio | Marketing Agency Stockton CA"
+        description="Portfolio from Visual Smash, a marketing agency in Stockton, CA: brand identity, catalog design, advertising, web design, and creative direction for major brands."
         canonical="https://visualsmash.lovable.app/portfolio"
-        keywords="design portfolio, brand identity portfolio, catalog design, advertising design, creative direction, Visual Smash work"
+        keywords="marketing agency Stockton CA, Stockton design portfolio, brand identity portfolio, catalog design Stockton, advertising design, web design Stockton, creative direction, Central Valley marketing agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Visual Smash Design Portfolio",
-          "description": "A curated collection of brand identities, catalog systems, advertising campaigns, and digital experiences.",
+          "name": "Visual Smash Portfolio — Marketing Agency Stockton CA",
+          "description": "Brand identities, catalog systems, advertising campaigns, and digital experiences from a Stockton, CA marketing agency.",
           "url": "https://visualsmash.lovable.app/portfolio"
         }}
       />
