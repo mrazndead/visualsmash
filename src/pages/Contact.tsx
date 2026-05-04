@@ -9,7 +9,7 @@ import wireframeArch from "@/assets/wireframe-arch.webp";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "visualsmash@gmail.com", href: "mailto:visualsmash@gmail.com" },
-  { icon: MapPin, label: "Location", value: "San Francisco Bay Area, CA", href: null },
+  { icon: MapPin, label: "Location", value: "Stockton, CA · Serving Central Valley & Bay Area", href: null },
   { icon: Clock, label: "Response Time", value: "Within 24 hours", href: null },
 ];
 

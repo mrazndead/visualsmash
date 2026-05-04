@@ -1,11 +1,12 @@
 # Visual Smash
 
-> Visual Smash is a boutique creative agency based in the San Francisco Bay Area. Founded in 2004, we deliver brand identity, UX design, web design, AI-powered creative, marketing automation, and Microsoft Power Platform solutions for Fortune 500 companies and ambitious startups.
+> Visual Smash is a marketing agency based in Stockton, CA, serving the Central Valley and San Francisco Bay Area. Founded in 2004, we deliver brand identity, UX design, web design, AI-powered creative, marketing automation, and Microsoft Power Platform solutions for Fortune 500 companies and ambitious startups.
 
 ## About
 - Name: Visual Smash
 - Founded: 2004
-- Location: San Francisco Bay Area, California, USA
+- Location: Stockton, California, USA (serving Central Valley & San Francisco Bay Area)
+- Primary Keyword: marketing agency Stockton CA
 - Contact: visualsmash@gmail.com
 - Site: https://visualsmash.lovable.app
 
@@ -29,6 +30,7 @@ Technology, Luxury Real Estate, Fashion & Retail, Financial Services, Healthcare
 - Portfolio: https://visualsmash.lovable.app/portfolio — Brands served, web work, downloadable PDFs
 - Blog: https://visualsmash.lovable.app/blog — Insights on AI design, branding, UX, and creative tech
 - Contact: https://visualsmash.lovable.app/contact — Engagement models, FAQs, and inquiry email
+- Tech Stack: https://visualsmash.lovable.app/tech-stack — Tools we use to design, build, and automate
 
 ## Selected Brands & Clients
 Stetson, Tommy Bahama, Panama Jack, Stacy Adams, Dorfman Pacific, Christys' London, Accenture, Rakuten, MPhasis, Mortgage Connect, Bureau Veritas, ABB, Digital Risk, Modesto Symphony, Renovo Communities, Lyon Investments, Heritage Builders, Confluent Medical, Beakr Winery, Amaara Networks, Husker Home, Mid-Valley Engineering.
