@@ -9,7 +9,7 @@ import wireframeArch from "@/assets/wireframe-arch.webp";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "visualsmash@gmail.com", href: "mailto:visualsmash@gmail.com" },
-  { icon: MapPin, label: "Location", value: "San Francisco Bay Area, CA", href: null },
+  { icon: MapPin, label: "Location", value: "Stockton, CA · Serving Central Valley & Bay Area", href: null },
   { icon: Clock, label: "Response Time", value: "Within 24 hours", href: null },
 ];
 
@@ -57,18 +57,29 @@ export default function Contact() {
   return (
     <div className="pt-24 overflow-x-hidden">
       <SEO
-        title="Contact"
-        description="Get in touch with Visual Smash. We're a selective creative agency accepting 2-3 new clients per quarter. Let's discuss your next project."
+        title="Contact | Marketing Agency Stockton CA"
+        description="Contact Visual Smash, a marketing agency in Stockton, CA. We accept 2-3 new clients per quarter across the Central Valley and Bay Area. Let's discuss your project."
         canonical="https://visualsmash.lovable.app/contact"
-        keywords="contact Visual Smash, hire creative agency, design consultation, brand project inquiry"
+        keywords="marketing agency Stockton CA, contact Visual Smash, hire Stockton marketing agency, Stockton creative agency, design consultation Stockton, Central Valley marketing agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@graph": [
             {
               "@type": "ContactPage",
-              "name": "Contact Visual Smash",
-              "description": "Get in touch to discuss your next creative project.",
+              "name": "Contact Visual Smash — Marketing Agency Stockton CA",
+              "description": "Get in touch with a Stockton, CA marketing agency to discuss your next creative project.",
               "url": "https://visualsmash.lovable.app/contact"
+            },
+            {
+              "@type": "LocalBusiness",
+              "name": "Visual Smash",
+              "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70455fe2-15bd-4dd2-a405-f3cb3fef6556/id-preview-ab820fab--a02f9379-36d5-4f16-9b2b-ea77e5f17fd5.lovable.app-1774582250132.png",
+              "url": "https://visualsmash.lovable.app",
+              "email": "visualsmash@gmail.com",
+              "priceRange": "$$$$",
+              "address": { "@type": "PostalAddress", "addressLocality": "Stockton", "addressRegion": "CA", "postalCode": "95202", "addressCountry": "US" },
+              "geo": { "@type": "GeoCoordinates", "latitude": 37.9577, "longitude": -121.2908 },
+              "areaServed": ["Stockton, CA", "San Joaquin County", "Central Valley", "San Francisco Bay Area"]
             },
             {
               "@type": "FAQPage",

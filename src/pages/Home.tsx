@@ -199,21 +199,39 @@ export default function Home() {
   return (
     <div ref={containerRef} className="relative overflow-x-hidden">
       <SEO
-        title="Visual Smash – Bay Area Creative Agency"
-        description="Award-winning creative agency in Northern California. 20+ years of brand design, UX, AI-powered creative, and marketing for Fortune 500 companies and ambitious startups."
+        title="Marketing Agency Stockton CA | Visual Smash"
+        description="Visual Smash is a marketing agency in Stockton, CA delivering brand design, UX, web design, AI-powered creative, and marketing automation for Central Valley and Bay Area businesses."
         canonical="https://visualsmash.lovable.app"
-        keywords="creative agency, brand design, UX design, AI design, Bay Area, San Francisco, graphic design, web design, marketing"
+        keywords="marketing agency Stockton CA, Stockton marketing agency, creative agency Stockton, branding Stockton California, web design Stockton, AI marketing Stockton, Central Valley marketing, San Joaquin County marketing agency, Bay Area creative agency, UX design Stockton, marketing automation Stockton"
         jsonLd={{
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "ProfessionalService",
+              "@type": ["ProfessionalService", "LocalBusiness", "MarketingAgency"],
+              "@id": "https://visualsmash.lovable.app/#organization",
               "name": "Visual Smash",
-              "description": "Award-winning creative agency specializing in brand design, UX, AI-powered creative, and marketing.",
+              "description": "Marketing agency in Stockton, CA specializing in brand design, UX, AI-powered creative, web design, and marketing automation.",
               "url": "https://visualsmash.lovable.app",
-              "areaServed": "San Francisco Bay Area, California",
+              "email": "visualsmash@gmail.com",
+              "areaServed": [
+                { "@type": "City", "name": "Stockton" },
+                { "@type": "City", "name": "Lodi" },
+                { "@type": "City", "name": "Tracy" },
+                { "@type": "City", "name": "Modesto" },
+                { "@type": "City", "name": "Manteca" },
+                { "@type": "AdministrativeArea", "name": "San Joaquin County" },
+                { "@type": "AdministrativeArea", "name": "Central Valley, California" },
+                { "@type": "AdministrativeArea", "name": "San Francisco Bay Area" }
+              ],
               "priceRange": "$$$$",
-              "address": { "@type": "PostalAddress", "addressLocality": "San Francisco Bay Area", "addressRegion": "CA", "addressCountry": "US" },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Stockton",
+                "addressRegion": "CA",
+                "postalCode": "95202",
+                "addressCountry": "US"
+              },
+              "geo": { "@type": "GeoCoordinates", "latitude": 37.9577, "longitude": -121.2908 },
               "serviceType": ["Brand Identity", "UX Design", "AI-Powered Creative", "Web Design", "Marketing"],
               "foundingDate": "2004"
             },

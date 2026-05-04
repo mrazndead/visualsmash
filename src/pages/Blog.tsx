@@ -61,15 +61,15 @@ export default function Blog() {
   return (
     <div className="relative overflow-x-hidden">
       <SEO
-        title="Blog – AI Design, Branding & Creative Insights"
-        description="Expert insights on AI-powered design, branding strategy, UX psychology, marketing automation, and the future of creative technology from Visual Smash."
+        title="Blog | Marketing Agency Stockton CA"
+        description="Insights on AI-powered design, branding, UX, and marketing automation from Visual Smash — a marketing agency in Stockton, CA serving the Central Valley and Bay Area."
         canonical="https://visualsmash.lovable.app/blog"
-        keywords="AI design blog, branding strategy, UX psychology, creative technology, marketing automation, design insights"
+        keywords="marketing agency Stockton CA, Stockton marketing blog, AI design blog, branding strategy, UX psychology, marketing automation, Central Valley marketing insights"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Blog",
-          "name": "Visual Smash Blog",
-          "description": "Expert insights on AI-powered design, branding, and creative technology.",
+          "name": "Visual Smash Blog — Marketing Agency Stockton CA",
+          "description": "Insights on AI-powered design, branding, UX, and marketing automation from a Stockton, CA marketing agency.",
           "url": "https://visualsmash.lovable.app/blog",
           "publisher": { "@type": "Organization", "name": "Visual Smash" }
         }}

@@ -47,17 +47,23 @@ export default function About() {
   return (
     <div className="pt-24 overflow-x-hidden">
       <SEO
-        title="About"
-        description="Visual Smash is a boutique creative agency founded in 2004. 20+ years of Fortune 500 brand design, UX strategy, and AI-powered creative direction from the San Francisco Bay Area."
+        title="About | Marketing Agency Stockton CA"
+        description="Visual Smash is a Stockton, CA marketing agency founded in 2004. 20+ years of Fortune 500 brand design, UX strategy, and AI-powered creative for Central Valley and Bay Area clients."
         canonical="https://visualsmash.lovable.app/about"
-        keywords="about Visual Smash, creative agency history, brand design experience, Fortune 500 design, Bay Area agency"
+        keywords="marketing agency Stockton CA, about Visual Smash, Stockton creative agency, Central Valley marketing agency, brand design Stockton, Fortune 500 design experience, Bay Area creative agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
           "name": "About Visual Smash",
-          "description": "Boutique creative agency founded in 2004 with 20+ years of Fortune 500 brand design and AI-powered creative direction.",
+          "description": "Marketing agency in Stockton, CA founded in 2004 with 20+ years of Fortune 500 brand design and AI-powered creative direction.",
           "url": "https://visualsmash.lovable.app/about",
-          "mainEntity": { "@type": "Organization", "name": "Visual Smash", "foundingDate": "2004", "areaServed": "San Francisco Bay Area" }
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Visual Smash",
+            "foundingDate": "2004",
+            "address": { "@type": "PostalAddress", "addressLocality": "Stockton", "addressRegion": "CA", "addressCountry": "US" },
+            "areaServed": ["Stockton, CA", "San Joaquin County", "Central Valley", "San Francisco Bay Area"]
+          }
         }}
       />
 
