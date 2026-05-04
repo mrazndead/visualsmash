@@ -18,6 +18,7 @@ const UseCases = lazy(() => import("./pages/UseCases"));
 const Blog = lazy(() => import("./pages/Blog"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
+const TechStack = lazy(() => import("./pages/TechStack"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const AnimatedRoutes = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/tech-stack" element={<TechStack />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
