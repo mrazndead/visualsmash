@@ -48,7 +48,7 @@ const disciplines = [
 const stats = [
   { value: "200+", label: "Projects Delivered" },
   { value: "50+", label: "Brands Served" },
-  { value: "15+", label: "Years Experience" },
+  { value: "20+", label: "Years Experience" },
   { value: "12", label: "Industries" },
 ];
 
