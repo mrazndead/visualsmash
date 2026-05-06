@@ -147,6 +147,12 @@ const testimonials = [
     company: "FinTech Unicorn",
     rating: 5,
   },
+  {
+    quote: "From our rebrand to our product launch, Visual Smash handled every detail. Our AI Brain now answers client questions before we even see them.",
+    author: "Owner",
+    company: "Central Valley Logistics",
+    rating: 5,
+  },
 ];
 
 const whyUs = [
