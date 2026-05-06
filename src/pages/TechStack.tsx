@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import {
   Sparkles, Figma, Globe, Zap, Map, Layout, Palette, Wand2, Image as ImageIcon,
   PenTool, Shapes, Box, Code2, Wind, Terminal, ShieldCheck, Network, Workflow,
-  Users, Rocket,
+  Users, Rocket, Newspaper,
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
@@ -14,6 +14,7 @@ const tools = [
   { name: "Framer", desc: "Interactive landing pages with top-tier motion and animation.", icon: Zap },
   { name: "Relume", desc: "AI-powered sitemaps and wireframes for lightning-fast planning.", icon: Map },
   { name: "Wix Studio", desc: "Enterprise-grade platform for ultra-responsive agency builds.", icon: Layout },
+  { name: "WordPress", desc: "The world's most flexible CMS powering scalable content-driven websites.", icon: Newspaper },
   { name: "Adobe CC", desc: "The essential suite for professional photo, vector, and video editing.", icon: Palette },
   { name: "Midjourney", desc: "State-of-the-art generative AI for high-fidelity concept art.", icon: Wand2 },
   { name: "Canva", desc: "Rapid content creation and automated brand-kit scaling.", icon: ImageIcon },
