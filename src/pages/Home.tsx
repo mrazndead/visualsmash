@@ -313,7 +313,7 @@ export default function Home() {
               <span className="font-editorial italic font-light text-accent-gradient">
                 Smash
               </span>
-              {" "}The Ordinary.
+              <span className="sr-only"> The Ordinary.</span>
             </motion.h1>
           </div>
           <div className="overflow-hidden">
