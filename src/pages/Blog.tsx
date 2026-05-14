@@ -62,7 +62,7 @@ export default function Blog() {
     <div className="relative overflow-x-hidden">
       <SEO
         title="Blog | Marketing Agency Stockton CA"
-        description="Insights on AI-powered design, branding, UX, and marketing automation from Visual Smash — a marketing agency in Stockton, CA serving the Central Valley and Bay Area."
+        description="AI design, branding, UX, and marketing automation insights from Visual Smash — a Stockton, CA marketing agency serving the Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/blog"
         keywords="marketing agency Stockton CA, Stockton marketing blog, AI design blog, branding strategy, UX psychology, marketing automation, Central Valley marketing insights"
         jsonLd={{

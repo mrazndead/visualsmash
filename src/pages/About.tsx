@@ -48,7 +48,7 @@ export default function About() {
     <div className="pt-24 overflow-x-hidden">
       <SEO
         title="About | Marketing Agency Stockton CA"
-        description="Visual Smash is a Stockton, CA marketing agency founded in 2004. 20+ years of Fortune 500 brand design, UX strategy, and AI-powered creative for Central Valley and Bay Area clients."
+        description="Stockton, CA marketing agency since 2004. 20+ years of Fortune 500 brand design, UX, and AI-powered creative across the Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/about"
         keywords="marketing agency Stockton CA, about Visual Smash, Stockton creative agency, Central Valley marketing agency, brand design Stockton, Fortune 500 design experience, Bay Area creative agency"
         jsonLd={{
@@ -192,7 +192,7 @@ export default function About() {
                   >
                     <a.icon size={22} className="shrink-0 text-primary mt-1 transition-colors group-hover:text-secondary" />
                     <div>
-                      <h4 className="mb-2 font-display text-base font-black uppercase tracking-tight text-foreground">{a.title}</h4>
+                      <h3 className="mb-2 font-display text-base font-black uppercase tracking-tight text-foreground">{a.title}</h3>
                       <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">{a.body}</p>
                     </div>
                   </motion.div>

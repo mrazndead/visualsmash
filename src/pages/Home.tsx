@@ -206,7 +206,7 @@ export default function Home() {
     <div ref={containerRef} className="relative overflow-x-hidden">
       <SEO
         title="Marketing Agency Stockton CA | Visual Smash"
-        description="Visual Smash is a marketing agency in Stockton, CA delivering brand design, UX, web design, AI-powered creative, and marketing automation for Central Valley and Bay Area businesses."
+        description="Marketing agency in Stockton, CA. Brand, UX, web, AI-powered creative, and automation for Central Valley and Bay Area brands."
         canonical="https://visualsmash.lovable.app"
         keywords="marketing agency Stockton CA, Stockton marketing agency, creative agency Stockton, branding Stockton California, web design Stockton, AI marketing Stockton, Central Valley marketing, San Joaquin County marketing agency, Bay Area creative agency, UX design Stockton, marketing automation Stockton"
         jsonLd={{
@@ -313,17 +313,19 @@ export default function Home() {
               <span className="font-editorial italic font-light text-accent-gradient">
                 Smash
               </span>
+              <span className="sr-only"> The Ordinary.</span>
             </motion.h1>
           </div>
           <div className="overflow-hidden">
-            <motion.h1
+            <motion.div
               initial={{ y: "100%" }}
               animate={{ y: isLoaded ? "0%" : "100%" }}
               transition={{ duration: 1, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
               className="text-hero font-display font-black uppercase text-foreground"
+              aria-hidden="true"
             >
               The Ordinary.
-            </motion.h1>
+            </motion.div>
           </div>
 
           <motion.p

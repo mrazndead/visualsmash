@@ -23,14 +23,14 @@
 ## Industries Served
 Technology, Luxury Real Estate, Fashion & Retail, Financial Services, Healthcare, Construction, Energy, Legal, Education, Logistics.
 
-## Key Pages
-- Home: https://visualsmash.lovable.app/ — Agency overview, services, testimonials, FAQs
-- About: https://visualsmash.lovable.app/about — History, philosophy, capabilities, 20-year timeline
-- Use Cases: https://visualsmash.lovable.app/use-cases — Eight core disciplines with results and methodology
-- Portfolio: https://visualsmash.lovable.app/portfolio — Brands served, web work, downloadable PDFs
-- Blog: https://visualsmash.lovable.app/blog — Insights on AI design, branding, UX, and creative tech
-- Contact: https://visualsmash.lovable.app/contact — Engagement models, FAQs, and inquiry email
-- Tech Stack: https://visualsmash.lovable.app/tech-stack — Tools we use to design, build, and automate
+## Pages
+- [Home](/): Agency overview, services, testimonials, FAQs.
+- [About](/about): History, philosophy, capabilities, 20-year timeline.
+- [Use Cases](/use-cases): Eight core disciplines with results and methodology.
+- [Portfolio](/portfolio): Brands served, web work, downloadable PDFs.
+- [Blog](/blog): Insights on AI design, branding, UX, and creative tech.
+- [Contact](/contact): Engagement models, FAQs, and inquiry email.
+- [Tech Stack](/tech-stack): Tools we use to design, build, and automate.
 
 ## Selected Brands & Clients
 Stetson, Tommy Bahama, Panama Jack, Stacy Adams, Dorfman Pacific, Christys' London, Accenture, Rakuten, MPhasis, Mortgage Connect, Bureau Veritas, ABB, Digital Risk, Modesto Symphony, Renovo Communities, Lyon Investments, Heritage Builders, Confluent Medical, Beakr Winery, Amaara Networks, Husker Home, Mid-Valley Engineering.

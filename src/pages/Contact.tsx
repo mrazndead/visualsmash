@@ -58,7 +58,7 @@ export default function Contact() {
     <div className="pt-24 overflow-x-hidden">
       <SEO
         title="Contact | Marketing Agency Stockton CA"
-        description="Contact Visual Smash, a marketing agency in Stockton, CA. We accept 2-3 new clients per quarter across the Central Valley and Bay Area. Let's discuss your project."
+        description="Contact Visual Smash — a Stockton, CA marketing agency. We take 2–3 new clients per quarter across the Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/contact"
         keywords="marketing agency Stockton CA, contact Visual Smash, hire Stockton marketing agency, Stockton creative agency, design consultation Stockton, Central Valley marketing agency"
         jsonLd={{
@@ -217,9 +217,9 @@ export default function Contact() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.3}>
-                <h3 className="font-display text-lg font-black uppercase tracking-tight text-foreground mb-4">
+                <h2 className="font-display text-lg font-black uppercase tracking-tight text-foreground mb-4">
                   What to Expect
-                </h3>
+                </h2>
                 <div className="space-y-4">
                   {[
                     { step: "01", text: "You email us with a brief overview of your project or challenge." },
