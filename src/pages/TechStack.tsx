@@ -49,7 +49,7 @@ const TechStack = () => {
     <>
       <SEO
         title="Tech Stack | Marketing Agency Stockton CA"
-        description="The elite tools Visual Smash, a marketing agency in Stockton, CA, uses to design, build, and automate — Figma, Webflow, Framer, Midjourney, LangGraph, CrewAI, n8n, and more."
+        description="The elite tools Visual Smash — a Stockton, CA marketing agency — uses to design, build, and automate: Figma, Webflow, Framer, Midjourney, n8n, and more."
         canonical="https://visualsmash.lovable.app/tech-stack"
         keywords="marketing agency Stockton CA, tech stack, design tools, AI tools, Figma, Webflow, Framer, Midjourney, LangGraph, n8n, CrewAI, Stockton marketing tools"
         jsonLd={jsonLd}

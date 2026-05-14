@@ -206,7 +206,7 @@ export default function Home() {
     <div ref={containerRef} className="relative overflow-x-hidden">
       <SEO
         title="Marketing Agency Stockton CA | Visual Smash"
-        description="Visual Smash is a marketing agency in Stockton, CA delivering brand design, UX, web design, AI-powered creative, and marketing automation for Central Valley and Bay Area businesses."
+        description="Marketing agency in Stockton, CA. Brand, UX, web, AI-powered creative, and automation for Central Valley and Bay Area brands."
         canonical="https://visualsmash.lovable.app"
         keywords="marketing agency Stockton CA, Stockton marketing agency, creative agency Stockton, branding Stockton California, web design Stockton, AI marketing Stockton, Central Valley marketing, San Joaquin County marketing agency, Bay Area creative agency, UX design Stockton, marketing automation Stockton"
         jsonLd={{

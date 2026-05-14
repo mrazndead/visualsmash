@@ -157,7 +157,7 @@ export default function UseCases() {
     <div className="pt-24">
       <SEO
         title="Use Cases | Marketing Agency Stockton CA"
-        description="Marketing agency Stockton CA services: graphic design, technical marketing, UX design, branding, marketing automation, web design, AI software, email automation, product launch content, and AI Brain development."
+        description="Marketing agency Stockton CA services: branding, UX, web, AI software, marketing automation, and launch content for Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/use-cases"
         keywords="marketing agency Stockton CA, Stockton branding, web design Stockton, UX design Stockton, marketing automation Stockton, AI marketing Stockton, Central Valley marketing agency, graphic design Stockton, email marketing Stockton, product launch agency, AI Brain development"
         jsonLd={{

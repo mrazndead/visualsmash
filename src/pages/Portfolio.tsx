@@ -56,8 +56,8 @@ const Portfolio = () => {
   return (
     <>
       <SEO
-        title="Design Portfolio | Marketing Agency Stockton CA"
-        description="Portfolio from Visual Smash, a marketing agency in Stockton, CA: brand identity, catalog design, advertising, web design, and creative direction for major brands."
+        title="Portfolio | Marketing Agency Stockton CA"
+        description="Portfolio from Visual Smash — a Stockton, CA marketing agency: brand identity, catalog, advertising, web, and creative direction for top brands."
         canonical="https://visualsmash.lovable.app/portfolio"
         keywords="marketing agency Stockton CA, Stockton design portfolio, brand identity portfolio, catalog design Stockton, advertising design, web design Stockton, creative direction, Central Valley marketing agency"
         jsonLd={{

@@ -58,7 +58,7 @@ export default function Contact() {
     <div className="pt-24 overflow-x-hidden">
       <SEO
         title="Contact | Marketing Agency Stockton CA"
-        description="Contact Visual Smash, a marketing agency in Stockton, CA. We accept 2-3 new clients per quarter across the Central Valley and Bay Area. Let's discuss your project."
+        description="Contact Visual Smash — a Stockton, CA marketing agency. We take 2–3 new clients per quarter across the Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/contact"
         keywords="marketing agency Stockton CA, contact Visual Smash, hire Stockton marketing agency, Stockton creative agency, design consultation Stockton, Central Valley marketing agency"
         jsonLd={{
