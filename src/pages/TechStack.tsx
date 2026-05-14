@@ -91,6 +91,7 @@ const TechStack = () => {
       {/* Grid */}
       <section className="relative pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <h2 className="sr-only">Tools We Use</h2>
           <StaggerContainer>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {tools.map((tool) => {

@@ -222,6 +222,7 @@ export default function UseCases() {
       {/* ── USE CASES LIST ── */}
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <h2 className="sr-only">Our Disciplines</h2>
           <div className="space-y-12">
             {useCases.map((uc, i) => (
               <ScrollReveal key={uc.number} delay={i * 0.04}>

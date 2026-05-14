@@ -217,9 +217,9 @@ export default function Contact() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.3}>
-                <h3 className="font-display text-lg font-black uppercase tracking-tight text-foreground mb-4">
+                <h2 className="font-display text-lg font-black uppercase tracking-tight text-foreground mb-4">
                   What to Expect
-                </h3>
+                </h2>
                 <div className="space-y-4">
                   {[
                     { step: "01", text: "You email us with a brief overview of your project or challenge." },

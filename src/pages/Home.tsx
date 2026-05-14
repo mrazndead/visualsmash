@@ -313,17 +313,19 @@ export default function Home() {
               <span className="font-editorial italic font-light text-accent-gradient">
                 Smash
               </span>
+              {" "}The Ordinary.
             </motion.h1>
           </div>
           <div className="overflow-hidden">
-            <motion.h1
+            <motion.div
               initial={{ y: "100%" }}
               animate={{ y: isLoaded ? "0%" : "100%" }}
               transition={{ duration: 1, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
               className="text-hero font-display font-black uppercase text-foreground"
+              aria-hidden="true"
             >
               The Ordinary.
-            </motion.h1>
+            </motion.div>
           </div>
 
           <motion.p

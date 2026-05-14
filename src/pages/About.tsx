@@ -192,7 +192,7 @@ export default function About() {
                   >
                     <a.icon size={22} className="shrink-0 text-primary mt-1 transition-colors group-hover:text-secondary" />
                     <div>
-                      <h4 className="mb-2 font-display text-base font-black uppercase tracking-tight text-foreground">{a.title}</h4>
+                      <h3 className="mb-2 font-display text-base font-black uppercase tracking-tight text-foreground">{a.title}</h3>
                       <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">{a.body}</p>
                     </div>
                   </motion.div>
