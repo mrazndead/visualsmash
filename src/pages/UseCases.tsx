@@ -159,7 +159,7 @@ export default function UseCases() {
         title="Use Cases | Marketing Agency Stockton CA"
         description="Marketing agency Stockton CA services: branding, UX, web, AI software, marketing automation, and launch content for Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/use-cases"
-        keywords="marketing agency Stockton CA, Stockton branding, web design Stockton, UX design Stockton, marketing automation Stockton, AI marketing Stockton, Central Valley marketing agency, graphic design Stockton, email marketing Stockton, product launch agency, AI Brain development"
+        keywords="marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, web design Stockton, UX design Stockton, marketing automation Stockton, AI marketing Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, social media marketing Stockton, email marketing Stockton, Central Valley marketing agency, Bay Area creative agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",

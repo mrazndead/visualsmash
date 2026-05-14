@@ -59,7 +59,7 @@ const Portfolio = () => {
         title="Portfolio | Marketing Agency Stockton CA"
         description="Portfolio from Visual Smash — a Stockton, CA marketing agency: brand identity, catalog, advertising, web, and creative direction for top brands."
         canonical="https://visualsmash.lovable.app/portfolio"
-        keywords="marketing agency Stockton CA, Stockton design portfolio, brand identity portfolio, catalog design Stockton, advertising design, web design Stockton, creative direction, Central Valley marketing agency"
+        keywords="marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, Stockton design portfolio, brand identity portfolio, catalog design Stockton, web design Stockton, creative direction, Central Valley marketing agency, Bay Area creative agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",

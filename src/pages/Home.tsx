@@ -205,10 +205,10 @@ export default function Home() {
   return (
     <div ref={containerRef} className="relative overflow-x-hidden">
       <SEO
-        title="Marketing Agency Stockton CA | Visual Smash"
-        description="Marketing agency in Stockton, CA. Brand, UX, web, AI-powered creative, and automation for Central Valley and Bay Area brands."
+        title="Marketing Agency Stockton CA | Creative Agency | Visual Smash"
+        description="Marketing & creative agency in Stockton, CA. Branding, web design, UX, AI creative, and marketing automation for Central Valley & Bay Area brands."
         canonical="https://visualsmash.lovable.app"
-        keywords="marketing agency Stockton CA, Stockton marketing agency, creative agency Stockton, branding Stockton California, web design Stockton, AI marketing Stockton, Central Valley marketing, San Joaquin County marketing agency, Bay Area creative agency, UX design Stockton, marketing automation Stockton"
+        keywords="marketing agency Stockton CA, marketing agency in Stockton California, creative agency Stockton, creative agency in Stockton CA, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, web design agency Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, social media marketing Stockton, AI marketing agency Stockton, UX design Stockton, marketing automation Stockton, Lodi marketing agency, Tracy marketing agency, Modesto marketing agency, San Joaquin County marketing agency, Central Valley marketing agency, Bay Area creative agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@graph": [
@@ -216,6 +216,7 @@ export default function Home() {
               "@type": ["ProfessionalService", "LocalBusiness", "MarketingAgency"],
               "@id": "https://visualsmash.lovable.app/#organization",
               "name": "Visual Smash",
+              "alternateName": ["Visual Smash Marketing Agency", "Visual Smash Creative Agency Stockton"],
               "description": "Marketing agency in Stockton, CA specializing in brand design, UX, AI-powered creative, web design, and marketing automation.",
               "url": "https://visualsmash.lovable.app",
               "email": "visualsmash@gmail.com",
