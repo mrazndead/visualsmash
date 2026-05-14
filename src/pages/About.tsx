@@ -50,7 +50,7 @@ export default function About() {
         title="About | Marketing Agency Stockton CA"
         description="Stockton, CA marketing agency since 2004. 20+ years of Fortune 500 brand design, UX, and AI-powered creative across the Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/about"
-        keywords="marketing agency Stockton CA, about Visual Smash, Stockton creative agency, Central Valley marketing agency, brand design Stockton, Fortune 500 design experience, Bay Area creative agency"
+        keywords="marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, about Visual Smash, Central Valley marketing agency, brand design Stockton, Fortune 500 design experience, Bay Area creative agency, San Joaquin County marketing agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
