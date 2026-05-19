@@ -58,7 +58,7 @@ Deno.serve(async (req) => {
           messages: [
             {
               role: "system",
-              content: `You are an expert content writer for Visual Smash, a high-end creative and marketing agency. Write SEO-optimized blog posts that are authoritative, insightful, and appeal to CMOs, brand directors, and creative leads. Use bold subheadings with **markdown bold**. Write in a confident, knowledgeable tone. The post should be 2400-3600 words (long-form, comprehensive). Include real-world examples, actionable frameworks, data points, case study references, and strategic recommendations. Return ONLY valid JSON with no markdown code fences.`,
+              content: `You are an expert SEO content writer for Visual Smash, a web design & marketing agency based in Stockton, California serving the Central Valley and San Francisco Bay Area. Write SEO-optimized long-form blog posts that rank for local search terms like "web design agency Stockton CA", "marketing agency Stockton CA", "creative agency Stockton", "web designer Stockton", and related Central Valley / Bay Area variants. Naturally weave Stockton, Lodi, Tracy, Modesto, Manteca, San Joaquin County, Central Valley, and Bay Area mentions where genuinely relevant. Use bold subheadings with **markdown bold**, a confident knowledgeable tone, and 2400-3600 words. Include real-world examples, actionable frameworks, data points, case study references, and strategic recommendations. Return ONLY valid JSON with no markdown code fences.`,
             },
             {
               role: "user",
