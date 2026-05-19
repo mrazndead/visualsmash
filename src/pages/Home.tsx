@@ -205,10 +205,10 @@ export default function Home() {
   return (
     <div ref={containerRef} className="relative overflow-x-hidden">
       <SEO
-        title="Marketing Agency Stockton CA | Creative Agency | Visual Smash"
-        description="Marketing & creative agency in Stockton, CA. Branding, web design, UX, AI creative, and marketing automation for Central Valley & Bay Area brands."
+        title="Web Design & Marketing Agency Stockton CA | Visual Smash"
+        description="Web design & marketing agency in Stockton, CA. Custom websites, branding, UX, SEO & AI creative for Central Valley & Bay Area businesses."
         canonical="https://visualsmash.lovable.app"
-        keywords="marketing agency Stockton CA, marketing agency in Stockton California, creative agency Stockton, creative agency in Stockton CA, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, web design agency Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, social media marketing Stockton, AI marketing agency Stockton, UX design Stockton, marketing automation Stockton, Lodi marketing agency, Tracy marketing agency, Modesto marketing agency, San Joaquin County marketing agency, Central Valley marketing agency, Bay Area creative agency"
+        keywords="web design agency Stockton CA, web design agency in Stockton California, web designer Stockton, website design Stockton, custom web design Stockton, responsive web design Stockton, WordPress web design Stockton, Webflow agency Stockton, ecommerce web design Stockton, Shopify web design Stockton, marketing agency Stockton CA, marketing agency in Stockton California, creative agency Stockton, creative agency in Stockton CA, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, local SEO Stockton, social media marketing Stockton, AI marketing agency Stockton, UX design Stockton, marketing automation Stockton, Lodi web design, Tracy web design, Modesto web design, San Joaquin County web design, Central Valley web design agency, Bay Area web design agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@graph": [

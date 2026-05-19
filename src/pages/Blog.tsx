@@ -61,10 +61,10 @@ export default function Blog() {
   return (
     <div className="relative overflow-x-hidden">
       <SEO
-        title="Blog | Marketing Agency Stockton CA"
-        description="AI design, branding, UX, and marketing automation insights from Visual Smash — a Stockton, CA marketing agency serving the Central Valley & Bay Area."
+        title="Blog | Web Design & Marketing Agency Stockton CA"
+        description="Web design, AI, branding, UX & marketing insights from Visual Smash — a Stockton, CA web design & marketing agency serving Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/blog"
-        keywords="marketing agency Stockton CA, creative agency Stockton, Stockton marketing blog, AI design blog, branding strategy Stockton, UX psychology, marketing automation, Central Valley marketing insights, Bay Area creative agency blog"
+        keywords="web design agency Stockton CA, web design blog Stockton, marketing agency Stockton CA, creative agency Stockton, Stockton marketing blog, AI design blog, branding strategy Stockton, UX psychology, marketing automation, SEO Stockton, Central Valley web design insights, Bay Area web design agency blog"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Blog",

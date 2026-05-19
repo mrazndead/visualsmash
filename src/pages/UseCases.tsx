@@ -156,10 +156,10 @@ export default function UseCases() {
   return (
     <div className="pt-24">
       <SEO
-        title="Use Cases | Marketing Agency Stockton CA"
-        description="Marketing agency Stockton CA services: branding, UX, web, AI software, marketing automation, and launch content for Central Valley & Bay Area."
+        title="Services | Web Design & Marketing Agency Stockton CA"
+        description="Stockton CA web design & marketing services: custom websites, branding, UX, SEO, AI software, and marketing automation for Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/use-cases"
-        keywords="marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, web design Stockton, UX design Stockton, marketing automation Stockton, AI marketing Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, social media marketing Stockton, email marketing Stockton, Central Valley marketing agency, Bay Area creative agency"
+        keywords="web design agency Stockton CA, web designer Stockton, website design Stockton, custom web design Stockton, responsive web design Stockton, ecommerce web design Stockton, marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, UX design Stockton, marketing automation Stockton, AI marketing Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, social media marketing Stockton, email marketing Stockton, Central Valley web design agency, Bay Area web design agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
