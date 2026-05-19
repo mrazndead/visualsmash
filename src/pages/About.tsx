@@ -47,10 +47,10 @@ export default function About() {
   return (
     <div className="pt-24 overflow-x-hidden">
       <SEO
-        title="About | Marketing Agency Stockton CA"
-        description="Stockton, CA marketing agency since 2004. 20+ years of Fortune 500 brand design, UX, and AI-powered creative across the Central Valley & Bay Area."
+        title="About | Web Design & Marketing Agency Stockton CA"
+        description="Stockton, CA web design & marketing agency since 2004. 20+ years of Fortune 500 brand, web, UX & AI creative across the Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/about"
-        keywords="marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, about Visual Smash, Central Valley marketing agency, brand design Stockton, Fortune 500 design experience, Bay Area creative agency, San Joaquin County marketing agency"
+        keywords="web design agency Stockton CA, web designer Stockton, website design Stockton, marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, about Visual Smash, Central Valley web design agency, brand design Stockton, Fortune 500 design experience, Bay Area web design agency, San Joaquin County marketing agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
