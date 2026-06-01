@@ -71,6 +71,13 @@ export default function Contact() {
               "url": "https://visualsmash.lovable.app/contact"
             },
             {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visualsmash.lovable.app/" },
+                { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://visualsmash.lovable.app/contact" }
+              ]
+            },
+            {
               "@type": "LocalBusiness",
               "name": "Visual Smash",
               "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70455fe2-15bd-4dd2-a405-f3cb3fef6556/id-preview-ab820fab--a02f9379-36d5-4f16-9b2b-ea77e5f17fd5.lovable.app-1774582250132.png",
@@ -302,6 +309,41 @@ export default function Contact() {
                   </p>
                 </div>
               </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── LOCAL SERVICE AREA ── */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-10">
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Where We Work
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Proudly Based in{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Stockton, California.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
+              Visual Smash is a Stockton, CA web design and marketing agency rooted in San Joaquin County and serving
+              the entire Central Valley and San Francisco Bay Area. Whether you're a Miracle Mile retailer, a Lodi
+              winery, a Tracy logistics company, or a Bay Area startup, we bring agency-grade craft to your zip code.
+            </p>
+          </ScrollReveal>
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              "Stockton, CA 95202", "Stockton 95204 — Miracle Mile", "Stockton 95207 — Lincoln Village",
+              "Stockton 95209 — Spanos Park", "Stockton 95219 — Brookside", "Lodi, CA",
+              "Tracy, CA", "Manteca, CA", "Ripon, CA", "Lathrop, CA", "Modesto, CA", "Turlock, CA",
+              "Sacramento, CA", "Elk Grove, CA", "San Joaquin County", "Stanislaus County",
+              "Central Valley, CA", "San Francisco, CA", "Oakland, CA", "San Jose & Silicon Valley",
+            ].map((loc) => (
+              <div key={loc} className="border border-border px-4 py-3 hover:border-primary/40 transition-colors">
+                <p className="font-display text-xs font-medium text-muted-foreground hover:text-foreground transition-colors">
+                  {loc}
+                </p>
+              </div>
             ))}
           </div>
         </div>

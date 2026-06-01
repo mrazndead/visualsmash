@@ -767,6 +767,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── LOCAL COVERAGE ── */}
+      <section className="py-20 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-10">
+            <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Local Coverage
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              A Stockton Web Design Agency Serving the{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Central Valley &amp; Bay Area.</span>
+            </h2>
+            <p className="mt-4 max-w-3xl font-display text-sm md:text-base font-light leading-relaxed text-muted-foreground">
+              Visual Smash is a Stockton, California–based web design and marketing agency. We build custom websites,
+              brand identities, SEO programs, ecommerce stores, and AI-powered marketing systems for businesses across
+              San Joaquin County, the Central Valley, and the San Francisco Bay Area. Local roots, Fortune 500 craft.
+            </p>
+          </ScrollReveal>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Stockton, CA", "Lodi", "Tracy", "Manteca", "Ripon", "Lathrop", "Modesto", "Turlock",
+              "Sacramento", "Elk Grove", "San Joaquin County", "Stanislaus County", "Central Valley",
+              "San Francisco", "Oakland", "San Jose", "Silicon Valley",
+            ].map((c) => (
+              <span
+                key={c}
+                className="border border-primary/20 text-primary/70 hover:text-primary hover:border-primary/40 transition-colors px-3 py-1 font-display text-[10px] font-bold uppercase tracking-widest"
+              >
+                {c}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="py-24 border-t border-border">
         <div className="mx-auto max-w-5xl px-6 lg:px-12">

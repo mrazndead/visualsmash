@@ -3,7 +3,7 @@ import { useRef } from "react";
 import {
   Palette, BarChart3, MousePointer2, Fingerprint,
   Workflow, Sparkles, Globe, Cpu, ArrowRight, CheckCircle2, Brain,
-  TrendingUp, Users, Lightbulb, Layers,
+  TrendingUp, Users, Lightbulb, Layers, HelpCircle, MapPin,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
@@ -148,6 +148,60 @@ const methodology = [
 
 import { Target } from "lucide-react";
 
+const servicesFaqs = [
+  {
+    q: "Are you a full-service web design and marketing agency in Stockton, CA?",
+    a: "Yes. Visual Smash is a Stockton, California–based web design and marketing agency offering custom websites, branding, UX, SEO, paid media, email automation, and AI-powered creative. We serve clients across Stockton, Lodi, Tracy, Modesto, Manteca, the broader San Joaquin County, the Central Valley, and the San Francisco Bay Area."
+  },
+  {
+    q: "How much does a custom website from a Stockton web design agency cost?",
+    a: "Most small-business websites we build in the Central Valley land between $6,000 and $25,000, depending on page count, integrations, and content production. Enterprise platforms, ecommerce stores, and AI-enabled web applications scale from $35,000 upward. We send a fixed-fee proposal after a free 30-minute discovery call."
+  },
+  {
+    q: "How long does it take to launch a new website?",
+    a: "A typical Stockton small-business site launches in 4–6 weeks. Brand-led marketing sites with custom photography and motion design average 8–10 weeks. Headless ecommerce builds, multilingual sites, and complex web apps run 10–16 weeks. We share a week-by-week timeline before kickoff."
+  },
+  {
+    q: "Do you offer SEO and local SEO services for Stockton businesses?",
+    a: "Yes. Every site we ship includes on-page SEO, schema markup, Core Web Vitals tuning, and a local SEO foundation: Google Business Profile optimization, NAP consistency, local landing pages, and review-generation flows. We also offer ongoing SEO retainers focused on ranking for high-intent Central Valley search terms."
+  },
+  {
+    q: "Can you redesign an existing WordPress, Shopify, Webflow, or Wix site?",
+    a: "Absolutely. We migrate and redesign WordPress, Shopify, Webflow, Wix, Squarespace, and custom-coded sites. We preserve SEO equity with full redirect mapping, keyword preservation, and structured-data migration so traffic stays intact through the relaunch."
+  },
+  {
+    q: "Do you build ecommerce websites?",
+    a: "Yes — Shopify, WooCommerce, BigCommerce, and headless commerce on Next.js. We design product pages that convert, integrate Klaviyo and Meta/Google ads, and engineer checkout flows that lift average order value and reduce cart abandonment."
+  },
+  {
+    q: "What makes Visual Smash different from other Stockton marketing agencies?",
+    a: "Twenty years of Fortune 500 creative experience delivered with the speed and intimacy of a boutique studio. We pair senior designers and strategists with proprietary AI workflows, so you get agency-grade craft at a Central Valley price point — and we cap our roster at 2–3 new partnerships per quarter to protect quality."
+  },
+  {
+    q: "Do you only work with clients in Stockton, California?",
+    a: "Stockton is home base, but we serve clients throughout the Central Valley (Lodi, Tracy, Modesto, Manteca, Sacramento) and the San Francisco Bay Area, plus remote engagements across the U.S. Our process is fully remote-friendly with optional on-site workshops for local clients."
+  },
+  {
+    q: "Do you offer ongoing marketing retainers or one-time projects?",
+    a: "Both. Project engagements are ideal for a website launch, rebrand, or campaign. Monthly retainers cover continuous design, SEO, content, paid media, and marketing automation — perfect for growing Stockton and Bay Area brands that need a dedicated creative partner."
+  },
+  {
+    q: "How do I get a proposal from your Stockton web design team?",
+    a: "Email visualsmash@gmail.com with a short brief — goals, audience, timeline, and rough budget. We respond within 24 hours and book a 30-minute discovery call. You'll receive a tailored proposal with scope, milestones, and a fixed investment within 5 business days."
+  }
+];
+
+const serviceAreas = [
+  { city: "Stockton, CA", note: "Headquarters — Downtown, Miracle Mile, Brookside, Lincoln Village, Weston Ranch, Spanos Park" },
+  { city: "Lodi, CA", note: "Wine-country brands, hospitality, and downtown Lodi retail" },
+  { city: "Tracy, CA", note: "Logistics, ecommerce, and Tri-Valley B2B clients" },
+  { city: "Modesto, CA", note: "Agriculture, healthcare, and Stanislaus County professional services" },
+  { city: "Manteca & Ripon, CA", note: "Home services, construction, and family-owned businesses" },
+  { city: "Sacramento, CA", note: "Government contractors, nonprofits, and Capital Region startups" },
+  { city: "San Joaquin County", note: "Local SEO, multi-location franchise, and county-wide campaigns" },
+  { city: "SF Bay Area", note: "Tech, fintech, biotech, and venture-backed launch partners" },
+];
+
 export default function UseCases() {
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
@@ -162,10 +216,44 @@ export default function UseCases() {
         keywords="web design agency Stockton CA, web designer Stockton, website design Stockton, custom web design Stockton, responsive web design Stockton, ecommerce web design Stockton, marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, UX design Stockton, marketing automation Stockton, AI marketing Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, social media marketing Stockton, email marketing Stockton, Central Valley web design agency, Bay Area web design agency"
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          "name": "Visual Smash Use Cases — Marketing Agency Stockton CA",
-          "description": "Core creative and marketing disciplines from a Stockton, CA marketing agency: graphic design, branding, UX, web, AI, and automation.",
-          "url": "https://visualsmash.lovable.app/use-cases"
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              "name": "Services — Web Design & Marketing Agency Stockton CA",
+              "description": "Core web design, branding, UX, SEO, AI, and automation services from a Stockton, CA agency serving the Central Valley and Bay Area.",
+              "url": "https://visualsmash.lovable.app/use-cases"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visualsmash.lovable.app/" },
+                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://visualsmash.lovable.app/use-cases" }
+              ]
+            },
+            {
+              "@type": "ItemList",
+              "name": "Services",
+              "itemListElement": useCases.map((u, i) => ({
+                "@type": "ListItem",
+                "position": i + 1,
+                "item": {
+                  "@type": "Service",
+                  "name": u.title,
+                  "description": u.body,
+                  "areaServed": ["Stockton, CA", "San Joaquin County", "Central Valley", "San Francisco Bay Area"],
+                  "provider": { "@type": "Organization", "name": "Visual Smash", "url": "https://visualsmash.lovable.app" }
+                }
+              }))
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": servicesFaqs.map((f) => ({
+                "@type": "Question",
+                "name": f.q,
+                "acceptedAnswer": { "@type": "Answer", "text": f.a }
+              }))
+            }
+          ]
         }}
       />
 
@@ -399,6 +487,84 @@ export default function UseCases() {
               </StaggerItem>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ── SERVICE AREAS ── */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-12">
+            <LineReveal className="mb-6" />
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Service Area
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Web Design &amp; Marketing Across the{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Central Valley.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
+              Visual Smash is a Stockton, California web design and marketing agency serving small businesses,
+              ecommerce brands, and enterprises across San Joaquin County, the Central Valley, and the San Francisco Bay Area.
+            </p>
+          </ScrollReveal>
+          <StaggerContainer className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {serviceAreas.map((area) => (
+              <StaggerItem key={area.city}>
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  className="border border-border p-5 h-full hover:border-primary/40 transition-colors group"
+                >
+                  <div className="flex items-start gap-3">
+                    <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
+                    <div>
+                      <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground group-hover:text-primary transition-colors">
+                        {area.city}
+                      </h3>
+                      <p className="mt-2 font-display text-xs font-light leading-relaxed text-muted-foreground">
+                        {area.note}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ── SERVICES FAQ ── */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-5xl px-6 lg:px-12">
+          <ScrollReveal className="mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <HelpCircle size={16} className="text-primary" />
+              <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                Services FAQ
+              </p>
+            </div>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Stockton Web Design{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Questions, Answered.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
+              Pricing, timelines, SEO, ecommerce, redesigns, and how we partner with businesses across Stockton,
+              the Central Valley, and the Bay Area.
+            </p>
+          </ScrollReveal>
+          <div className="divide-y divide-border">
+            {servicesFaqs.map((faq, i) => (
+              <ScrollReveal key={faq.q} delay={Math.min(i, 6) * 0.04}>
+                <article className="py-6">
+                  <h3 className="font-display text-base md:text-lg font-bold text-foreground mb-2">
+                    {faq.q}
+                  </h3>
+                  <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">
+                    {faq.a}
+                  </p>
+                </article>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
