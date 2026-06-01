@@ -148,6 +148,60 @@ const methodology = [
 
 import { Target } from "lucide-react";
 
+const servicesFaqs = [
+  {
+    q: "Are you a full-service web design and marketing agency in Stockton, CA?",
+    a: "Yes. Visual Smash is a Stockton, California–based web design and marketing agency offering custom websites, branding, UX, SEO, paid media, email automation, and AI-powered creative. We serve clients across Stockton, Lodi, Tracy, Modesto, Manteca, the broader San Joaquin County, the Central Valley, and the San Francisco Bay Area."
+  },
+  {
+    q: "How much does a custom website from a Stockton web design agency cost?",
+    a: "Most small-business websites we build in the Central Valley land between $6,000 and $25,000, depending on page count, integrations, and content production. Enterprise platforms, ecommerce stores, and AI-enabled web applications scale from $35,000 upward. We send a fixed-fee proposal after a free 30-minute discovery call."
+  },
+  {
+    q: "How long does it take to launch a new website?",
+    a: "A typical Stockton small-business site launches in 4–6 weeks. Brand-led marketing sites with custom photography and motion design average 8–10 weeks. Headless ecommerce builds, multilingual sites, and complex web apps run 10–16 weeks. We share a week-by-week timeline before kickoff."
+  },
+  {
+    q: "Do you offer SEO and local SEO services for Stockton businesses?",
+    a: "Yes. Every site we ship includes on-page SEO, schema markup, Core Web Vitals tuning, and a local SEO foundation: Google Business Profile optimization, NAP consistency, local landing pages, and review-generation flows. We also offer ongoing SEO retainers focused on ranking for high-intent Central Valley search terms."
+  },
+  {
+    q: "Can you redesign an existing WordPress, Shopify, Webflow, or Wix site?",
+    a: "Absolutely. We migrate and redesign WordPress, Shopify, Webflow, Wix, Squarespace, and custom-coded sites. We preserve SEO equity with full redirect mapping, keyword preservation, and structured-data migration so traffic stays intact through the relaunch."
+  },
+  {
+    q: "Do you build ecommerce websites?",
+    a: "Yes — Shopify, WooCommerce, BigCommerce, and headless commerce on Next.js. We design product pages that convert, integrate Klaviyo and Meta/Google ads, and engineer checkout flows that lift average order value and reduce cart abandonment."
+  },
+  {
+    q: "What makes Visual Smash different from other Stockton marketing agencies?",
+    a: "Twenty years of Fortune 500 creative experience delivered with the speed and intimacy of a boutique studio. We pair senior designers and strategists with proprietary AI workflows, so you get agency-grade craft at a Central Valley price point — and we cap our roster at 2–3 new partnerships per quarter to protect quality."
+  },
+  {
+    q: "Do you only work with clients in Stockton, California?",
+    a: "Stockton is home base, but we serve clients throughout the Central Valley (Lodi, Tracy, Modesto, Manteca, Sacramento) and the San Francisco Bay Area, plus remote engagements across the U.S. Our process is fully remote-friendly with optional on-site workshops for local clients."
+  },
+  {
+    q: "Do you offer ongoing marketing retainers or one-time projects?",
+    a: "Both. Project engagements are ideal for a website launch, rebrand, or campaign. Monthly retainers cover continuous design, SEO, content, paid media, and marketing automation — perfect for growing Stockton and Bay Area brands that need a dedicated creative partner."
+  },
+  {
+    q: "How do I get a proposal from your Stockton web design team?",
+    a: "Email visualsmash@gmail.com with a short brief — goals, audience, timeline, and rough budget. We respond within 24 hours and book a 30-minute discovery call. You'll receive a tailored proposal with scope, milestones, and a fixed investment within 5 business days."
+  }
+];
+
+const serviceAreas = [
+  { city: "Stockton, CA", note: "Headquarters — Downtown, Miracle Mile, Brookside, Lincoln Village, Weston Ranch, Spanos Park" },
+  { city: "Lodi, CA", note: "Wine-country brands, hospitality, and downtown Lodi retail" },
+  { city: "Tracy, CA", note: "Logistics, ecommerce, and Tri-Valley B2B clients" },
+  { city: "Modesto, CA", note: "Agriculture, healthcare, and Stanislaus County professional services" },
+  { city: "Manteca & Ripon, CA", note: "Home services, construction, and family-owned businesses" },
+  { city: "Sacramento, CA", note: "Government contractors, nonprofits, and Capital Region startups" },
+  { city: "San Joaquin County", note: "Local SEO, multi-location franchise, and county-wide campaigns" },
+  { city: "SF Bay Area", note: "Tech, fintech, biotech, and venture-backed launch partners" },
+];
+
 export default function UseCases() {
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
