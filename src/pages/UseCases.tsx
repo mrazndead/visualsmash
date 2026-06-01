@@ -490,6 +490,84 @@ export default function UseCases() {
         </div>
       </section>
 
+      {/* ── SERVICE AREAS ── */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-12">
+            <LineReveal className="mb-6" />
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Service Area
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Web Design &amp; Marketing Across the{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Central Valley.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
+              Visual Smash is a Stockton, California web design and marketing agency serving small businesses,
+              ecommerce brands, and enterprises across San Joaquin County, the Central Valley, and the San Francisco Bay Area.
+            </p>
+          </ScrollReveal>
+          <StaggerContainer className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {serviceAreas.map((area) => (
+              <StaggerItem key={area.city}>
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  className="border border-border p-5 h-full hover:border-primary/40 transition-colors group"
+                >
+                  <div className="flex items-start gap-3">
+                    <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
+                    <div>
+                      <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground group-hover:text-primary transition-colors">
+                        {area.city}
+                      </h3>
+                      <p className="mt-2 font-display text-xs font-light leading-relaxed text-muted-foreground">
+                        {area.note}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ── SERVICES FAQ ── */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-5xl px-6 lg:px-12">
+          <ScrollReveal className="mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <HelpCircle size={16} className="text-primary" />
+              <p className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+                Services FAQ
+              </p>
+            </div>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Stockton Web Design{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Questions, Answered.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
+              Pricing, timelines, SEO, ecommerce, redesigns, and how we partner with businesses across Stockton,
+              the Central Valley, and the Bay Area.
+            </p>
+          </ScrollReveal>
+          <div className="divide-y divide-border">
+            {servicesFaqs.map((faq, i) => (
+              <ScrollReveal key={faq.q} delay={Math.min(i, 6) * 0.04}>
+                <article className="py-6">
+                  <h3 className="font-display text-base md:text-lg font-bold text-foreground mb-2">
+                    {faq.q}
+                  </h3>
+                  <p className="font-display text-sm font-light leading-relaxed text-muted-foreground">
+                    {faq.a}
+                  </p>
+                </article>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="relative overflow-hidden py-32">
         <div className="absolute inset-0 grid-lines opacity-15" />
