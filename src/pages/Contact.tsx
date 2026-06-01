@@ -71,6 +71,13 @@ export default function Contact() {
               "url": "https://visualsmash.lovable.app/contact"
             },
             {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visualsmash.lovable.app/" },
+                { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://visualsmash.lovable.app/contact" }
+              ]
+            },
+            {
               "@type": "LocalBusiness",
               "name": "Visual Smash",
               "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70455fe2-15bd-4dd2-a405-f3cb3fef6556/id-preview-ab820fab--a02f9379-36d5-4f16-9b2b-ea77e5f17fd5.lovable.app-1774582250132.png",
