@@ -9,7 +9,7 @@ import wireframeArch from "@/assets/wireframe-arch.webp";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "visualsmash@gmail.com", href: "mailto:visualsmash@gmail.com" },
-  { icon: MapPin, label: "Location", value: "Stockton, CA · Serving Central Valley & Bay Area", href: null },
+  { icon: MapPin, label: "Location", value: "Stockton, CA · Central Valley · San Francisco Bay Area", href: null },
   { icon: Clock, label: "Response Time", value: "Within 24 hours", href: null },
 ];
 
@@ -328,7 +328,7 @@ export default function Contact() {
             <p className="mt-4 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
               Visual Smash is a Stockton, CA web design and marketing agency rooted in San Joaquin County and serving
               the entire Stockton, CA, Central Valley, and San Francisco Bay Area. Whether you're a Miracle Mile retailer, a Lodi
-              winery, a Tracy logistics company, or a Bay Area startup, we bring agency-grade craft to your zip code.
+              winery, a Tracy logistics company, or a San Francisco Bay Area startup, we bring agency-grade craft to your zip code.
             </p>
           </ScrollReveal>
           <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

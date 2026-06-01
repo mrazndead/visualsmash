@@ -167,11 +167,11 @@ const whyUs = [
 const homeFaqs = [
   {
     q: "What does Visual Smash do?",
-    a: "Visual Smash is a Bay Area creative agency offering brand identity, UX design, web design, AI-powered creative, marketing automation, email marketing automation, product launch content and collateral, AI Brain development for small businesses, Microsoft Power Automate workflows, and AI agents built with Microsoft 365 Copilot Studio.",
+    a: "Visual Smash is a Stockton, CA marketing agency and creative studio offering brand identity, UX design, web design, AI-powered creative, marketing automation, email marketing automation, product launch content and collateral, AI Brain development for small businesses, Microsoft Power Automate workflows, and AI agents built with Microsoft 365 Copilot Studio.",
   },
   {
     q: "Where is Visual Smash located?",
-    a: "We're based in the San Francisco Bay Area, California, and work with clients across the United States and globally.",
+    a: "We're a Stockton, CA marketing agency and creative studio, also serving the San Francisco Bay Area, and we work with clients across the United States and globally.",
   },
   {
     q: "Who are your typical clients?",
@@ -876,10 +876,10 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "CreativeAgency",
             name: "Visual Smash",
-            description: "Award-winning creative agency in the San Francisco Bay Area specializing in brand design, UX, AI-powered creative, and marketing.",
+            description: "Award-winning Stockton, CA marketing agency and creative studio also serving the San Francisco Bay Area specializing in brand design, UX, AI-powered creative, and marketing.",
             url: "https://visualsmash.lovable.app",
             foundingDate: "2004",
-            areaServed: "San Francisco Bay Area, California",
+            areaServed: "Stockton, CA, San Joaquin County, Central Valley, and San Francisco Bay Area",
             email: "visualsmash@gmail.com",
             knowsAbout: ["Brand Design", "UX Design", "AI Creative", "Marketing Automation", "Email Marketing Automation", "Product Launch Content", "AI Brain Development", "Web Design", "Prompt Engineering"],
           }),
