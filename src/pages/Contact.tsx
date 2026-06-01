@@ -314,6 +314,41 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* ── LOCAL SERVICE AREA ── */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12">
+          <ScrollReveal className="mb-10">
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              Where We Work
+            </p>
+            <h2 className="text-title font-display font-black uppercase text-foreground">
+              Proudly Based in{" "}
+              <span className="font-editorial italic font-light text-accent-gradient">Stockton, California.</span>
+            </h2>
+            <p className="mt-4 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
+              Visual Smash is a Stockton, CA web design and marketing agency rooted in San Joaquin County and serving
+              the entire Central Valley and San Francisco Bay Area. Whether you're a Miracle Mile retailer, a Lodi
+              winery, a Tracy logistics company, or a Bay Area startup, we bring agency-grade craft to your zip code.
+            </p>
+          </ScrollReveal>
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              "Stockton, CA 95202", "Stockton 95204 — Miracle Mile", "Stockton 95207 — Lincoln Village",
+              "Stockton 95209 — Spanos Park", "Stockton 95219 — Brookside", "Lodi, CA",
+              "Tracy, CA", "Manteca, CA", "Ripon, CA", "Lathrop, CA", "Modesto, CA", "Turlock, CA",
+              "Sacramento, CA", "Elk Grove, CA", "San Joaquin County", "Stanislaus County",
+              "Central Valley, CA", "San Francisco, CA", "Oakland, CA", "San Jose & Silicon Valley",
+            ].map((loc) => (
+              <div key={loc} className="border border-border px-4 py-3 hover:border-primary/40 transition-colors">
+                <p className="font-display text-xs font-medium text-muted-foreground hover:text-foreground transition-colors">
+                  {loc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── FINAL CTA ── */}
       <section className="relative overflow-hidden py-32">
         <div className="absolute inset-0 grid-lines opacity-15" />
