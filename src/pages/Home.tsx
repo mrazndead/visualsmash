@@ -167,11 +167,11 @@ const whyUs = [
 const homeFaqs = [
   {
     q: "What does Visual Smash do?",
-    a: "Visual Smash is a Bay Area creative agency offering brand identity, UX design, web design, AI-powered creative, marketing automation, email marketing automation, product launch content and collateral, AI Brain development for small businesses, Microsoft Power Automate workflows, and AI agents built with Microsoft 365 Copilot Studio.",
+    a: "Visual Smash is a Stockton, CA marketing agency and creative studio offering brand identity, UX design, web design, AI-powered creative, marketing automation, email marketing automation, product launch content and collateral, AI Brain development for small businesses, Microsoft Power Automate workflows, and AI agents built with Microsoft 365 Copilot Studio.",
   },
   {
     q: "Where is Visual Smash located?",
-    a: "We're based in the San Francisco Bay Area, California, and work with clients across the United States and globally.",
+    a: "We're a Stockton, CA marketing agency and creative studio, also serving the San Francisco Bay Area, and we work with clients across the United States and globally.",
   },
   {
     q: "Who are your typical clients?",
@@ -205,10 +205,10 @@ export default function Home() {
   return (
     <div ref={containerRef} className="relative overflow-x-hidden">
       <SEO
-        title="Web Design & Marketing Agency Stockton CA | Visual Smash"
-        description="Web design & marketing agency in Stockton, CA. Custom websites, branding, UX, SEO & AI creative for Central Valley & Bay Area businesses."
+        title="Stockton CA Marketing Agency & Creative Studio | Web Design"
+        description="Web design & marketing agency in Stockton, CA. Custom websites, branding, UX, SEO & AI creative for Stockton, CA, Central Valley & Bay Area businesses."
         canonical="https://visualsmash.lovable.app"
-        keywords="web design agency Stockton CA, web design agency in Stockton California, web designer Stockton, website design Stockton, custom web design Stockton, responsive web design Stockton, WordPress web design Stockton, Webflow agency Stockton, ecommerce web design Stockton, Shopify web design Stockton, marketing agency Stockton CA, marketing agency in Stockton California, creative agency Stockton, creative agency in Stockton CA, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, local SEO Stockton, social media marketing Stockton, AI marketing agency Stockton, UX design Stockton, marketing automation Stockton, Lodi web design, Tracy web design, Modesto web design, San Joaquin County web design, Central Valley web design agency, Bay Area web design agency"
+        keywords="Stockton CA marketing agency, Stockton CA creative studio, Stockton CA web development services, Stockton marketing agency, Stockton creative studio, Stockton web development, Stockton web developer, web development agency Stockton, web development services Stockton CA, web design agency Stockton CA, web design agency in Stockton California, web designer Stockton, website design Stockton, custom web design Stockton, responsive web design Stockton, WordPress web design Stockton, Webflow agency Stockton, ecommerce web design Stockton, Shopify web design Stockton, marketing agency Stockton CA, marketing agency in Stockton California, creative agency Stockton, creative agency in Stockton CA, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, local SEO Stockton, social media marketing Stockton, AI marketing agency Stockton, UX design Stockton, marketing automation Stockton, Lodi web design, Tracy web design, Modesto web design, San Joaquin County web design, Central Valley web design agency, Bay Area web design agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@graph": [
@@ -876,10 +876,10 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "CreativeAgency",
             name: "Visual Smash",
-            description: "Award-winning creative agency in the San Francisco Bay Area specializing in brand design, UX, AI-powered creative, and marketing.",
+            description: "Award-winning Stockton, CA marketing agency and creative studio also serving the San Francisco Bay Area specializing in brand design, UX, AI-powered creative, and marketing.",
             url: "https://visualsmash.lovable.app",
             foundingDate: "2004",
-            areaServed: "San Francisco Bay Area, California",
+            areaServed: "Stockton, CA, San Joaquin County, Central Valley, and San Francisco Bay Area",
             email: "visualsmash@gmail.com",
             knowsAbout: ["Brand Design", "UX Design", "AI Creative", "Marketing Automation", "Email Marketing Automation", "Product Launch Content", "AI Brain Development", "Web Design", "Prompt Engineering"],
           }),

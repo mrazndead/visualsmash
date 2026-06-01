@@ -13,7 +13,7 @@ const timeline = [
   { year: "2004", title: "The Genesis", body: "Started in San Francisco's tech scene, shaping brands for emerging companies during the dot-com renaissance. Cut teeth on high-stakes product launches and built a reputation for creative work that actually moved the needle." },
   { year: "2008", title: "Fortune 500 Elevation", body: "Joined the big leagues. Creative direction for household-name tech and retail giants. Led teams of 30+ across multi-million dollar campaigns." },
   { year: "2011", title: "Technical Marketing Mastery", body: "Deepened the analytics muscle. Built data-driven creative frameworks that merged performance marketing with high-end design." },
-  { year: "2013", title: "Real Estate Reimagined", body: "Pioneered luxury real estate branding in the Bay Area. Transformed how property is marketed through cinematic storytelling and editorial-grade design." },
+  { year: "2013", title: "Real Estate Reimagined", body: "Pioneered luxury real estate branding across Stockton, CA, the Central Valley, and the San Francisco Bay Area. Transformed how property is marketed through cinematic storytelling and editorial-grade design." },
   { year: "2017", title: "Fashion Forward", body: "Bridged the gap between Silicon Valley and high fashion. Art direction for capsule collections, editorial campaigns, and global retail identities." },
   { year: "2019", title: "UX as Strategy", body: "Embedded a full-scale UX design practice—user research, journey mapping, interaction design, and prototype testing for digital products reaching millions." },
   { year: "2021", title: "AI Integration Pioneers", body: "Became early adopters of applied AI for creative work. Built generative imagery pipelines, AI-accelerated production systems, and intelligent campaign tools." },
@@ -47,10 +47,10 @@ export default function About() {
   return (
     <div className="pt-24 overflow-x-hidden">
       <SEO
-        title="About | Web Design & Marketing Agency Stockton CA"
-        description="Stockton, CA web design & marketing agency since 2004. 20+ years of Fortune 500 brand, web, UX & AI creative across the Central Valley & Bay Area."
+        title="About | Stockton CA Marketing Agency & Creative Studio"
+        description="Stockton, CA web design & marketing agency since 2004. 20+ years of Fortune 500 brand, web, UX & AI creative across the Stockton, CA, Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/about"
-        keywords="web design agency Stockton CA, web designer Stockton, website design Stockton, marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, about Visual Smash, Central Valley web design agency, brand design Stockton, Fortune 500 design experience, Bay Area web design agency, San Joaquin County marketing agency"
+        keywords="Stockton CA marketing agency, Stockton CA creative studio, Stockton CA web development services, Stockton marketing agency, Stockton creative studio, Stockton web development, Stockton web developer, web development agency Stockton, web development services Stockton CA, web design agency Stockton CA, web designer Stockton, website design Stockton, marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, about Visual Smash, Central Valley web design agency, brand design Stockton, Fortune 500 design experience, Bay Area web design agency, San Joaquin County marketing agency"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
@@ -99,7 +99,7 @@ export default function About() {
                   and culture. We don't make things look pretty—we make things matter.
                 </p>
                 <p className="mt-4 font-display text-base font-light leading-relaxed text-muted-foreground md:text-lg">
-                  Founded in the San Francisco Bay Area, our work has shaped the
+                  Founded in Stockton, CA with deep roots in the San Francisco Bay Area, our work has shaped the
                   identities of Fortune 500 companies across tech, real estate,
                   fashion, and retail.
                 </p>
@@ -146,7 +146,7 @@ export default function About() {
                 >
                   <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">Founded</p>
                   <p className="font-display text-2xl md:text-3xl font-black text-foreground">2004</p>
-                  <p className="mt-1 font-display text-xs text-muted-foreground">Bay Area · California</p>
+                  <p className="mt-1 font-display text-xs text-muted-foreground">Stockton, CA · Bay Area · California</p>
                 </motion.div>
               </div>
             </ScrollReveal>
