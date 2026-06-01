@@ -216,10 +216,44 @@ export default function UseCases() {
         keywords="web design agency Stockton CA, web designer Stockton, website design Stockton, custom web design Stockton, responsive web design Stockton, ecommerce web design Stockton, marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, digital marketing agency Stockton, UX design Stockton, marketing automation Stockton, AI marketing Stockton, graphic design Stockton, logo design Stockton, SEO agency Stockton, social media marketing Stockton, email marketing Stockton, Central Valley web design agency, Bay Area web design agency"
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          "name": "Visual Smash Use Cases — Marketing Agency Stockton CA",
-          "description": "Core creative and marketing disciplines from a Stockton, CA marketing agency: graphic design, branding, UX, web, AI, and automation.",
-          "url": "https://visualsmash.lovable.app/use-cases"
+          "@graph": [
+            {
+              "@type": "CollectionPage",
+              "name": "Services — Web Design & Marketing Agency Stockton CA",
+              "description": "Core web design, branding, UX, SEO, AI, and automation services from a Stockton, CA agency serving the Central Valley and Bay Area.",
+              "url": "https://visualsmash.lovable.app/use-cases"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visualsmash.lovable.app/" },
+                { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://visualsmash.lovable.app/use-cases" }
+              ]
+            },
+            {
+              "@type": "ItemList",
+              "name": "Services",
+              "itemListElement": useCases.map((u, i) => ({
+                "@type": "ListItem",
+                "position": i + 1,
+                "item": {
+                  "@type": "Service",
+                  "name": u.title,
+                  "description": u.body,
+                  "areaServed": ["Stockton, CA", "San Joaquin County", "Central Valley", "San Francisco Bay Area"],
+                  "provider": { "@type": "Organization", "name": "Visual Smash", "url": "https://visualsmash.lovable.app" }
+                }
+              }))
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": servicesFaqs.map((f) => ({
+                "@type": "Question",
+                "name": f.q,
+                "acceptedAnswer": { "@type": "Answer", "text": f.a }
+              }))
+            }
+          ]
         }}
       />
 
