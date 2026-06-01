@@ -3,7 +3,7 @@ import { useRef } from "react";
 import {
   Palette, BarChart3, MousePointer2, Fingerprint,
   Workflow, Sparkles, Globe, Cpu, ArrowRight, CheckCircle2, Brain,
-  TrendingUp, Users, Lightbulb, Layers,
+  TrendingUp, Users, Lightbulb, Layers, HelpCircle, MapPin,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
