@@ -33,11 +33,19 @@ export const Footer = () => {
               Award-winning creative direction and brand design for companies
               that refuse to be ordinary.
             </p>
-            <div className="mt-6 flex items-center gap-2">
-              <div className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
-              <span className="font-display text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                Bay Area, California
-              </span>
+            <div className="mt-6 flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
+                <span className="font-display text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                  Bay Area, California
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-secondary animate-pulse" />
+                <span className="font-display text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                  Stockton, California
+                </span>
+              </div>
             </div>
           </div>
 
