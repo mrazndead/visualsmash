@@ -53,6 +53,30 @@ export type Database = {
         }
         Relationships: []
       }
+      seo_dynamic_keywords: {
+        Row: {
+          description: string | null
+          id: string
+          keywords: string
+          page: string
+          updated_at: string
+        }
+        Insert: {
+          description?: string | null
+          id?: string
+          keywords?: string
+          page: string
+          updated_at?: string
+        }
+        Update: {
+          description?: string | null
+          id?: string
+          keywords?: string
+          page?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       site_themes: {
         Row: {
           active: boolean
