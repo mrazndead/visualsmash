@@ -55,7 +55,7 @@ const stats = [
 const Portfolio = () => {
   return (
     <>
-      <SEO
+      <SEO pageKey="portfolio"
         title="Portfolio | Web Design & Marketing Agency Stockton CA"
         description="Portfolio from Visual Smash — a Stockton, CA web design & marketing agency: web design, brand identity, catalog, advertising, and creative direction."
         canonical="https://visualsmash.lovable.app/portfolio"

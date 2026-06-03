@@ -56,7 +56,7 @@ const faqs = [
 export default function Contact() {
   return (
     <div className="pt-24 overflow-x-hidden">
-      <SEO
+      <SEO pageKey="contact"
         title="Contact | Stockton CA Marketing Agency & Creative Studio"
         description="Contact Visual Smash — a Stockton, CA web design & marketing agency. We take 2–3 new clients per quarter across the Stockton, CA, Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/contact"
