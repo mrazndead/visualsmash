@@ -209,7 +209,7 @@ export default function UseCases() {
 
   return (
     <div className="pt-24">
-      <SEO
+      <SEO pageKey="use-cases"
         title="Services | Stockton CA Marketing Agency & Web Development"
         description="Stockton CA web design & marketing services: custom websites, branding, UX, SEO, AI software, and marketing automation for Stockton, CA, Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/use-cases"

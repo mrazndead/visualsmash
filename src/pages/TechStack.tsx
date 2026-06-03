@@ -47,7 +47,7 @@ const TechStack = () => {
 
   return (
     <>
-      <SEO
+      <SEO pageKey="tech-stack"
         title="Tech Stack | Stockton CA Creative Studio & Web Development"
         description="The elite tools Visual Smash — a Stockton, CA web design & marketing agency — uses to design, build, and automate: Figma, Webflow, Framer, WordPress, n8n, and more."
         canonical="https://visualsmash.lovable.app/tech-stack"

@@ -60,7 +60,7 @@ export default function Blog() {
 
   return (
     <div className="relative overflow-x-hidden">
-      <SEO
+      <SEO pageKey="blog"
         title="Blog | Web Design & Marketing Agency Stockton CA"
         description="Web design, AI, branding, UX & marketing insights from Visual Smash — a Stockton, CA web design & marketing agency serving Stockton, CA, Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/blog"

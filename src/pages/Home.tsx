@@ -204,7 +204,7 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="relative overflow-x-hidden">
-      <SEO
+      <SEO pageKey="home"
         title="Stockton CA Marketing Agency & Creative Studio | Web Design"
         description="Web design & marketing agency in Stockton, CA. Custom websites, branding, UX, SEO & AI creative for Stockton, CA, Central Valley & Bay Area businesses."
         canonical="https://visualsmash.lovable.app"

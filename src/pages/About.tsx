@@ -46,7 +46,7 @@ const capabilities = [
 export default function About() {
   return (
     <div className="pt-24 overflow-x-hidden">
-      <SEO
+      <SEO pageKey="about"
         title="About | Stockton CA Marketing Agency & Creative Studio"
         description="Stockton, CA web design & marketing agency since 2004. 20+ years of Fortune 500 brand, web, UX & AI creative across the Stockton, CA, Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/about"
