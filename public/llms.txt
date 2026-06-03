@@ -6,8 +6,14 @@
 - Name: Visual Smash
 - Founded: 2004
 - Location: Stockton, California, USA (serving Stockton, CA, Central Valley & San Francisco Bay Area)
-- Primary Keywords: Stockton CA marketing agency, Stockton CA creative studio, Stockton CA web development services, web design agency Stockton CA
-- Also Known For: web designer Stockton, website design Stockton CA, custom web design Stockton, WordPress web design Stockton, Webflow agency Stockton, ecommerce web design Stockton, creative agency in Stockton CA, branding agency Stockton, AI marketing agency Stockton, advertising agency Stockton, SEO agency Stockton, digital marketing Central Valley, Bay Area web design agency
+- Primary Keywords: Stockton CA marketing agency, marketing agency in Stockton California, Stockton CA creative studio, creative agency in Stockton CA, Stockton CA web development services, web design agency Stockton CA, web developer Stockton CA
+- Also Known For: web designer Stockton, website design Stockton CA, custom web design Stockton, responsive web design Stockton, WordPress web design Stockton, Webflow agency Stockton, Shopify web design Stockton, ecommerce web design Stockton, landing page design Stockton, website redesign Stockton, branding agency Stockton, brand identity Stockton, logo design Stockton, graphic design Stockton, advertising agency Stockton, digital marketing agency Stockton, SEO agency Stockton, local SEO Stockton, social media marketing Stockton, Google Ads Stockton, AI marketing agency Stockton, AI automation Stockton, UX design Stockton, marketing automation Stockton, small business marketing Stockton, digital marketing Central Valley, Bay Area web design agency, Lodi web design, Tracy web design, Modesto web design, Manteca web design, San Joaquin County web design
+
+## FAQ
+- Q: Are you a marketing agency in Stockton, CA? A: Yes — Visual Smash is a marketing agency and creative studio based in Stockton, California, also serving the Central Valley and San Francisco Bay Area.
+- Q: Do you offer web design and web development in Stockton? A: Yes — we build custom websites, WordPress, Webflow, Shopify, and headless React/Vite sites for Stockton, CA businesses.
+- Q: Do you do SEO in Stockton, CA? A: Yes — local SEO, technical SEO, content, and Google Business Profile optimization for Stockton and San Joaquin County.
+- Q: Do you work with small businesses? A: Yes — from Stockton small businesses and startups to Fortune 500 brands.
 - Contact: visualsmash@gmail.com
 - Site: https://visualsmash.lovable.app
 
