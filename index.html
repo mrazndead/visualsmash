@@ -46,6 +46,55 @@
     <meta name="twitter:title" content="Stockton CA Marketing Agency & Creative Studio | Visual Smash">
     <meta name="twitter:description" content="Web design & marketing agency in Stockton, CA. Custom websites, branding, UX, SEO, and AI creative across the Stockton, CA, Central Valley & Bay Area.">
     <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70455fe2-15bd-4dd2-a405-f3cb3fef6556/id-preview-ab820fab--a02f9379-36d5-4f16-9b2b-ea77e5f17fd5.lovable.app-1774582250132.png">
+
+    <!-- Sitewide JSON-LD: Organization + WebSite SearchAction + LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://visualsmash.lovable.app/#org",
+          "name": "Visual Smash",
+          "url": "https://visualsmash.lovable.app",
+          "logo": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70455fe2-15bd-4dd2-a405-f3cb3fef6556/id-preview-ab820fab--a02f9379-36d5-4f16-9b2b-ea77e5f17fd5.lovable.app-1774582250132.png",
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://visualsmash.lovable.app/#website",
+          "url": "https://visualsmash.lovable.app",
+          "name": "Visual Smash",
+          "publisher": { "@id": "https://visualsmash.lovable.app/#org" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://visualsmash.lovable.app/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": ["LocalBusiness", "ProfessionalService", "MarketingAgency"],
+          "@id": "https://visualsmash.lovable.app/#localbusiness",
+          "name": "Visual Smash",
+          "url": "https://visualsmash.lovable.app",
+          "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70455fe2-15bd-4dd2-a405-f3cb3fef6556/id-preview-ab820fab--a02f9379-36d5-4f16-9b2b-ea77e5f17fd5.lovable.app-1774582250132.png",
+          "priceRange": "$$$",
+          "areaServed": [
+            "Stockton, CA", "Lodi, CA", "Tracy, CA", "Modesto, CA", "Manteca, CA",
+            "San Joaquin County", "Central Valley", "Sacramento, CA", "San Francisco Bay Area"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Stockton",
+            "addressRegion": "CA",
+            "postalCode": "95202",
+            "addressCountry": "US"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": 37.9577, "longitude": -121.2908 }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
