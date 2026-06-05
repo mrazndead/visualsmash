@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useLocation, Navigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Check } from "lucide-react";
 import { SEO } from "@/components/SEO";
@@ -17,8 +17,9 @@ const services = [
 ];
 
 export default function LocationPage() {
-  const { slug } = useParams<{ slug: string }>();
-  const loc = findLocation(slug ?? "");
+  const { pathname } = useLocation();
+  const slug = pathname.replace(/^\//, "").replace(/\/$/, "");
+  const loc = findLocation(slug);
   if (!loc) return <Navigate to="/" replace />;
 
   const url = `https://visualsmash.lovable.app/${loc.slug}`;

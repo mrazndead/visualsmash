@@ -28,7 +28,6 @@ const categories = [
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [expandedPost, setExpandedPost] = useState<string | null>(null);
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
