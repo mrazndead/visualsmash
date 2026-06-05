@@ -1,0 +1,200 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Visual Smash Blog",
+  "home_page_url": "https://visualsmash.lovable.app/blog",
+  "feed_url": "https://visualsmash.lovable.app/feed.json",
+  "description": "Web design, AI, branding, UX & marketing insights from Visual Smash — a Stockton, CA web design & marketing agency.",
+  "language": "en-US",
+  "items": [
+    {
+      "id": "https://visualsmash.lovable.app/blog/brand-identity-visual-smash-s-definitive-guide",
+      "url": "https://visualsmash.lovable.app/blog/brand-identity-visual-smash-s-definitive-guide",
+      "title": "Brand Identity: Visual Smash's Definitive Guide",
+      "summary": "Unlock the power of your brand identity. Visual Smash, your Stockton CA web design & marketing experts, reveal how to build a timeless, resonant brand.",
+      "tags": [
+        "Brand Identity"
+      ],
+      "date_published": "2026-06-01T14:00:21.292Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/power-automate-your-stockton-agency-s-workflow-supercharger",
+      "url": "https://visualsmash.lovable.app/blog/power-automate-your-stockton-agency-s-workflow-supercharger",
+      "title": "Power Automate: Your Stockton Agency's Workflow Supercharger",
+      "summary": "Unlock efficiency with Microsoft Power Automate. This guide from a leading Stockton web design agency shows how to automate tasks and boost productivity.",
+      "tags": [
+        "Microsoft Power Automate"
+      ],
+      "date_published": "2026-05-28T14:00:38.500Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/marketing-automation-your-stockton-agency-s-growth-engine",
+      "url": "https://visualsmash.lovable.app/blog/marketing-automation-your-stockton-agency-s-growth-engine",
+      "title": "Marketing Automation: Your Stockton Agency's Growth Engine",
+      "summary": "Unlock explosive growth with marketing automation. Visual Smash, your Stockton CA web design & marketing agency, reveals how to dominate the Central Valley & Bay Area.",
+      "tags": [
+        "Marketing Automation"
+      ],
+      "date_published": "2026-05-24T14:00:20.956Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/ux-design-stockton-crafting-digital-experiences-for-growth",
+      "url": "https://visualsmash.lovable.app/blog/ux-design-stockton-crafting-digital-experiences-for-growth",
+      "title": "UX Design Stockton: Crafting Digital Experiences for Growth",
+      "summary": "Discover the power of UX Design in Stockton, CA. Visual Smash crafts intuitive digital experiences that drive engagement and business growth in the Central Valley.",
+      "tags": [
+        "UX Design"
+      ],
+      "date_published": "2026-05-22T14:00:30.788Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/ai-agents-with-microsoft-365-copilot-the-future-of-creative-marketing",
+      "url": "https://visualsmash.lovable.app/blog/ai-agents-with-microsoft-365-copilot-the-future-of-creative-marketing",
+      "title": "AI Agents with Microsoft 365 Copilot: The Future of Creative & Marketing",
+      "summary": "Unleash transformative AI Agents with Microsoft 365 Copilot for creative and marketing leaders. Discover strategic advantages, implementation frameworks, and future trends.",
+      "tags": [
+        "AI Agents with Microsoft 365 Copilot"
+      ],
+      "date_published": "2026-05-18T14:00:43.691Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/mastering-product-launch-content-a-definitive-guide-for-cmos",
+      "url": "https://visualsmash.lovable.app/blog/mastering-product-launch-content-a-definitive-guide-for-cmos",
+      "title": "Mastering Product Launch Content: A Definitive Guide for CMOs",
+      "summary": "Unlock unparalleled success for your next product launch with our definitive guide to strategic content and collateral. Learn frameworks, trends, and avoid common pitfalls.",
+      "tags": [
+        "Product Launch Content & Collateral"
+      ],
+      "date_published": "2026-05-11T14:00:35.255Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/unlocking-hyperautomation-power-automate-s-strategic-impact-on-marketing",
+      "url": "https://visualsmash.lovable.app/blog/unlocking-hyperautomation-power-automate-s-strategic-impact-on-marketing",
+      "title": "Unlocking Hyperautomation: Power Automate's Strategic Impact on Marketing",
+      "summary": "Discover how Microsoft Power Automate drives hyperautomation in marketing, optimizing workflows, enhancing data insights, and boosting ROI for CMOs and creative leaders.",
+      "tags": [
+        "Microsoft Power Automate"
+      ],
+      "date_published": "2026-05-04T14:00:37.502Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/email-marketing-automation-revenue-engine-2026",
+      "url": "https://visualsmash.lovable.app/blog/email-marketing-automation-revenue-engine-2026",
+      "title": "Email Marketing Automation in 2026: Building the Revenue Engine Inside the Inbox",
+      "summary": "Email is still the highest-ROI channel in marketing — but only when automation, segmentation, and creative work as one system. Here is how Visual Smash builds email programs that compound revenue month after month.",
+      "tags": [
+        "Email Marketing Automation"
+      ],
+      "date_published": "2026-05-02T14:21:31.138Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/ux-design-the-strategic-imperative-for-brand-leadership-in-2026",
+      "url": "https://visualsmash.lovable.app/blog/ux-design-the-strategic-imperative-for-brand-leadership-in-2026",
+      "title": "UX Design: The Strategic Imperative for Brand Leadership in 2026",
+      "summary": "Discover how strategic UX design drives brand loyalty, innovation, and market dominance. This guide for CMOs explores 2026 trends, actionable frameworks, and case studies.",
+      "tags": [
+        "UX Design"
+      ],
+      "date_published": "2026-05-01T16:25:06.384Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/ai-transforming-graphic-design",
+      "url": "https://visualsmash.lovable.app/blog/ai-transforming-graphic-design",
+      "title": "How AI Is Transforming Graphic Design in 2025",
+      "summary": "From generative fill to AI-powered layout systems, artificial intelligence is rewriting the rules of graphic design.",
+      "tags": [
+        "AI Design"
+      ],
+      "date_published": "2025-03-15T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/future-of-web-design-2025",
+      "url": "https://visualsmash.lovable.app/blog/future-of-web-design-2025",
+      "title": "The Future of Web Design: Trends Defining the Next Era",
+      "summary": "Brutalist aesthetics, immersive 3D experiences, AI-personalized layouts, and performance-first design are reshaping the web.",
+      "tags": [
+        "Web Design"
+      ],
+      "date_published": "2025-02-20T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/ux-design-psychology-conversion",
+      "url": "https://visualsmash.lovable.app/blog/ux-design-psychology-conversion",
+      "title": "UX Psychology: Design Patterns That Actually Convert",
+      "summary": "Beyond best practices—how cognitive psychology and behavioral economics combine to create digital experiences that drive measurable outcomes.",
+      "tags": [
+        "UX Design"
+      ],
+      "date_published": "2025-02-10T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/brand-strategy-digital-age",
+      "url": "https://visualsmash.lovable.app/blog/brand-strategy-digital-age",
+      "title": "Building a Brand That Survives the Algorithm",
+      "summary": "In a world of infinite content and shrinking attention spans, brand strategy has never been more critical—or more misunderstood.",
+      "tags": [
+        "Branding"
+      ],
+      "date_published": "2025-01-25T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/marketing-automation-ai-workflows",
+      "url": "https://visualsmash.lovable.app/blog/marketing-automation-ai-workflows",
+      "title": "Marketing Automation Meets AI: The New Playbook",
+      "summary": "Smart automation isn't about removing humans—it's about removing busywork and creating more effective campaigns at scale.",
+      "tags": [
+        "Marketing"
+      ],
+      "date_published": "2025-01-15T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/prompt-engineering-creative-professionals",
+      "url": "https://visualsmash.lovable.app/blog/prompt-engineering-creative-professionals",
+      "title": "Prompt Engineering for Creative Professionals",
+      "summary": "The designers and marketers who master prompt engineering will define the next generation of creative work.",
+      "tags": [
+        "AI Design"
+      ],
+      "date_published": "2024-12-20T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/color-theory-digital-branding",
+      "url": "https://visualsmash.lovable.app/blog/color-theory-digital-branding",
+      "title": "Advanced Color Theory for Digital Branding",
+      "summary": "Color is the most immediate and emotional element of any brand. How to build color systems that work across screens and cultures.",
+      "tags": [
+        "Graphic Design"
+      ],
+      "date_published": "2024-12-10T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/design-systems-scaling-brands",
+      "url": "https://visualsmash.lovable.app/blog/design-systems-scaling-brands",
+      "title": "Design Systems: Scaling Your Brand Without Losing Its Soul",
+      "summary": "A design system is more than a component library. It's the codified DNA of your brand.",
+      "tags": [
+        "UX Design"
+      ],
+      "date_published": "2024-11-20T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/ai-tools-software-design",
+      "url": "https://visualsmash.lovable.app/blog/ai-tools-software-design",
+      "title": "AI-Powered Software Design: Tools Reshaping the Industry",
+      "summary": "From Figma's AI features to AI-generated code, the software design landscape is evolving faster than ever.",
+      "tags": [
+        "AI Design"
+      ],
+      "date_published": "2024-11-10T00:00:00.000Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/content-marketing-strategy-2025",
+      "url": "https://visualsmash.lovable.app/blog/content-marketing-strategy-2025",
+      "title": "Content Marketing Strategy for the AI-Saturated Web",
+      "summary": "When everyone has access to AI content generation, what differentiates great content marketing? Original thinking and strategic depth.",
+      "tags": [
+        "Marketing"
+      ],
+      "date_published": "2024-10-15T00:00:00.000Z"
+    }
+  ]
+}

@@ -28,7 +28,6 @@ const categories = [
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [expandedPost, setExpandedPost] = useState<string | null>(null);
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -155,11 +154,11 @@ export default function Blog() {
             <div className="grid gap-6 md:grid-cols-2">
               {featured.map((post, i) => (
                 <ScrollReveal key={post.slug} delay={i * 0.1}>
+                  <Link to={`/blog/${post.slug}`} className="block h-full">
                   <motion.div
                     whileHover={{ y: -4 }}
                     transition={{ duration: 0.3 }}
                     className="group relative border border-border p-8 md:p-10 h-full flex flex-col cursor-pointer transition-all duration-500 hover:border-primary/40 hover:bg-muted/10"
-                    onClick={() => setExpandedPost(expandedPost === post.slug ? null : post.slug)}
                   >
                     <div className="absolute top-0 right-0 w-20 h-20 border-l border-b border-border transition-colors group-hover:border-primary/20" />
                     <div className="flex items-center gap-3 mb-6">
@@ -180,22 +179,10 @@ export default function Blog() {
                       {post.excerpt}
                     </p>
                     <div className="mt-6 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary">
-                      {expandedPost === post.slug ? "Read Less" : "Read More"} <ArrowRight size={12} />
+                      Read More <ArrowRight size={12} />
                     </div>
-
-                    {expandedPost === post.slug && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="mt-8 pt-8 border-t border-border"
-                      >
-                        <div className="font-display text-sm font-light leading-relaxed text-foreground/80 whitespace-pre-line">
-                          {post.content}
-                        </div>
-                      </motion.div>
-                    )}
                   </motion.div>
+                  </Link>
                 </ScrollReveal>
               ))}
             </div>
@@ -216,11 +203,11 @@ export default function Blog() {
             <StaggerContainer className="grid gap-0 divide-y divide-border">
               {filtered.map((post) => (
                 <StaggerItem key={post.slug}>
+                  <Link to={`/blog/${post.slug}`} className="block">
                   <motion.div
                     whileHover={{ x: 8 }}
                     transition={{ duration: 0.3 }}
                     className="group py-8 md:py-10 px-4 cursor-pointer transition-colors hover:bg-muted/10"
-                    onClick={() => setExpandedPost(expandedPost === post.slug ? null : post.slug)}
                   >
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                       <div className="flex-1">
@@ -245,23 +232,11 @@ export default function Blog() {
                         </p>
                       </div>
                       <div className="flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary shrink-0">
-                        {expandedPost === post.slug ? "Close" : "Read"} <ArrowRight size={12} className={`transition-transform ${expandedPost === post.slug ? "rotate-90" : ""}`} />
+                        Read <ArrowRight size={12} />
                       </div>
                     </div>
-
-                    {expandedPost === post.slug && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="mt-8 pt-8 border-t border-border max-w-3xl"
-                      >
-                        <div className="font-display text-sm font-light leading-relaxed text-foreground/80 whitespace-pre-line">
-                          {post.content}
-                        </div>
-                      </motion.div>
-                    )}
                   </motion.div>
+                  </Link>
                 </StaggerItem>
               ))}
             </StaggerContainer>

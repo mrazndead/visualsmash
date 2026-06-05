@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import { Download, ExternalLink, ArrowRight, Palette, Layout, Megaphone, Globe, Layers, Sparkles, Monitor } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { caseStudies } from "@/data/caseStudies";
 import portfolioHero from "@/assets/portfolio-hero.webp";
 const DeepDiveScrollStory = lazy(() => import("@/components/features/DeepDiveScrollStory"));
 
@@ -214,6 +216,50 @@ const Portfolio = () => {
                     {brand}
                   </span>
                 </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Web Work */}
+      <section className="py-24 md:py-32 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12 mb-16">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4 block">
+                Case Studies
+              </span>
+              <h2 className="text-title text-foreground">
+                Selected <span className="text-accent-gradient">Deep Dives</span>
+              </h2>
+              <p className="mt-4 max-w-2xl mx-auto font-display text-sm font-light text-muted-foreground">
+                Detailed breakdowns of challenge, approach, deliverables, and measured outcomes for recent engagements.
+              </p>
+            </div>
+          </ScrollReveal>
+          <StaggerContainer className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {caseStudies.map((cs) => (
+              <StaggerItem key={cs.slug}>
+                <Link to={`/portfolio/${cs.slug}`}>
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    className="group h-full p-8 border border-border bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-primary/30"
+                  >
+                    <span className="font-display text-[10px] font-bold uppercase tracking-[0.2em] text-primary mb-3 block">
+                      {cs.category}
+                    </span>
+                    <h3 className="font-display text-xl font-black uppercase tracking-tight text-foreground group-hover:text-primary transition-colors mb-3">
+                      {cs.client}
+                    </h3>
+                    <p className="font-display text-sm font-light text-muted-foreground line-clamp-3 mb-6">
+                      {cs.tagline}
+                    </p>
+                    <span className="inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary">
+                      Read Case Study <ArrowRight size={12} />
+                    </span>
+                  </motion.div>
+                </Link>
               </StaggerItem>
             ))}
           </StaggerContainer>
