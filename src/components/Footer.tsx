@@ -8,7 +8,16 @@ const footerLinks = [
   { label: "Use Cases", href: "/use-cases" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
+];
+
+const serviceAreas = [
+  { label: "Web Design Stockton", href: "/web-design-stockton" },
+  { label: "Web Design Lodi", href: "/web-design-lodi" },
+  { label: "Web Design Tracy", href: "/web-design-tracy" },
+  { label: "Web Design Modesto", href: "/web-design-modesto" },
+  { label: "Web Design Manteca", href: "/web-design-manteca" },
 ];
 
 export const Footer = () => {
@@ -18,7 +27,7 @@ export const Footer = () => {
     <footer className="relative border-t border-border overflow-hidden">
       <div className="absolute inset-0 grid-lines opacity-10" />
       <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-12">
-        <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="group inline-flex items-center gap-2 mb-6">
@@ -87,6 +96,24 @@ export const Footer = () => {
                 New Business Inquiries Welcome
               </p>
             </div>
+          </div>
+
+          {/* Service Areas */}
+          <div>
+            <p className="mb-6 font-display text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground">
+              Service Areas
+            </p>
+            <nav className="flex flex-col gap-3">
+              {serviceAreas.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="font-display text-sm font-semibold text-foreground/60 transition-colors hover:text-foreground underline-accent w-fit"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
           </div>
         </div>
 
