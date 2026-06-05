@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import { Download, ExternalLink, ArrowRight, Palette, Layout, Megaphone, Globe, Layers, Sparkles, Monitor } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { caseStudies } from "@/data/caseStudies";
 import portfolioHero from "@/assets/portfolio-hero.webp";
 const DeepDiveScrollStory = lazy(() => import("@/components/features/DeepDiveScrollStory"));
 
