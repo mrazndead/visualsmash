@@ -16,9 +16,13 @@ import Home from "./pages/Home";
 const About = lazy(() => import("./pages/About"));
 const UseCases = lazy(() => import("./pages/UseCases"));
 const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
+const CaseStudy = lazy(() => import("./pages/CaseStudy"));
 const TechStack = lazy(() => import("./pages/TechStack"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const LocationPage = lazy(() => import("./pages/LocationPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -38,9 +42,17 @@ const AnimatedRoutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/use-cases" element={<UseCases />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/:slug" element={<CaseStudy />} />
           <Route path="/tech-stack" element={<TechStack />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/web-design-stockton" element={<LocationPage />} />
+          <Route path="/web-design-lodi" element={<LocationPage />} />
+          <Route path="/web-design-tracy" element={<LocationPage />} />
+          <Route path="/web-design-modesto" element={<LocationPage />} />
+          <Route path="/web-design-manteca" element={<LocationPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
