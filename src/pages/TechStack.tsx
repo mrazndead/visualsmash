@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { useRef } from "react";
 import {
   Sparkles, Figma, Globe, Zap, Map, Layout, Palette, Wand2, Image as ImageIcon,
   PenTool, Shapes, Box, Code2, Wind, Terminal, ShieldCheck, Network, Workflow,
@@ -32,6 +33,28 @@ const tools = [
 ];
 
 const TechStack = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const prefersReducedMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const yBack = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const yMid = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const yFront = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
+  const opacityFade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+
+  const parallaxIcons = [
+    { Icon: Sparkles, top: "12%", left: "8%", size: 56 },
+    { Icon: Figma, top: "22%", left: "82%", size: 44 },
+    { Icon: Code2, top: "68%", left: "14%", size: 64 },
+    { Icon: Wand2, top: "78%", left: "76%", size: 48 },
+    { Icon: Network, top: "44%", left: "92%", size: 40 },
+    { Icon: Workflow, top: "58%", left: "4%", size: 52 },
+    { Icon: Box, top: "8%", left: "48%", size: 36 },
+    { Icon: Terminal, top: "84%", left: "44%", size: 44 },
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -56,9 +79,58 @@ const TechStack = () => {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-40 pb-24 md:pt-48 md:pb-32">
-        <div className="grid-lines absolute inset-0 opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+      <section ref={heroRef} className="relative overflow-hidden pt-40 pb-24 md:pt-48 md:pb-32">
+        {/* Parallax motion graphic background */}
+        <motion.div
+          style={{ opacity: opacityFade }}
+          className="pointer-events-none absolute inset-0"
+          aria-hidden="true"
+        >
+          {/* Layer 1 — deep grid */}
+          <motion.div
+            style={{ y: prefersReducedMotion ? 0 : yBack }}
+            className="grid-lines absolute inset-0 opacity-20"
+          />
+          {/* Layer 2 — radial gradient orbs */}
+          <motion.div
+            style={{ y: prefersReducedMotion ? 0 : yMid }}
+            className="absolute inset-0"
+          >
+            <div className="absolute top-[10%] left-[15%] h-[420px] w-[420px] rounded-full bg-primary/10 blur-[120px]" />
+            <div className="absolute bottom-[5%] right-[10%] h-[520px] w-[520px] rounded-full bg-secondary/10 blur-[140px]" />
+            <div className="absolute top-[40%] left-[55%] h-[300px] w-[300px] rounded-full bg-primary/5 blur-[100px]" />
+          </motion.div>
+          {/* Layer 3 — floating tool icons */}
+          <motion.div
+            style={{ y: prefersReducedMotion ? 0 : yFront }}
+            className="absolute inset-0"
+          >
+            {parallaxIcons.map(({ Icon, top, left, size }, i) => (
+              <motion.div
+                key={i}
+                className="absolute text-primary/15"
+                style={{ top, left }}
+                animate={
+                  prefersReducedMotion
+                    ? undefined
+                    : { y: [0, -12, 0], rotate: [0, 4, 0] }
+                }
+                transition={{
+                  duration: 6 + (i % 4),
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.3,
+                }}
+              >
+                <Icon size={size} strokeWidth={1} />
+              </motion.div>
+            ))}
+          </motion.div>
+          {/* Fade overlay so the content stays readable */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        </motion.div>
+
         <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
