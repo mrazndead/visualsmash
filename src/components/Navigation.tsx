@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { routeLoaders } from "@/App";
+import { routeLoaders } from "@/lib/routeLoaders";
 
 const navLinks = [
   { label: "Home", href: "/", prefetch: null as null | (() => Promise<unknown>) },
