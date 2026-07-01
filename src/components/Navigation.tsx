@@ -2,16 +2,17 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { routeLoaders } from "@/App";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Use Cases", href: "/use-cases" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Tech Stack", href: "/tech-stack" },
-  { label: "Blog", href: "/blog" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "Home", href: "/", prefetch: null as null | (() => Promise<unknown>) },
+  { label: "About", href: "/about", prefetch: routeLoaders.about },
+  { label: "Use Cases", href: "/use-cases", prefetch: routeLoaders.useCases },
+  { label: "Portfolio", href: "/portfolio", prefetch: routeLoaders.portfolio },
+  { label: "Tech Stack", href: "/tech-stack", prefetch: routeLoaders.techStack },
+  { label: "Blog", href: "/blog", prefetch: routeLoaders.blog },
+  { label: "FAQ", href: "/faq", prefetch: routeLoaders.faq },
+  { label: "Contact", href: "/contact", prefetch: routeLoaders.contact },
 ];
 
 export const Navigation = () => {
@@ -57,6 +58,8 @@ export const Navigation = () => {
               <Link
                 key={link.href}
                 to={link.href}
+                onMouseEnter={() => link.prefetch?.().catch(() => {})}
+                onFocus={() => link.prefetch?.().catch(() => {})}
                 className={`font-display text-xs font-semibold uppercase tracking-[0.15em] transition-colors duration-200 underline-accent ${
                   location.pathname === link.href
                     ? "text-primary"
@@ -114,6 +117,7 @@ export const Navigation = () => {
                 >
                   <Link
                     to={link.href}
+                    onMouseEnter={() => link.prefetch?.().catch(() => {})}
                     className={`font-display text-4xl font-black uppercase tracking-tight transition-colors duration-200 ${
                       location.pathname === link.href
                         ? "text-accent-gradient"
