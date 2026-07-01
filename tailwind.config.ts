@@ -124,6 +124,10 @@ export default {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+        "orb-drift": {
+          "0%, 100%": { transform: "translate3d(0,0,0) scale(1)" },
+          "50%": { transform: "translate3d(10px,-20px,0) scale(1.1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -137,6 +141,7 @@ export default {
         "line-draw": "line-draw 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "rotate-slow": "rotate-slow 20s linear infinite",
+        "orb-drift": "orb-drift 8s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

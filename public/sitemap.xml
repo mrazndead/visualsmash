@@ -2,51 +2,123 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://visualsmash.lovable.app/</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/about</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/use-cases</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/portfolio</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/blog</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/contact</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/tech-stack</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/faq</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/power-automate-your-stockton-creative-agency-s-secret-weapon</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/ai-agents-microsoft-365-copilot-your-stockton-agency-s-edge</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/brand-identity-your-ultimate-guide-for-stockton-bay-area</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/graphic-design-visual-strategy-for-stockton-businesses</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/ux-design-crafting-seamless-digital-experiences</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/catalog-print-design-visual-smash-stockton-s-definitive-guide</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/brand-identity-your-stockton-agency-s-definitive-guide</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/graphic-design-stockton-ca-visual-smash-experts</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/ai-brain-development-for-small-businesses-the-visual-smash-guide</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/ux-design-crafting-digital-experiences-that-convert</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/power-automate-your-stockton-agency-s-guide-to-efficiency</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://visualsmash.lovable.app/blog/ai-powered-creative-the-future-of-marketing-in-stockton</loc>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/blog/stockton-web-design-experts-visual-smash-your-online-presence</loc>
@@ -170,61 +242,61 @@
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/portfolio/husker-home-1040</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/portfolio/amaara-networks</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/portfolio/beakr-winery</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/portfolio/mm-law-firm</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/portfolio/minirf</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/web-design-stockton</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/web-design-lodi</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/web-design-tracy</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/web-design-modesto</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://visualsmash.lovable.app/web-design-manteca</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

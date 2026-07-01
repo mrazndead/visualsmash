@@ -21,18 +21,20 @@ export const AnimatedCounter = ({
 
   useEffect(() => {
     if (!isInView) return;
-    let start = 0;
-    const step = value / (duration * 60);
-    const id = setInterval(() => {
-      start += step;
-      if (start >= value) {
-        setDisplay(value);
-        clearInterval(id);
-      } else {
-        setDisplay(Math.floor(start));
-      }
-    }, 1000 / 60);
-    return () => clearInterval(id);
+    let raf = 0;
+    let startTs = 0;
+    const total = duration * 1000;
+    const tick = (ts: number) => {
+      if (!startTs) startTs = ts;
+      const p = Math.min(1, (ts - startTs) / total);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - p, 3);
+      setDisplay(Math.floor(eased * value));
+      if (p < 1) raf = requestAnimationFrame(tick);
+      else setDisplay(value);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
   }, [isInView, value, duration]);
 
   return (
@@ -141,22 +143,21 @@ export const FloatingOrb = ({
   delay?: number;
 }) => {
   const colorClass = color === "primary" ? "bg-primary/8" : "bg-secondary/8";
-
+  // Pure CSS animation — GPU composited, no per-frame JS from Framer Motion.
+  // Hidden on mobile (blur-3xl is expensive on low-end devices).
   return (
-    <motion.div
-      className={`absolute rounded-full ${colorClass} blur-3xl pointer-events-none hidden md:block`}
-      style={{ width: size, height: size, left: x, top: y }}
-      animate={{
-        y: [0, -20, 0],
-        x: [0, 10, 0],
-        scale: [1, 1.1, 1],
+    <div
+      className={`absolute rounded-full ${colorClass} blur-3xl pointer-events-none hidden md:block motion-safe:animate-orb-drift`}
+      style={{
+        width: size,
+        height: size,
+        left: x,
+        top: y,
+        animationDelay: `${delay}s`,
+        willChange: "transform",
+        contain: "layout paint",
       }}
-      transition={{
-        duration: 8,
-        delay,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
+      aria-hidden="true"
     />
   );
 };

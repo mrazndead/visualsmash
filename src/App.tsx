@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
@@ -12,23 +12,57 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { useSiteTheme } from "@/hooks/useSiteTheme";
 import Home from "./pages/Home";
 
-// Lazy-load secondary routes for faster initial load
-const About = lazy(() => import("./pages/About"));
-const UseCases = lazy(() => import("./pages/UseCases"));
-const Blog = lazy(() => import("./pages/Blog"));
-const BlogPost = lazy(() => import("./pages/BlogPost"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Portfolio = lazy(() => import("./pages/Portfolio"));
-const CaseStudy = lazy(() => import("./pages/CaseStudy"));
-const TechStack = lazy(() => import("./pages/TechStack"));
-const FAQ = lazy(() => import("./pages/FAQ"));
-const LocationPage = lazy(() => import("./pages/LocationPage"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+// Lazy-load secondary routes for faster initial load.
+// Loaders are exported so Navigation can prefetch them on hover.
+export const routeLoaders = {
+  about: () => import("./pages/About"),
+  useCases: () => import("./pages/UseCases"),
+  blog: () => import("./pages/Blog"),
+  blogPost: () => import("./pages/BlogPost"),
+  contact: () => import("./pages/Contact"),
+  portfolio: () => import("./pages/Portfolio"),
+  caseStudy: () => import("./pages/CaseStudy"),
+  techStack: () => import("./pages/TechStack"),
+  faq: () => import("./pages/FAQ"),
+  location: () => import("./pages/LocationPage"),
+  notFound: () => import("./pages/NotFound"),
+};
+const About = lazy(routeLoaders.about);
+const UseCases = lazy(routeLoaders.useCases);
+const Blog = lazy(routeLoaders.blog);
+const BlogPost = lazy(routeLoaders.blogPost);
+const Contact = lazy(routeLoaders.contact);
+const Portfolio = lazy(routeLoaders.portfolio);
+const CaseStudy = lazy(routeLoaders.caseStudy);
+const TechStack = lazy(routeLoaders.techStack);
+const FAQ = lazy(routeLoaders.faq);
+const LocationPage = lazy(routeLoaders.location);
+const NotFound = lazy(routeLoaders.notFound);
 
 const queryClient = new QueryClient();
 
 const ThemeLoader = () => {
   useSiteTheme();
+  return null;
+};
+
+/** Prefetch secondary route chunks after the browser goes idle. */
+const IdlePrefetch = () => {
+  useEffect(() => {
+    const ric =
+      (window as any).requestIdleCallback ||
+      ((cb: any) => setTimeout(cb, 1500));
+    const id = ric(() => {
+      // Fire in low-priority order; failures are silent.
+      Object.values(routeLoaders).forEach((load) => {
+        try { load(); } catch {}
+      });
+    });
+    return () => {
+      const cic = (window as any).cancelIdleCallback || clearTimeout;
+      try { cic(id); } catch {}
+    };
+  }, []);
   return null;
 };
 
@@ -68,6 +102,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ThemeLoader />
+          <IdlePrefetch />
           <ScrollToTop />
           <Navigation />
           <main>
