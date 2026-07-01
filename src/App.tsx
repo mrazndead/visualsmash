@@ -102,6 +102,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ThemeLoader />
+          <IdlePrefetch />
           <ScrollToTop />
           <Navigation />
           <main>
