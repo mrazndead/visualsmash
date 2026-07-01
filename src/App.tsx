@@ -11,22 +11,9 @@ import { PageTransition } from "@/components/PageTransition";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { useSiteTheme } from "@/hooks/useSiteTheme";
 import Home from "./pages/Home";
+import { routeLoaders } from "@/lib/routeLoaders";
 
 // Lazy-load secondary routes for faster initial load.
-// Loaders are exported so Navigation can prefetch them on hover.
-export const routeLoaders = {
-  about: () => import("./pages/About"),
-  useCases: () => import("./pages/UseCases"),
-  blog: () => import("./pages/Blog"),
-  blogPost: () => import("./pages/BlogPost"),
-  contact: () => import("./pages/Contact"),
-  portfolio: () => import("./pages/Portfolio"),
-  caseStudy: () => import("./pages/CaseStudy"),
-  techStack: () => import("./pages/TechStack"),
-  faq: () => import("./pages/FAQ"),
-  location: () => import("./pages/LocationPage"),
-  notFound: () => import("./pages/NotFound"),
-};
 const About = lazy(routeLoaders.about);
 const UseCases = lazy(routeLoaders.useCases);
 const Blog = lazy(routeLoaders.blog);
