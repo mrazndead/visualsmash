@@ -3,7 +3,13 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Check } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { findLocation } from "@/data/locations";
+import { findLocation, locations } from "@/data/locations";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const services = [
   "Custom website design & development",
@@ -66,8 +72,18 @@ export default function LocationPage() {
           { "@type": "ListItem", position: 2, name: `Web Design ${loc.city}`, item: url },
         ],
       },
+      {
+        "@type": "FAQPage",
+        mainEntity: loc.localFaqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      },
     ],
   };
+
+  const otherLocations = locations.filter((l) => l.slug !== loc.slug);
 
   return (
     <div className="relative overflow-x-hidden">
@@ -146,6 +162,61 @@ export default function LocationPage() {
             <p className="font-display text-base font-light text-muted-foreground leading-relaxed">
               {loc.neighborhoodCopy}
             </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="py-16 border-t border-border">
+        <div className="mx-auto max-w-3xl px-6 lg:px-12">
+          <ScrollReveal>
+            <h2 className="font-display text-2xl md:text-3xl font-black uppercase mb-6">
+              {loc.city} FAQs
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {loc.localFaqs.map((f, i) => (
+                <AccordionItem key={i} value={`loc-${i}`} className="border-border">
+                  <AccordionTrigger className="font-display text-left text-base font-bold uppercase tracking-tight">
+                    {f.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="font-display text-sm font-light text-muted-foreground leading-relaxed">
+                    {f.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="py-16 border-t border-border">
+        <div className="mx-auto max-w-4xl px-6 lg:px-12">
+          <ScrollReveal>
+            <h2 className="font-display text-xl md:text-2xl font-black uppercase mb-6">
+              Also serving nearby
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              {otherLocations.map((l) => (
+                <Link
+                  key={l.slug}
+                  to={`/${l.slug}`}
+                  className="font-display text-xs font-bold uppercase tracking-[0.15em] border border-border px-4 py-2 text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                >
+                  Web design {l.city}
+                </Link>
+              ))}
+              <Link
+                to="/portfolio"
+                className="font-display text-xs font-bold uppercase tracking-[0.15em] border border-border px-4 py-2 text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+              >
+                See portfolio
+              </Link>
+              <Link
+                to="/use-cases"
+                className="font-display text-xs font-bold uppercase tracking-[0.15em] border border-border px-4 py-2 text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+              >
+                All services
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>
