@@ -9,6 +9,7 @@ export interface LocationData {
   intro: string;
   industries: string[];
   neighborhoodCopy: string;
+  localFaqs: { q: string; a: string }[];
 }
 
 export const locations: LocationData[] = [
@@ -32,6 +33,11 @@ export const locations: LocationData[] = [
     ],
     neighborhoodCopy:
       "We've worked with Stockton brands rooted in the Port, the Miracle Mile, the University of the Pacific corridor, and the agricultural businesses that define San Joaquin County. Local context shapes every site we ship.",
+    localFaqs: [
+      { q: "Are you actually based in Stockton, CA?", a: "Yes. Visual Smash operates out of Stockton and serves clients throughout San Joaquin County, the Central Valley, Sacramento, and the Bay Area. We're happy to meet in person around Lincoln Center, the Miracle Mile, or downtown." },
+      { q: "Do you work with small businesses in Stockton?", a: "Most of our Stockton work is with small and mid-sized businesses — law firms, contractors, medical practices, restaurants, and family-owned operations. Scope is always tuned to your budget." },
+      { q: "Can you help my Stockton business rank on Google Maps?", a: "Yes. Local SEO for Stockton includes Google Business Profile optimization, NAP consistency across directories, review flows, and local landing pages targeting neighborhoods like Brookside, Lincoln Village, Spanos Park, and Weston Ranch." },
+    ],
   },
   {
     slug: "web-design-lodi",
@@ -53,6 +59,11 @@ export const locations: LocationData[] = [
     ],
     neighborhoodCopy:
       "From Downtown Lodi and the Wine & Roses corridor to the appellations of the Lodi AVA, we design sites that reflect the craft and authenticity local brands are known for.",
+    localFaqs: [
+      { q: "Do you build websites for Lodi wineries?", a: "Yes — winery sites are a specialty. We build tasting-room booking, wine club sign-ups, ecommerce for shipping-compliant states, and cellar-door content that reflects the Lodi AVA's identity." },
+      { q: "How far is your studio from Lodi?", a: "About 14 miles south, in Stockton. We regularly meet clients in Downtown Lodi and along School Street; most production runs remote with weekly reviews." },
+      { q: "Can you handle DTC wine ecommerce?", a: "Yes. We build Shopify and custom stacks with age verification, state-by-state shipping rules, wine-club subscriptions, and integrations with fulfillment partners." },
+    ],
   },
   {
     slug: "web-design-tracy",
@@ -74,6 +85,11 @@ export const locations: LocationData[] = [
     ],
     neighborhoodCopy:
       "Tracy's fast growth means most businesses are racing to keep their digital presence ahead of demand. We build sites that scale — from one-page launches to full ecommerce platforms.",
+    localFaqs: [
+      { q: "Do you work with Tracy and Mountain House commuter businesses?", a: "Yes. A lot of Tracy work is Bay Area-adjacent — startups, contractors, and service businesses along the I-205 corridor that need a site that reads modern to both markets." },
+      { q: "Can you build logistics or 3PL websites?", a: "Yes. Tracy's logistics cluster is a common client type — we build quoting flows, driver-recruitment funnels, and integrations with TMS/WMS systems." },
+      { q: "How quickly can a Tracy business launch a new site?", a: "Marketing sites ship in 4–8 weeks. Rapid single-page launches can go live in under 2 weeks when timing matters." },
+    ],
   },
   {
     slug: "web-design-modesto",
@@ -95,6 +111,11 @@ export const locations: LocationData[] = [
     ],
     neighborhoodCopy:
       "Modesto's mix of established industry and entrepreneurial energy demands sites that read both credible and modern. We've delivered work across the Central Valley that does exactly that.",
+    localFaqs: [
+      { q: "Do you work with Modesto and Stanislaus County businesses?", a: "Yes. We regularly partner with Modesto brands across McHenry, Vintage Faire, and Downtown — from healthcare groups to ag-processing operations." },
+      { q: "Are you a Modesto-based agency?", a: "We're headquartered in Stockton, about 30 miles north. Most Modesto engagements run remotely with on-site meetings scheduled when useful." },
+      { q: "Do you handle Spanish-language sites for Modesto's bilingual market?", a: "Yes. We build bilingual (EN/ES) sites with proper hreflang, translated content, and structured data that ranks in both languages." },
+    ],
   },
   {
     slug: "web-design-manteca",
@@ -116,6 +137,11 @@ export const locations: LocationData[] = [
     ],
     neighborhoodCopy:
       "Manteca's growth along the 120 and 99 corridors creates real opportunity for businesses ready to invest in a digital presence that matches the city's trajectory.",
+    localFaqs: [
+      { q: "Do you work with Manteca and Lathrop businesses?", a: "Yes — we cover the 99/120 corridor including Manteca, Lathrop, and Ripon. New residential growth and the Promenade Shops make it a strong market for retail and service brands." },
+      { q: "Can you help launch a new Manteca business?", a: "Yes. Startup packages include brand identity, a launch site, Google Business Profile setup, and a marketing foundation ready to grow with you." },
+      { q: "Do you build sites for Manteca contractors and trades?", a: "Yes. Contractor sites include quote-request flows, service-area schema, before/after galleries, and financing integrations when relevant." },
+    ],
   },
 ];
 

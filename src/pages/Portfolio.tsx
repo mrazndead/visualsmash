@@ -58,7 +58,7 @@ const Portfolio = () => {
   return (
     <>
       <SEO pageKey="portfolio"
-        title="Portfolio | Web Design & Marketing Agency Stockton CA"
+        title="Portfolio & Case Studies"
         description="Portfolio from Visual Smash — a Stockton, CA web design & marketing agency: web design, brand identity, catalog, advertising, and creative direction."
         canonical="https://visualsmash.lovable.app/portfolio"
         keywords="Stockton CA marketing agency, Stockton CA creative studio, Stockton CA web development services, Stockton marketing agency, Stockton creative studio, Stockton web development, Stockton web developer, web development agency Stockton, web development services Stockton CA, web design agency Stockton CA, web designer Stockton, website design Stockton, web design portfolio Stockton, marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, design agency Stockton, advertising agency Stockton, Stockton design portfolio, brand identity portfolio, catalog design Stockton, creative direction, Central Valley web design agency, Bay Area web design agency"

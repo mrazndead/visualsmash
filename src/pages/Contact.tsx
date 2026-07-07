@@ -57,7 +57,7 @@ export default function Contact() {
   return (
     <div className="pt-24 overflow-x-hidden">
       <SEO pageKey="contact"
-        title="Contact | Stockton CA Marketing Agency & Creative Studio"
+        title="Contact the Studio"
         description="Contact Visual Smash — a Stockton, CA web design & marketing agency. We take 2–3 new clients per quarter across the Stockton, CA, Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/contact"
         keywords="Stockton CA marketing agency, Stockton CA creative studio, Stockton CA web development services, Stockton marketing agency, Stockton creative studio, Stockton web development, Stockton web developer, web development agency Stockton, web development services Stockton CA, web design agency Stockton CA, hire web designer Stockton, website design Stockton, marketing agency Stockton CA, creative agency Stockton, hire marketing agency Stockton, contact Visual Smash, branding agency Stockton, advertising agency Stockton, design consultation Stockton, Central Valley web design agency, Bay Area web design agency"

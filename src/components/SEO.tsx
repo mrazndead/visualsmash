@@ -11,6 +11,7 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   pageKey?: string;
+  preloadImage?: string;
 }
 
 export const SEO = ({
@@ -22,6 +23,7 @@ export const SEO = ({
   keywords,
   image = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/70455fe2-15bd-4dd2-a405-f3cb3fef6556/id-preview-ab820fab--a02f9379-36d5-4f16-9b2b-ea77e5f17fd5.lovable.app-1774582250132.png",
   pageKey,
+  preloadImage,
 }: SEOProps) => {
   const siteUrl = "https://visualsmash.lovable.app";
   const fullTitle = title === "Visual Smash" ? title : `${title} | Visual Smash`;
@@ -55,6 +57,15 @@ export const SEO = ({
       <meta name="description" content={finalDescription} />
       {mergedKeywords && <meta name="keywords" content={mergedKeywords} />}
       <link rel="canonical" href={canonicalUrl} />
+
+      {preloadImage && (
+        <link
+          rel="preload"
+          as="image"
+          href={preloadImage}
+          {...({ fetchpriority: "high" } as Record<string, string>)}
+        />
+      )}
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />

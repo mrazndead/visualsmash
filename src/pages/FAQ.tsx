@@ -91,7 +91,7 @@ export default function FAQ() {
   return (
     <div className="relative overflow-x-hidden">
       <SEO
-        title="FAQ — Web Design & Marketing Agency Stockton CA"
+        title="Frequently Asked Questions"
         description="Pricing, timelines, services, and process — answers to the most common questions about working with Visual Smash, a Stockton, CA web design & marketing agency."
         canonical="https://visualsmash.lovable.app/faq"
         keywords="web design agency Stockton CA, marketing agency Stockton CA, web design pricing Stockton, website cost Stockton, Stockton SEO services, Stockton creative agency FAQ, Central Valley web design questions"

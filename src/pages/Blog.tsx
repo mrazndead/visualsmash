@@ -60,7 +60,7 @@ export default function Blog() {
   return (
     <div className="relative overflow-x-hidden">
       <SEO pageKey="blog"
-        title="Blog | Web Design & Marketing Agency Stockton CA"
+        title="Blog — Web Design & Marketing"
         description="Web design, AI, branding, UX & marketing insights from Visual Smash — a Stockton, CA web design & marketing agency serving Stockton, CA, Central Valley & Bay Area."
         canonical="https://visualsmash.lovable.app/blog"
         keywords="Stockton CA marketing agency, marketing agency in Stockton California, Stockton CA creative studio, creative agency in Stockton CA, Stockton CA web development services, web development agency Stockton, web developer Stockton CA, web design agency Stockton CA, website design Stockton, WordPress web design Stockton, Webflow agency Stockton, Shopify web design Stockton, ecommerce web design Stockton, web design blog Stockton, marketing agency Stockton CA, creative agency Stockton, branding agency Stockton, logo design Stockton, graphic design Stockton, advertising agency Stockton, digital marketing agency Stockton, AI marketing agency Stockton, AI agency Stockton, UX design Stockton, marketing automation Stockton, social media marketing Stockton, SEO agency Stockton, local SEO Stockton, Google Ads Stockton, small business marketing Stockton, Stockton marketing blog, AI design blog, branding strategy Stockton, UX psychology, Lodi web design, Tracy web design, Modesto web design, Manteca web design, San Joaquin County web design, Central Valley web design insights, Bay Area web design agency blog"
