@@ -59,7 +59,12 @@ export const SEO = ({
       <link rel="canonical" href={canonicalUrl} />
 
       {preloadImage && (
-        <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+        <link
+          rel="preload"
+          as="image"
+          href={preloadImage}
+          {...({ fetchpriority: "high" } as Record<string, string>)}
+        />
       )}
 
       {/* Open Graph */}
