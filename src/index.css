@@ -311,3 +311,90 @@
     opacity: 1;
   }
 }
+
+/* ============================
+   ADA ACCESSIBILITY OVERRIDES
+   Toggled via <html class="a11y-*">
+   ============================ */
+@layer utilities {
+  .a11y-high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 90%;
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --primary: 60 100% 55%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 60 100% 55%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 60 100% 55%;
+    --accent-foreground: 0 0% 0%;
+    --ring: 60 100% 55%;
+  }
+  .a11y-high-contrast img,
+  .a11y-high-contrast video {
+    filter: contrast(1.15);
+  }
+
+  .a11y-large-text {
+    font-size: 118%;
+  }
+  .a11y-large-text .text-xs { font-size: 0.9rem; }
+  .a11y-large-text .text-sm { font-size: 1rem; }
+
+  .a11y-readable-font,
+  .a11y-readable-font body,
+  .a11y-readable-font * {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    letter-spacing: 0.01em;
+  }
+
+  .a11y-underline-links a {
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+  }
+
+  .a11y-reduced-motion *,
+  .a11y-reduced-motion *::before,
+  .a11y-reduced-motion *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .a11y-focus-rings *:focus,
+  .a11y-focus-rings *:focus-visible {
+    outline: 3px solid hsl(var(--primary)) !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 6px hsl(var(--primary) / 0.35) !important;
+  }
+
+  .a11y-big-cursor,
+  .a11y-big-cursor * {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path d='M6 2 L6 40 L16 30 L22 44 L28 42 L22 28 L36 28 Z' fill='yellow' stroke='black' stroke-width='2'/></svg>") 4 2, auto !important;
+  }
+
+  /* Skip link */
+  .a11y-skip-link {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    z-index: 2000;
+    padding: 0.75rem 1rem;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    font-weight: 700;
+    border-radius: 0.25rem;
+    transition: top 0.2s;
+  }
+  .a11y-skip-link:focus {
+    top: 1rem;
+    outline: 3px solid hsl(var(--secondary));
+  }
+}
