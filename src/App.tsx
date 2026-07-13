@@ -9,6 +9,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { PageTransition } from "@/components/PageTransition";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { AccessibilityToggle } from "@/components/AccessibilityToggle";
 import { useSiteTheme } from "@/hooks/useSiteTheme";
 import Home from "./pages/Home";
 import { routeLoaders } from "@/lib/routeLoaders";
@@ -92,10 +93,12 @@ const App = () => (
           <IdlePrefetch />
           <ScrollToTop />
           <Navigation />
-          <main>
+          <a href="#main-content" className="a11y-skip-link">Skip to main content</a>
+          <main id="main-content">
             <AnimatedRoutes />
           </main>
           <Footer />
+          <AccessibilityToggle />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
