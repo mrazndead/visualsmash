@@ -34,7 +34,6 @@ export function useSiteTheme() {
   useEffect(() => {
     if (cachedTheme) {
       applyTheme(cachedTheme);
-      return;
     }
 
     const fetchTheme = async () => {
@@ -65,6 +64,13 @@ export function useSiteTheme() {
     };
 
     fetchTheme();
+
+    const refreshWhenVisible = () => {
+      if (document.visibilityState === "visible") fetchTheme();
+    };
+
+    document.addEventListener("visibilitychange", refreshWhenVisible);
+    return () => document.removeEventListener("visibilitychange", refreshWhenVisible);
   }, []);
 
   return theme;
@@ -81,6 +87,19 @@ function applyTheme(t: SiteTheme) {
   root.style.setProperty("--sidebar-primary", p);
   root.style.setProperty("--sidebar-ring", p);
   root.style.setProperty("--secondary", s);
+
+  // Keep extended artwork, glow, and legacy design tokens in sync with the
+  // semantic palette so a scheduled rotation changes the whole visual system.
+  root.style.setProperty("--electric-blue", `hsl(${p})`);
+  root.style.setProperty("--acid-lime", `hsl(${s})`);
+  root.style.setProperty(
+    "--glow-blue",
+    `0 0 60px hsl(${p} / 0.4), 0 0 120px hsl(${p} / 0.15)`,
+  );
+  root.style.setProperty(
+    "--glow-lime",
+    `0 0 60px hsl(${s} / 0.4), 0 0 120px hsl(${s} / 0.15)`,
+  );
 
   root.style.setProperty("--font-display", `'${t.font_display}', sans-serif`);
   root.style.setProperty("--font-editorial", `'${t.font_editorial}', serif`);
