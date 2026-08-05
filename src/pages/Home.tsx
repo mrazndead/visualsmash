@@ -542,7 +542,7 @@ export default function Home() {
                     <p className="mt-3 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
                       {svc.description}
                     </p>
-                    {svc.href && (
+                    {"href" in svc && svc.href && (
                       <Link
                         to={svc.href}
                         className="mt-5 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary underline-accent"
