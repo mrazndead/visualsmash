@@ -4,6 +4,7 @@
 export const routeLoaders = {
   about: () => import("@/pages/About"),
   useCases: () => import("@/pages/UseCases"),
+  aiAutomation: () => import("@/pages/AIAutomation"),
   blog: () => import("@/pages/Blog"),
   blogPost: () => import("@/pages/BlogPost"),
   contact: () => import("@/pages/Contact"),

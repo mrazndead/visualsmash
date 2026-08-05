@@ -6,6 +6,7 @@ const footerLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Use Cases", href: "/use-cases" },
+  { label: "AI Automation", href: "/ai-automation" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },

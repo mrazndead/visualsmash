@@ -17,6 +17,7 @@ import { routeLoaders } from "@/lib/routeLoaders";
 // Lazy-load secondary routes for faster initial load.
 const About = lazy(routeLoaders.about);
 const UseCases = lazy(routeLoaders.useCases);
+const AIAutomation = lazy(routeLoaders.aiAutomation);
 const Blog = lazy(routeLoaders.blog);
 const BlogPost = lazy(routeLoaders.blogPost);
 const Contact = lazy(routeLoaders.contact);
@@ -63,6 +64,7 @@ const AnimatedRoutes = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/use-cases" element={<UseCases />} />
+          <Route path="/ai-automation" element={<AIAutomation />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
