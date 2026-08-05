@@ -179,7 +179,7 @@ export default function Blog() {
                       {post.excerpt}
                     </p>
                     <div className="mt-6 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary">
-                      Read More <ArrowRight size={12} />
+                      Read full article: {post.title} <ArrowRight size={12} />
                     </div>
                   </motion.div>
                   </Link>
@@ -232,7 +232,7 @@ export default function Blog() {
                         </p>
                       </div>
                       <div className="flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary shrink-0">
-                        Read <ArrowRight size={12} />
+                        Read {post.title} <ArrowRight size={12} />
                       </div>
                     </div>
                   </motion.div>
