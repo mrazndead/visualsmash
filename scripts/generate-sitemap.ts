@@ -17,17 +17,16 @@ interface Entry {
   priority?: string;
 }
 
-const today = new Date().toISOString().slice(0, 10);
-
 const staticEntries: Entry[] = [
-  { path: "/", changefreq: "weekly", priority: "1.0", lastmod: today },
-  { path: "/about", changefreq: "monthly", priority: "0.8", lastmod: today },
-  { path: "/use-cases", changefreq: "monthly", priority: "0.8", lastmod: today },
-  { path: "/portfolio", changefreq: "monthly", priority: "0.9", lastmod: today },
-  { path: "/blog", changefreq: "weekly", priority: "0.7", lastmod: today },
-  { path: "/contact", changefreq: "monthly", priority: "0.6", lastmod: today },
-  { path: "/tech-stack", changefreq: "monthly", priority: "0.7", lastmod: today },
-  { path: "/faq", changefreq: "monthly", priority: "0.8", lastmod: today },
+  { path: "/", changefreq: "weekly", priority: "1.0" },
+  { path: "/about", changefreq: "monthly", priority: "0.8" },
+  { path: "/use-cases", changefreq: "monthly", priority: "0.8" },
+  { path: "/ai-automation", changefreq: "monthly", priority: "0.9" },
+  { path: "/portfolio", changefreq: "monthly", priority: "0.9" },
+  { path: "/blog", changefreq: "weekly", priority: "0.7" },
+  { path: "/contact", changefreq: "monthly", priority: "0.6" },
+  { path: "/tech-stack", changefreq: "monthly", priority: "0.7" },
+  { path: "/faq", changefreq: "monthly", priority: "0.8" },
 ];
 
 async function main() {
@@ -39,21 +38,19 @@ async function main() {
 
   const postEntries: Entry[] = (posts ?? []).map((p) => ({
     path: `/blog/${p.slug}`,
-    lastmod: (p.published_at ?? today).slice(0, 10),
+    lastmod: p.published_at ? p.published_at.slice(0, 10) : undefined,
     changefreq: "monthly",
     priority: "0.7",
   }));
 
   const caseEntries: Entry[] = caseStudies.map((c) => ({
     path: `/portfolio/${c.slug}`,
-    lastmod: today,
     changefreq: "monthly",
     priority: "0.8",
   }));
 
   const locationEntries: Entry[] = locations.map((l) => ({
     path: `/${l.slug}`,
-    lastmod: today,
     changefreq: "monthly",
     priority: "0.9",
   }));

@@ -354,6 +354,15 @@ export default function UseCases() {
                         <p className="mb-4 font-display text-sm font-light leading-relaxed text-muted-foreground/80">{uc.extended}</p>
                         <p className="mb-6 font-display text-sm font-light leading-relaxed text-muted-foreground/70">{uc.deepDive}</p>
 
+                        {uc.number === "11" && (
+                          <Link
+                            to="/ai-automation"
+                            className="mb-6 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary underline-accent"
+                          >
+                            Explore AI Brain development <ArrowRight size={12} />
+                          </Link>
+                        )}
+
                         {/* Results */}
                         <div className="mb-6 space-y-2">
                           {uc.results.map((result, ri) => (

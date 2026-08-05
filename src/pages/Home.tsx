@@ -102,6 +102,7 @@ const services = [
     description:
       "Your digital consultant, trained on your company's content and brand guidelines. Visual Smash builds your AI Brain so your team can ask, create, and decide—on-brand, 24/7.",
     icon: Brain,
+    href: "/ai-automation",
   },
 ];
 
@@ -541,6 +542,14 @@ export default function Home() {
                     <p className="mt-3 max-w-2xl font-display text-sm font-light leading-relaxed text-muted-foreground">
                       {svc.description}
                     </p>
+                    {svc.href && (
+                      <Link
+                        to={svc.href}
+                        className="mt-5 inline-flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary underline-accent"
+                      >
+                        Explore AI automation services <ArrowRight size={12} />
+                      </Link>
+                    )}
                   </div>
                   <motion.div
                     initial={{ scaleX: 0 }}
