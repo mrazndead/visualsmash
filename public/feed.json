@@ -7,6 +7,66 @@
   "language": "en-US",
   "items": [
     {
+      "id": "https://visualsmash.lovable.app/blog/technical-marketing-analytics-your-data-driven-growth-engine",
+      "url": "https://visualsmash.lovable.app/blog/technical-marketing-analytics-your-data-driven-growth-engine",
+      "title": "Technical Marketing & Analytics: Your Data-Driven Growth Engine",
+      "summary": "Master Technical Marketing & Analytics for data-driven growth. Visual Smash, your Stockton CA web design & marketing experts, unlock your business potential.",
+      "tags": [
+        "Technical Marketing & Analytics"
+      ],
+      "date_published": "2026-08-17T14:00:19.888Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/product-launch-content-your-definitive-guide-to-success",
+      "url": "https://visualsmash.lovable.app/blog/product-launch-content-your-definitive-guide-to-success",
+      "title": "Product Launch Content: Your Definitive Guide to Success",
+      "summary": "Master product launch content & collateral. Visual Smash, a leading Stockton CA creative agency, delivers strategies for impactful product launches in the Central Valley and Bay Area.",
+      "tags": [
+        "Product Launch Content & Collateral"
+      ],
+      "date_published": "2026-08-16T14:00:18.267Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/ai-powered-creative-your-agency-s-next-frontier",
+      "url": "https://visualsmash.lovable.app/blog/ai-powered-creative-your-agency-s-next-frontier",
+      "title": "AI-Powered Creative: Your Agency's Next Frontier",
+      "summary": "Unlock the power of AI-powered creative. Discover how AI is transforming design, marketing, and content for agencies in Stockton, the Bay Area, and beyond.",
+      "tags": [
+        "AI-Powered Creative"
+      ],
+      "date_published": "2026-08-15T14:00:15.062Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/ai-brain-development-for-small-business-the-ultimate-guide",
+      "url": "https://visualsmash.lovable.app/blog/ai-brain-development-for-small-business-the-ultimate-guide",
+      "title": "AI Brain Development for Small Business: The Ultimate Guide",
+      "summary": "Unlock AI potential for your small business. Discover how AI brain development can revolutionize your operations and marketing in Stockton, CA and beyond.",
+      "tags": [
+        "AI Brain Development for Small Business"
+      ],
+      "date_published": "2026-08-14T14:00:19.374Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/unlock-your-brand-s-potential-with-expert-graphic-design",
+      "url": "https://visualsmash.lovable.app/blog/unlock-your-brand-s-potential-with-expert-graphic-design",
+      "title": "Unlock Your Brand's Potential with Expert Graphic Design",
+      "summary": "Elevate your brand with professional graphic design services from Visual Smash in Stockton, CA. Discover how stunning visuals drive engagement and growth for businesses in the Central Valley and Bay Area.",
+      "tags": [
+        "Graphic Design"
+      ],
+      "date_published": "2026-08-13T14:00:20.893Z"
+    },
+    {
+      "id": "https://visualsmash.lovable.app/blog/unlock-your-potential-with-ai-agents-microsoft-365-copilot",
+      "url": "https://visualsmash.lovable.app/blog/unlock-your-potential-with-ai-agents-microsoft-365-copilot",
+      "title": "Unlock Your Potential with AI Agents & Microsoft 365 Copilot",
+      "summary": "Discover how AI Agents, powered by Microsoft 365 Copilot, are revolutionizing productivity for businesses in Stockton, the Central Valley, and the Bay Area.",
+      "tags": [
+        "AI Agents with Microsoft 365 Copilot"
+      ],
+      "date_published": "2026-08-10T14:00:32.179Z"
+    },
+    {
       "id": "https://visualsmash.lovable.app/blog/catalog-print-design-visual-smash-stockton-experts",
       "url": "https://visualsmash.lovable.app/blog/catalog-print-design-visual-smash-stockton-experts",
       "title": "Catalog & Print Design: Visual Smash Stockton Experts",
@@ -445,46 +505,6 @@
         "AI Design"
       ],
       "date_published": "2024-12-20T00:00:00.000Z"
-    },
-    {
-      "id": "https://visualsmash.lovable.app/blog/color-theory-digital-branding",
-      "url": "https://visualsmash.lovable.app/blog/color-theory-digital-branding",
-      "title": "Advanced Color Theory for Digital Branding",
-      "summary": "Color is the most immediate and emotional element of any brand. How to build color systems that work across screens and cultures.",
-      "tags": [
-        "Graphic Design"
-      ],
-      "date_published": "2024-12-10T00:00:00.000Z"
-    },
-    {
-      "id": "https://visualsmash.lovable.app/blog/design-systems-scaling-brands",
-      "url": "https://visualsmash.lovable.app/blog/design-systems-scaling-brands",
-      "title": "Design Systems: Scaling Your Brand Without Losing Its Soul",
-      "summary": "A design system is more than a component library. It's the codified DNA of your brand.",
-      "tags": [
-        "UX Design"
-      ],
-      "date_published": "2024-11-20T00:00:00.000Z"
-    },
-    {
-      "id": "https://visualsmash.lovable.app/blog/ai-tools-software-design",
-      "url": "https://visualsmash.lovable.app/blog/ai-tools-software-design",
-      "title": "AI-Powered Software Design: Tools Reshaping the Industry",
-      "summary": "From Figma's AI features to AI-generated code, the software design landscape is evolving faster than ever.",
-      "tags": [
-        "AI Design"
-      ],
-      "date_published": "2024-11-10T00:00:00.000Z"
-    },
-    {
-      "id": "https://visualsmash.lovable.app/blog/content-marketing-strategy-2025",
-      "url": "https://visualsmash.lovable.app/blog/content-marketing-strategy-2025",
-      "title": "Content Marketing Strategy for the AI-Saturated Web",
-      "summary": "When everyone has access to AI content generation, what differentiates great content marketing? Original thinking and strategic depth.",
-      "tags": [
-        "Marketing"
-      ],
-      "date_published": "2024-10-15T00:00:00.000Z"
     }
   ]
 }

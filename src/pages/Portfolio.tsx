@@ -209,7 +209,7 @@ const Portfolio = () => {
           </ScrollReveal>
 
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {["Stetson", "Tommy Bahama", "Panama Jack", "Stacy Adams", "Scala Pro", "Christys' London", "Dorfman Pacific", "Sinatra Collection", "Renovo Communities", "Lyon Investments", "Zelman Development", "AGS", "ROME", "Digital Risk", "ABB", "Modesto Symphony", "Bureau Veritas", "Bynum Construction", "Amaara Networks", "Beakr Winery", "Husker Home", "TelSwitch", "Geelers", "Amaya Cloud", "Heritage Builders", "Fenton Grant", "Front Range", "InnoLogic", "Confluent Medical", "First Coast Siding", "Mallison & Martinez Law", "MiniRF", "MarketingTBD", "Accenture", "Altera Advisors", "Axios", "Broadstreet", "EMC", "Hudson Marshall", "Mortgage Connect", "National Field Network", "Onyx Lending", "Priority One", "Rakuten", "Shabani Law", "SSAD", "Pingora", "MPhasis", "Mid-Valley Engineering"].map((brand) => (
+            {["Stetson", "Tommy Bahama", "Panama Jack", "Stacy Adams", "Scala Pro", "Christys' London", "Dorfman Pacific", "Sinatra Collection", "Renovo Communities", "Lyon Investments", "Zelman Development", "AGS", "ROME", "Digital Risk", "ABB", "ABB CFP", "MiniConnect", "Modesto Symphony", "Bureau Veritas", "Bynum Construction", "Amaara Networks", "Beakr Winery", "Husker Home", "TelSwitch", "Geelers", "Amaya Cloud", "Heritage Builders", "Fenton Grant", "Front Range", "InnoLogic", "Confluent Medical", "First Coast Siding", "Mallison & Martinez Law", "MiniRF", "MarketingTBD", "Accenture", "Altera Advisors", "Axios", "Broadstreet", "EMC", "Hudson Marshall", "Mortgage Connect", "National Field Network", "Onyx Lending", "Priority One", "Rakuten", "Shabani Law", "SSAD", "Pingora", "MPhasis", "Mid-Valley Engineering"].map((brand) => (
               <StaggerItem key={brand}>
                 <div className="group p-6 border border-border text-center transition-all duration-300 hover:border-primary/30 hover:bg-primary/5">
                   <span className="font-display text-sm font-bold uppercase tracking-[0.1em] text-muted-foreground group-hover:text-foreground transition-colors">
@@ -290,6 +290,8 @@ const Portfolio = () => {
               { name: "B-A-C", url: "https://b-a-c.com/" },
               { name: "HBI", url: "https://www.hbi.la/" },
               { name: "MiniRF", url: "https://minirf.com/" },
+              { name: "ABB CFP", url: "https://abbcfp.com/" },
+              { name: "MiniConnect", url: "https://miniconnect.net/" },
               { name: "MarketingTBD", url: "https://marketingtbd.com" },
               { name: "MM Law Firm", url: "https://themmlawfirm.com/" },
               { name: "Mortgage Connect", url: "https://www2.mortgageconnectlp.com/" },
