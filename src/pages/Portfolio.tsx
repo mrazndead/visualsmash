@@ -282,6 +282,11 @@ const Portfolio = () => {
 
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              { name: "Stocks Bagger", url: "https://stocksbagger.lovable.app/" },
+              { name: "Nova Write", url: "https://worddoc.lovable.app/" },
+              { name: "Music Player", url: "https://muzicplayer.lovable.app/" },
+              { name: "The Blue Note", url: "https://blue-note-story.lovable.app/" },
+              { name: "Glass Stream TV", url: "https://glass-stream-find.lovable.app/" },
               { name: "Husker Home 1040", url: "https://huskerhome1040.com/" },
               { name: "AC Testing", url: "https://actesting.com/" },
               { name: "Beakr Winery", url: "https://beakrwinery.com/" },
