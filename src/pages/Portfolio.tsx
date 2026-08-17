@@ -290,6 +290,8 @@ const Portfolio = () => {
               { name: "B-A-C", url: "https://b-a-c.com/" },
               { name: "HBI", url: "https://www.hbi.la/" },
               { name: "MiniRF", url: "https://minirf.com/" },
+              { name: "ABB CFP", url: "https://abbcfp.com/" },
+              { name: "MiniConnect", url: "https://miniconnect.net/" },
               { name: "MarketingTBD", url: "https://marketingtbd.com" },
               { name: "MM Law Firm", url: "https://themmlawfirm.com/" },
               { name: "Mortgage Connect", url: "https://www2.mortgageconnectlp.com/" },
